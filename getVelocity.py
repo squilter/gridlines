@@ -22,10 +22,10 @@ from uav_msgs.msg import GridLinePosPost
 date = str(time.time()) #so we make a unique log each run
 date = date[:-2] #substringing the last two decimal places off
 
-os.system('../test.sh '+date) #passing in the unique label as input
+os.system('../comm/runMavproxy.sh '+date) #passing in the unique label as input
 
-#myFile = '/home/sam/Desktop/pixhawk/logs/quadlog'+date+'_decode.txt'
-myFile = '../logs/quadlog_decode.txt'
+myFile = '../comm/logs/quadlog'+date+'_decode.txt'
+#myFile = '../comm/logs/quadlog_decode.txt'
 
 print "Preparing to parse "+myFile
 with open(myFile) as f:
