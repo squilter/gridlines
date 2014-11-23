@@ -5,6 +5,7 @@ from subprocess import Popen
 import os
 import time
 import rospy
+import sys
 from uav_msgs.msg import OpticalFlowPost
 from uav_msgs.msg import GridLinePosPost
 # probably need to follow http://wiki.ros.org/ROSNodeTutorialPython to get these msgs to work
@@ -18,14 +19,16 @@ from uav_msgs.msg import GridLinePosPost
 #mpstate.continue_mode = False
 #mavproxy.process_stdin('status GPS_RAW_INT')
 
+#ROOT = '/home/sam/Desktop/pixhawk/src/comm'
+ROOT = os.path.dirname(os.path.abspath(__file__))
 
 date = str(time.time()) #so we make a unique log each run
-date = date[:3] #substringing the last two decimal places and decimal off
+date = date[:-3] #substringing the last two decimal places and decimal off
 
-os.system('../comm/runMavproxy.sh '+date) #passing in the unique label as input
+os.system(ROOT+'/runMavproxy.sh '+date+' '+ROOT) #passing in the unique label as input, and the root
 
-myFile = '../comm/logs/quadlog'+date+'_decode.txt'
-#myFile = '../comm/logs/quadlog_decode.txt'
+myFile = ROOT+'/logs/quadlog'+date+'_decode.txt'
+#myFile = ROOT+'../comm/logs/quadlog_decode.txt'
 
 print "Preparing to parse "+myFile
 with open(myFile) as f:

@@ -1,16 +1,22 @@
 #!/bin/bash
 invalue="$1"
+rootvalue="$2"
 if [[ "$invalue" = "" ]]; then
 	invalue="badvalue"
 	# print "$invalue"
 fi
+if [[ "$rootvalue" = "" ]]; then
+	rootvalue="badroot"
+	# print "$invalue"
+fi
 
-quadlog='../comm/logs/quadlog'
+quadlog='/logs/quadlog'
+quadfull=$rootvalue$quadlog
 dottxt='.txt'
 decode='_decode'
 
-myLog=$quadlog$invalue$dottxt
-myLogDecode=$quadlog$invalue$decode$dottxt
+myLog=$quadfull$invalue$dottxt
+myLogDecode=$quadfull$invalue$decode$dottxt
 
 #echo $myLog
 mavproxy.py --master=/dev/ttyUSB0 --baudrate=57600 --logfile=$myLog --cmd='status GPS_RAW_INT;exit'
