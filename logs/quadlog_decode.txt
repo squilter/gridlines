@@ -1,0 +1,1045 @@
+2014-11-12 21:51:20.49: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:20.49: VFR_HUD {airspeed : 0.370000004768, groundspeed : 0.370000004768, heading : 41, throttle : 0, alt : 0.310000002384, climb : 0.0}
+2014-11-12 21:51:20.49: AHRS {omegaIx : 0.00551157910377, omegaIy : -0.0110573181883, omegaIz : -0.0015903605381, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.00035976950312, error_yaw : 0.00365196657367}
+2014-11-12 21:51:20.49: HWSTATUS {Vcc : 5198, I2Cerr : 0}
+2014-11-12 21:51:20.49: SYSTEM_TIME {time_unix_usec : 1415847080732000, time_boot_ms : 3672182}
+2014-11-12 21:51:20.49: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:20.49: REQUEST_DATA_STREAM {target_system : 1, target_component : 1, req_stream_id : 0, req_message_rate : 4, start_stop : 1}
+2014-11-12 21:51:20.49: RAW_IMU {time_usec : 3669616015, xacc : 7, yacc : -2, zacc : -1017, xgyro : -5, ygyro : 10, zgyro : 1, xmag : 96, ymag : -145, zmag : 347}
+2014-11-12 21:51:20.49: SCALED_IMU2 {time_boot_ms : 3672480, xacc : 25, yacc : 32, zacc : -998, xgyro : 0, ygyro : -18, zgyro : 21, xmag : 11, ymag : -298, zmag : 372}
+2014-11-12 21:51:20.49: SCALED_PRESSURE {time_boot_ms : 3672480, press_abs : 1014.75, press_diff : -0.0499999970198, temperature : 4979}
+2014-11-12 21:51:20.49: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101475, raw_temp : 4979, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:20.49: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 83, voltage_battery : 11478, current_battery : 15, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:20.50: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:20.50: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:20.51: GPS_RAW_INT {time_usec : 3672470000, fix_type : 3, lat : 423616046, lon : -710968568, alt : 240180, eph : 220, epv : 65535, vel : 49, cog : 9734, satellites_visible : 5}
+2014-11-12 21:51:20.51: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:20.51: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:20.53: GLOBAL_POSITION_INT {time_boot_ms : 3672470, lat : 423616038, lon : -710968463, alt : 240180, relative_alt : 310, vx : -13, vy : 47, vz : -52, hdg : 4137}
+2014-11-12 21:51:20.54: SERVO_OUTPUT_RAW {time_usec : 3669617475, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:20.54: RC_CHANNELS_RAW {time_boot_ms : 3672482, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:20.57: ATTITUDE {time_boot_ms : 3672482, roll : 0.00134695426095, pitch : 0.0069402246736, yaw : 0.722184598446, rollspeed : -0.00565744377673, pitchspeed : 0.0105139911175, yawspeed : 0.00102914683521}
+2014-11-12 21:51:20.57: VFR_HUD {airspeed : 0.489999979734, groundspeed : 0.489999979734, heading : 41, throttle : 0, alt : 0.310000002384, climb : 0.0}
+2014-11-12 21:51:20.58: RADIO {rssi : 92, remrssi : 112, txbuf : 100, noise : 33, remnoise : 19, rxerrors : 922, fixed : 684}
+2014-11-12 21:51:20.59: RADIO_STATUS {rssi : 92, remrssi : 112, txbuf : 100, noise : 33, remnoise : 19, rxerrors : 922, fixed : 684}
+2014-11-12 21:51:20.68: AHRS {omegaIx : 0.00551157910377, omegaIy : -0.0110573181883, omegaIz : -0.0015903605381, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000250683980994, error_yaw : 0.0045368024148}
+2014-11-12 21:51:20.72: HWSTATUS {Vcc : 5206, I2Cerr : 0}
+2014-11-12 21:51:20.72: SYSTEM_TIME {time_unix_usec : 1415847081032000, time_boot_ms : 3672482}
+2014-11-12 21:51:20.73: RAW_IMU {time_usec : 3669915627, xacc : 7, yacc : -2, zacc : -1018, xgyro : -5, ygyro : 10, zgyro : 2, xmag : 99, ymag : -148, zmag : 347}
+2014-11-12 21:51:20.73: SCALED_IMU2 {time_boot_ms : 3672780, xacc : 31, yacc : 24, zacc : -999, xgyro : 7, ygyro : -13, zgyro : 14, xmag : 10, ymag : -298, zmag : 369}
+2014-11-12 21:51:20.74: SCALED_PRESSURE {time_boot_ms : 3672780, press_abs : 1014.77490234, press_diff : -0.025078125298, temperature : 4980}
+2014-11-12 21:51:20.75: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101477, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:20.76: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 87, voltage_battery : 11485, current_battery : 15, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:20.76: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:20.79: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:20.80: GPS_RAW_INT {time_usec : 3672670000, fix_type : 3, lat : 423616051, lon : -710968568, alt : 240040, eph : 220, epv : 65535, vel : 40, cog : 9734, satellites_visible : 5}
+2014-11-12 21:51:20.80: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:20.81: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:20.83: GLOBAL_POSITION_INT {time_boot_ms : 3672670, lat : 423616025, lon : -710968420, alt : 240040, relative_alt : 320, vx : -4, vy : 39, vz : -48, hdg : 4136}
+2014-11-12 21:51:20.83: SERVO_OUTPUT_RAW {time_usec : 3669916881, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:20.84: RC_CHANNELS_RAW {time_boot_ms : 3672781, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:20.86: ATTITUDE {time_boot_ms : 3672781, roll : 0.00137906498276, pitch : 0.006915865466, yaw : 0.721961379051, rollspeed : -0.00582848675549, pitchspeed : 0.0109893158078, yawspeed : 0.00211432762444}
+2014-11-12 21:51:20.87: VFR_HUD {airspeed : 0.399999976158, groundspeed : 0.399999976158, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:20.88: AHRS {omegaIx : 0.00551157910377, omegaIy : -0.0110573181883, omegaIz : -0.0015903605381, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000351061898982, error_yaw : 0.00183053314686}
+2014-11-12 21:51:20.88: HWSTATUS {Vcc : 5217, I2Cerr : 0}
+2014-11-12 21:51:20.90: SYSTEM_TIME {time_unix_usec : 1415847081332000, time_boot_ms : 3672782}
+2014-11-12 21:51:20.93: RAW_IMU {time_usec : 3670215768, xacc : 6, yacc : -1, zacc : -1019, xgyro : -5, ygyro : 10, zgyro : 1, xmag : 97, ymag : -145, zmag : 347}
+2014-11-12 21:51:20.94: SCALED_IMU2 {time_boot_ms : 3673080, xacc : 30, yacc : 30, zacc : -1006, xgyro : 8, ygyro : -14, zgyro : 17, xmag : 10, ymag : -297, zmag : 371}
+2014-11-12 21:51:20.94: SCALED_PRESSURE {time_boot_ms : 3673080, press_abs : 1014.75823975, press_diff : -0.0417187474668, temperature : 4980}
+2014-11-12 21:51:20.97: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101475, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:20.98: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 84, voltage_battery : 11443, current_battery : 17, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:20.98: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:20.98: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:21.01: GPS_RAW_INT {time_usec : 3673070000, fix_type : 3, lat : 423616063, lon : -710968632, alt : 240580, eph : 220, epv : 65535, vel : 25, cog : 9734, satellites_visible : 5}
+2014-11-12 21:51:21.02: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:21.02: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:21.12: GLOBAL_POSITION_INT {time_boot_ms : 3673070, lat : 423616018, lon : -710968398, alt : 240580, relative_alt : 300, vx : 12, vy : -22, vz : -18, hdg : 4137}
+2014-11-12 21:51:21.15: SERVO_OUTPUT_RAW {time_usec : 3670217004, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:21.16: RC_CHANNELS_RAW {time_boot_ms : 3673081, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:21.16: ATTITUDE {time_boot_ms : 3673081, roll : 0.00143109983765, pitch : 0.00696740625426, yaw : 0.722192704678, rollspeed : -0.00542556121945, pitchspeed : 0.0109816528857, yawspeed : 0.00107208266854}
+2014-11-12 21:51:21.18: VFR_HUD {airspeed : 0.25, groundspeed : 0.25, heading : 41, throttle : 0, alt : 0.299999982119, climb : 0.0}
+2014-11-12 21:51:21.19: AHRS {omegaIx : 0.00551157910377, omegaIy : -0.0110573181883, omegaIz : -0.0015903605381, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000388766726246, error_yaw : 0.00389923644252}
+2014-11-12 21:51:21.19: HWSTATUS {Vcc : 5215, I2Cerr : 0}
+2014-11-12 21:51:21.19: SYSTEM_TIME {time_unix_usec : 1415847081652000, time_boot_ms : 3673082}
+2014-11-12 21:51:21.23: RAW_IMU {time_usec : 3670515746, xacc : 7, yacc : 0, zacc : -1017, xgyro : -5, ygyro : 11, zgyro : 1, xmag : 96, ymag : -145, zmag : 345}
+2014-11-12 21:51:21.24: SCALED_IMU2 {time_boot_ms : 3673380, xacc : 32, yacc : 22, zacc : -1013, xgyro : 3, ygyro : -11, zgyro : 19, xmag : 11, ymag : -296, zmag : 369}
+2014-11-12 21:51:21.24: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:21.24: SCALED_PRESSURE {time_boot_ms : 3673380, press_abs : 1014.76855469, press_diff : -0.031406249851, temperature : 4979}
+2014-11-12 21:51:21.25: PARAM_REQUEST_LIST {target_system : 1, target_component : 1}
+2014-11-12 21:51:21.32: RADIO {rssi : 94, remrssi : 112, txbuf : 100, noise : 45, remnoise : 19, rxerrors : 922, fixed : 684}
+2014-11-12 21:51:21.32: RADIO_STATUS {rssi : 94, remrssi : 112, txbuf : 100, noise : 45, remnoise : 19, rxerrors : 922, fixed : 684}
+2014-11-12 21:51:21.39: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4979, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:21.40: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 85, voltage_battery : 11460, current_battery : 16, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:21.40: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:21.40: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:21.41: GPS_RAW_INT {time_usec : 3673270000, fix_type : 3, lat : 423616066, lon : -710968637, alt : 240600, eph : 220, epv : 65535, vel : 27, cog : 9734, satellites_visible : 5}
+2014-11-12 21:51:21.45: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:21.45: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:21.46: GLOBAL_POSITION_INT {time_boot_ms : 3673270, lat : 423616016, lon : -710968402, alt : 240600, relative_alt : 310, vx : 13, vy : -22, vz : -14, hdg : 4136}
+2014-11-12 21:51:21.55: SERVO_OUTPUT_RAW {time_usec : 3670517168, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:21.58: RC_CHANNELS_RAW {time_boot_ms : 3673382, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:21.59: ATTITUDE {time_boot_ms : 3673382, roll : 0.00137449614704, pitch : 0.00693707168102, yaw : 0.721962451935, rollspeed : -0.00533498823643, pitchspeed : 0.0114723145962, yawspeed : 0.00122321676463}
+2014-11-12 21:51:21.60: VFR_HUD {airspeed : 0.269999980927, groundspeed : 0.269999980927, heading : 41, throttle : 0, alt : 0.310000002384, climb : 0.0}
+2014-11-12 21:51:21.61: AHRS {omegaIx : 0.00551157910377, omegaIy : -0.0110573181883, omegaIz : -0.0015903605381, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000449250161182, error_yaw : 0.00192983949091}
+2014-11-12 21:51:21.61: HWSTATUS {Vcc : 5206, I2Cerr : 0}
+2014-11-12 21:51:21.62: SYSTEM_TIME {time_unix_usec : 1415847081932000, time_boot_ms : 3673382}
+2014-11-12 21:51:21.62: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:21.66: STATUSTEXT {severity : 1, text : ArduCopter V3.1.5 (ee63c88b)}
+2014-11-12 21:51:21.79: STATUSTEXT {severity : 1, text : PX4: 9eb74dea NuttX: 65cd7f85}
+2014-11-12 21:51:21.82: STATUSTEXT {severity : 1, text : PX4v2 2D001A00 17473235 32303436}
+2014-11-12 21:51:21.83: PARAM_VALUE {param_id : SYSID_SW_MREV, param_value : 120.0, param_type : 4, param_count : 331, param_index : 0}
+2014-11-12 21:51:21.84: PARAM_VALUE {param_id : SYSID_SW_TYPE, param_value : 10.0, param_type : 2, param_count : 331, param_index : 1}
+2014-11-12 21:51:21.84: PARAM_VALUE {param_id : SYSID_THISMAV, param_value : 1.0, param_type : 4, param_count : 331, param_index : 2}
+2014-11-12 21:51:21.89: PARAM_VALUE {param_id : SYSID_MYGCS, param_value : 255.0, param_type : 4, param_count : 331, param_index : 3}
+2014-11-12 21:51:21.89: PARAM_VALUE {param_id : SERIAL1_BAUD, param_value : 57.0, param_type : 2, param_count : 331, param_index : 4}
+2014-11-12 21:51:21.90: PARAM_VALUE {param_id : SERIAL2_BAUD, param_value : 57.0, param_type : 2, param_count : 331, param_index : 5}
+2014-11-12 21:51:21.92: PARAM_VALUE {param_id : TELEM_DELAY, param_value : 0.0, param_type : 2, param_count : 331, param_index : 6}
+2014-11-12 21:51:21.93: PARAM_VALUE {param_id : RTL_ALT, param_value : 1000.0, param_type : 4, param_count : 331, param_index : 7}
+2014-11-12 21:51:21.93: PARAM_VALUE {param_id : SONAR_ENABLE, param_value : 0.0, param_type : 2, param_count : 331, param_index : 8}
+2014-11-12 21:51:21.95: PARAM_VALUE {param_id : SONAR_TYPE, param_value : 0.0, param_type : 2, param_count : 331, param_index : 9}
+2014-11-12 21:51:21.96: PARAM_VALUE {param_id : SONAR_GAIN, param_value : 0.800000011921, param_type : 9, param_count : 331, param_index : 10}
+2014-11-12 21:51:21.96: PARAM_VALUE {param_id : FS_BATT_ENABLE, param_value : 1.0, param_type : 2, param_count : 331, param_index : 11}
+2014-11-12 21:51:21.99: PARAM_VALUE {param_id : FS_BATT_VOLTAGE, param_value : 10.5, param_type : 9, param_count : 331, param_index : 12}
+2014-11-12 21:51:22.02: PARAM_VALUE {param_id : FS_BATT_MAH, param_value : 0.0, param_type : 9, param_count : 331, param_index : 13}
+2014-11-12 21:51:22.03: PARAM_VALUE {param_id : FS_GPS_ENABLE, param_value : 1.0, param_type : 2, param_count : 331, param_index : 14}
+2014-11-12 21:51:22.03: PARAM_VALUE {param_id : FS_GCS_ENABLE, param_value : 0.0, param_type : 2, param_count : 331, param_index : 15}
+2014-11-12 21:51:22.05: PARAM_VALUE {param_id : GPS_HDOP_GOOD, param_value : 200.0, param_type : 4, param_count : 331, param_index : 16}
+2014-11-12 21:51:22.06: PARAM_VALUE {param_id : MAG_ENABLE, param_value : 1.0, param_type : 2, param_count : 331, param_index : 17}
+2014-11-12 21:51:22.07: PARAM_VALUE {param_id : FLOW_ENABLE, param_value : 0.0, param_type : 2, param_count : 331, param_index : 18}
+2014-11-12 21:51:22.11: PARAM_VALUE {param_id : SUPER_SIMPLE, param_value : 0.0, param_type : 2, param_count : 331, param_index : 19}
+2014-11-12 21:51:22.11: PARAM_VALUE {param_id : RTL_ALT_FINAL, param_value : 0.0, param_type : 4, param_count : 331, param_index : 20}
+2014-11-12 21:51:22.12: PARAM_VALUE {param_id : RSSI_PIN, param_value : -1.0, param_type : 2, param_count : 331, param_index : 21}
+2014-11-12 21:51:22.14: PARAM_VALUE {param_id : RSSI_RANGE, param_value : 5.0, param_type : 9, param_count : 331, param_index : 22}
+2014-11-12 21:51:22.14: PARAM_VALUE {param_id : WP_YAW_BEHAVIOR, param_value : 2.0, param_type : 2, param_count : 331, param_index : 23}
+2014-11-12 21:51:22.15: PARAM_VALUE {param_id : WP_TOTAL, param_value : 3.0, param_type : 2, param_count : 331, param_index : 24}
+2014-11-12 21:51:22.17: PARAM_VALUE {param_id : WP_INDEX, param_value : 0.0, param_type : 2, param_count : 331, param_index : 25}
+2014-11-12 21:51:22.17: PARAM_VALUE {param_id : CIRCLE_RADIUS, param_value : 10.0, param_type : 4, param_count : 331, param_index : 26}
+2014-11-12 21:51:22.18: PARAM_VALUE {param_id : CIRCLE_RATE, param_value : 20.0, param_type : 9, param_count : 331, param_index : 27}
+2014-11-12 21:51:22.20: PARAM_VALUE {param_id : RTL_LOIT_TIME, param_value : 5000.0, param_type : 6, param_count : 331, param_index : 28}
+2014-11-12 21:51:22.24: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:22.24: PARAM_VALUE {param_id : LAND_SPEED, param_value : 49.0, param_type : 4, param_count : 331, param_index : 29}
+2014-11-12 21:51:22.25: PARAM_VALUE {param_id : PILOT_VELZ_MAX, param_value : 250.0, param_type : 4, param_count : 331, param_index : 30}
+2014-11-12 21:51:22.25: PARAM_VALUE {param_id : THR_MIN, param_value : 130.0, param_type : 4, param_count : 331, param_index : 31}
+2014-11-12 21:51:22.27: PARAM_VALUE {param_id : THR_MAX, param_value : 1000.0, param_type : 4, param_count : 331, param_index : 32}
+2014-11-12 21:51:22.28: PARAM_VALUE {param_id : FS_THR_ENABLE, param_value : 1.0, param_type : 2, param_count : 331, param_index : 33}
+2014-11-12 21:51:22.28: PARAM_VALUE {param_id : FS_THR_VALUE, param_value : 974.0, param_type : 4, param_count : 331, param_index : 34}
+2014-11-12 21:51:22.32: PARAM_VALUE {param_id : TRIM_THROTTLE, param_value : 566.0, param_type : 4, param_count : 331, param_index : 35}
+2014-11-12 21:51:22.33: PARAM_VALUE {param_id : THR_MID, param_value : 578.0, param_type : 4, param_count : 331, param_index : 36}
+2014-11-12 21:51:22.33: PARAM_VALUE {param_id : FLTMODE1, param_value : 0.0, param_type : 2, param_count : 331, param_index : 37}
+2014-11-12 21:51:22.35: PARAM_VALUE {param_id : FLTMODE2, param_value : 5.0, param_type : 2, param_count : 331, param_index : 38}
+2014-11-12 21:51:22.36: PARAM_VALUE {param_id : FLTMODE3, param_value : 3.0, param_type : 2, param_count : 331, param_index : 39}
+2014-11-12 21:51:22.37: PARAM_VALUE {param_id : FLTMODE4, param_value : 0.0, param_type : 2, param_count : 331, param_index : 40}
+2014-11-12 21:51:22.39: PARAM_VALUE {param_id : FLTMODE5, param_value : 2.0, param_type : 2, param_count : 331, param_index : 41}
+2014-11-12 21:51:22.39: PARAM_VALUE {param_id : FLTMODE6, param_value : 6.0, param_type : 2, param_count : 331, param_index : 42}
+2014-11-12 21:51:22.40: PARAM_VALUE {param_id : SIMPLE, param_value : 0.0, param_type : 2, param_count : 331, param_index : 43}
+2014-11-12 21:51:22.41: RADIO {rssi : 91, remrssi : 112, txbuf : 100, noise : 38, remnoise : 18, rxerrors : 922, fixed : 684}
+2014-11-12 21:51:22.41: RADIO_STATUS {rssi : 91, remrssi : 112, txbuf : 100, noise : 38, remnoise : 18, rxerrors : 922, fixed : 684}
+2014-11-12 21:51:22.47: PARAM_VALUE {param_id : LOG_BITMASK, param_value : 32767.0, param_type : 4, param_count : 331, param_index : 44}
+2014-11-12 21:51:22.47: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:22.48: PARAM_VALUE {param_id : ESC, param_value : 0.0, param_type : 2, param_count : 331, param_index : 45}
+2014-11-12 21:51:22.49: PARAM_VALUE {param_id : TUNE, param_value : 0.0, param_type : 2, param_count : 331, param_index : 46}
+2014-11-12 21:51:22.49: PARAM_VALUE {param_id : TUNE_LOW, param_value : 0.0, param_type : 4, param_count : 331, param_index : 47}
+2014-11-12 21:51:22.50: PARAM_VALUE {param_id : TUNE_HIGH, param_value : 1000.0, param_type : 4, param_count : 331, param_index : 48}
+2014-11-12 21:51:22.54: PARAM_VALUE {param_id : FRAME, param_value : 2.0, param_type : 2, param_count : 331, param_index : 49}
+2014-11-12 21:51:22.55: PARAM_VALUE {param_id : CH7_OPT, param_value : 0.0, param_type : 2, param_count : 331, param_index : 50}
+2014-11-12 21:51:22.55: PARAM_VALUE {param_id : CH8_OPT, param_value : 0.0, param_type : 2, param_count : 331, param_index : 51}
+2014-11-12 21:51:22.57: PARAM_VALUE {param_id : ARMING_CHECK, param_value : 0.0, param_type : 2, param_count : 331, param_index : 52}
+2014-11-12 21:51:22.58: PARAM_VALUE {param_id : ANGLE_MAX, param_value : 3000.0, param_type : 4, param_count : 331, param_index : 53}
+2014-11-12 21:51:22.58: PARAM_VALUE {param_id : ANGLE_RATE_MAX, param_value : 18000.0, param_type : 6, param_count : 331, param_index : 54}
+2014-11-12 21:51:22.60: PARAM_VALUE {param_id : RC_FEEL_RP, param_value : 75.0, param_type : 2, param_count : 331, param_index : 55}
+2014-11-12 21:51:22.61: PARAM_VALUE {param_id : RC1_MIN, param_value : 996.0, param_type : 4, param_count : 331, param_index : 56}
+2014-11-12 21:51:22.61: PARAM_VALUE {param_id : RC1_TRIM, param_value : 0.0, param_type : 4, param_count : 331, param_index : 57}
+2014-11-12 21:51:22.64: PARAM_VALUE {param_id : RC1_MAX, param_value : 2015.0, param_type : 4, param_count : 331, param_index : 58}
+2014-11-12 21:51:22.67: PARAM_VALUE {param_id : RC1_REV, param_value : 1.0, param_type : 2, param_count : 331, param_index : 59}
+2014-11-12 21:51:22.68: PARAM_VALUE {param_id : RC1_DZ, param_value : 30.0, param_type : 4, param_count : 331, param_index : 60}
+2014-11-12 21:51:22.69: PARAM_VALUE {param_id : RC2_MIN, param_value : 994.0, param_type : 4, param_count : 331, param_index : 61}
+2014-11-12 21:51:22.71: PARAM_VALUE {param_id : RC2_TRIM, param_value : 0.0, param_type : 4, param_count : 331, param_index : 62}
+2014-11-12 21:51:22.71: PARAM_VALUE {param_id : RC2_MAX, param_value : 2016.0, param_type : 4, param_count : 331, param_index : 63}
+2014-11-12 21:51:22.72: PARAM_VALUE {param_id : RC2_REV, param_value : 1.0, param_type : 2, param_count : 331, param_index : 64}
+2014-11-12 21:51:22.76: PARAM_VALUE {param_id : RC2_DZ, param_value : 30.0, param_type : 4, param_count : 331, param_index : 65}
+2014-11-12 21:51:22.76: PARAM_VALUE {param_id : RC3_MIN, param_value : 1104.0, param_type : 4, param_count : 331, param_index : 66}
+2014-11-12 21:51:22.77: PARAM_VALUE {param_id : RC3_TRIM, param_value : 1105.0, param_type : 4, param_count : 331, param_index : 67}
+2014-11-12 21:51:22.79: PARAM_VALUE {param_id : RC3_MAX, param_value : 2016.0, param_type : 4, param_count : 331, param_index : 68}
+2014-11-12 21:51:22.80: PARAM_VALUE {param_id : RC3_REV, param_value : 1.0, param_type : 2, param_count : 331, param_index : 69}
+2014-11-12 21:51:22.80: PARAM_VALUE {param_id : RC3_DZ, param_value : 30.0, param_type : 4, param_count : 331, param_index : 70}
+2014-11-12 21:51:22.82: PARAM_VALUE {param_id : RC4_MIN, param_value : 994.0, param_type : 4, param_count : 331, param_index : 71}
+2014-11-12 21:51:22.82: PARAM_VALUE {param_id : RC4_TRIM, param_value : 0.0, param_type : 4, param_count : 331, param_index : 72}
+2014-11-12 21:51:22.83: PARAM_VALUE {param_id : RC4_MAX, param_value : 2017.0, param_type : 4, param_count : 331, param_index : 73}
+2014-11-12 21:51:22.86: PARAM_VALUE {param_id : RC4_REV, param_value : 1.0, param_type : 2, param_count : 331, param_index : 74}
+2014-11-12 21:51:22.90: PARAM_VALUE {param_id : RC4_DZ, param_value : 40.0, param_type : 4, param_count : 331, param_index : 75}
+2014-11-12 21:51:22.91: PARAM_VALUE {param_id : RC5_MIN, param_value : 1146.0, param_type : 4, param_count : 331, param_index : 76}
+2014-11-12 21:51:22.91: PARAM_VALUE {param_id : RC5_TRIM, param_value : 1683.0, param_type : 4, param_count : 331, param_index : 77}
+2014-11-12 21:51:22.93: PARAM_VALUE {param_id : RC5_MAX, param_value : 1863.0, param_type : 4, param_count : 331, param_index : 78}
+2014-11-12 21:51:22.94: PARAM_VALUE {param_id : RC5_REV, param_value : 1.0, param_type : 2, param_count : 331, param_index : 79}
+2014-11-12 21:51:22.94: PARAM_VALUE {param_id : RC5_DZ, param_value : 0.0, param_type : 4, param_count : 331, param_index : 80}
+2014-11-12 21:51:22.97: PARAM_VALUE {param_id : RC5_FUNCTION, param_value : 0.0, param_type : 2, param_count : 331, param_index : 81}
+2014-11-12 21:51:22.98: PARAM_VALUE {param_id : RC6_MIN, param_value : 992.0, param_type : 4, param_count : 331, param_index : 82}
+2014-11-12 21:51:22.99: PARAM_VALUE {param_id : RC6_TRIM, param_value : 1500.0, param_type : 4, param_count : 331, param_index : 83}
+2014-11-12 21:51:23.04: PARAM_VALUE {param_id : RC6_FUNCTION, param_value : 0.0, param_type : 2, param_count : 331, param_index : 87}
+2014-11-12 21:51:23.04: PARAM_VALUE {param_id : RC7_MIN, param_value : 992.0, param_type : 4, param_count : 331, param_index : 88}
+2014-11-12 21:51:23.05: PARAM_VALUE {param_id : RC7_TRIM, param_value : 992.0, param_type : 4, param_count : 331, param_index : 89}
+2014-11-12 21:51:23.07: PARAM_VALUE {param_id : RC7_MAX, param_value : 2017.0, param_type : 4, param_count : 331, param_index : 90}
+2014-11-12 21:51:23.11: PARAM_VALUE {param_id : RC7_REV, param_value : 1.0, param_type : 2, param_count : 331, param_index : 91}
+2014-11-12 21:51:23.11: PARAM_VALUE {param_id : RC7_DZ, param_value : 0.0, param_type : 4, param_count : 331, param_index : 92}
+2014-11-12 21:51:23.12: PARAM_VALUE {param_id : RC7_FUNCTION, param_value : 0.0, param_type : 2, param_count : 331, param_index : 93}
+2014-11-12 21:51:23.14: PARAM_VALUE {param_id : RC8_MIN, param_value : 1503.0, param_type : 4, param_count : 331, param_index : 94}
+2014-11-12 21:51:23.14: PARAM_VALUE {param_id : RC8_TRIM, param_value : 1504.0, param_type : 4, param_count : 331, param_index : 95}
+2014-11-12 21:51:23.15: PARAM_VALUE {param_id : RC8_MAX, param_value : 1505.0, param_type : 4, param_count : 331, param_index : 96}
+2014-11-12 21:51:23.19: PARAM_VALUE {param_id : RC8_REV, param_value : 1.0, param_type : 2, param_count : 331, param_index : 97}
+2014-11-12 21:51:23.20: PARAM_VALUE {param_id : RC8_DZ, param_value : 0.0, param_type : 4, param_count : 331, param_index : 98}
+2014-11-12 21:51:23.20: PARAM_VALUE {param_id : RC8_FUNCTION, param_value : 0.0, param_type : 2, param_count : 331, param_index : 99}
+2014-11-12 21:51:23.22: PARAM_VALUE {param_id : RC9_MIN, param_value : 1000.0, param_type : 4, param_count : 331, param_index : 100}
+2014-11-12 21:51:23.23: PARAM_VALUE {param_id : RC9_TRIM, param_value : 1500.0, param_type : 4, param_count : 331, param_index : 101}
+2014-11-12 21:51:23.24: PARAM_VALUE {param_id : RC9_MAX, param_value : 1520.0, param_type : 4, param_count : 331, param_index : 102}
+2014-11-12 21:51:23.25: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:23.25: PARAM_VALUE {param_id : RC9_REV, param_value : 1.0, param_type : 2, param_count : 331, param_index : 103}
+2014-11-12 21:51:23.26: PARAM_VALUE {param_id : RC9_DZ, param_value : 0.0, param_type : 4, param_count : 331, param_index : 104}
+2014-11-12 21:51:23.27: PARAM_VALUE {param_id : RC9_FUNCTION, param_value : 7.0, param_type : 2, param_count : 331, param_index : 105}
+2014-11-12 21:51:23.27: RADIO {rssi : 91, remrssi : 112, txbuf : 100, noise : 43, remnoise : 19, rxerrors : 923, fixed : 684}
+2014-11-12 21:51:23.27: RADIO_STATUS {rssi : 91, remrssi : 112, txbuf : 100, noise : 43, remnoise : 19, rxerrors : 923, fixed : 684}
+2014-11-12 21:51:23.33: PARAM_VALUE {param_id : RC10_MIN, param_value : 1100.0, param_type : 4, param_count : 331, param_index : 106}
+2014-11-12 21:51:23.33: PARAM_VALUE {param_id : RC10_TRIM, param_value : 1500.0, param_type : 4, param_count : 331, param_index : 107}
+2014-11-12 21:51:23.34: PARAM_VALUE {param_id : RC10_MAX, param_value : 1900.0, param_type : 4, param_count : 331, param_index : 108}
+2014-11-12 21:51:23.36: PARAM_VALUE {param_id : RC10_REV, param_value : 1.0, param_type : 2, param_count : 331, param_index : 109}
+2014-11-12 21:51:23.36: PARAM_VALUE {param_id : RC10_DZ, param_value : 0.0, param_type : 4, param_count : 331, param_index : 110}
+2014-11-12 21:51:23.37: PARAM_VALUE {param_id : RC10_FUNCTION, param_value : 0.0, param_type : 2, param_count : 331, param_index : 111}
+2014-11-12 21:51:23.41: PARAM_VALUE {param_id : RC11_MIN, param_value : 1100.0, param_type : 4, param_count : 331, param_index : 112}
+2014-11-12 21:51:23.41: PARAM_VALUE {param_id : RC11_TRIM, param_value : 1500.0, param_type : 4, param_count : 331, param_index : 113}
+2014-11-12 21:51:23.42: PARAM_VALUE {param_id : RC11_MAX, param_value : 1900.0, param_type : 4, param_count : 331, param_index : 114}
+2014-11-12 21:51:23.44: PARAM_VALUE {param_id : RC11_REV, param_value : 1.0, param_type : 2, param_count : 331, param_index : 115}
+2014-11-12 21:51:23.45: PARAM_VALUE {param_id : RC11_DZ, param_value : 0.0, param_type : 4, param_count : 331, param_index : 116}
+2014-11-12 21:51:23.45: PARAM_VALUE {param_id : RC11_FUNCTION, param_value : 0.0, param_type : 2, param_count : 331, param_index : 117}
+2014-11-12 21:51:23.47: PARAM_VALUE {param_id : RC12_MIN, param_value : 1100.0, param_type : 4, param_count : 331, param_index : 118}
+2014-11-12 21:51:23.48: PARAM_VALUE {param_id : RC12_TRIM, param_value : 1500.0, param_type : 4, param_count : 331, param_index : 119}
+2014-11-12 21:51:23.48: PARAM_VALUE {param_id : RC12_MAX, param_value : 1900.0, param_type : 4, param_count : 331, param_index : 120}
+2014-11-12 21:51:23.51: PARAM_VALUE {param_id : RC12_REV, param_value : 1.0, param_type : 2, param_count : 331, param_index : 121}
+2014-11-12 21:51:23.55: PARAM_VALUE {param_id : RC12_DZ, param_value : 0.0, param_type : 4, param_count : 331, param_index : 122}
+2014-11-12 21:51:23.55: PARAM_VALUE {param_id : RC12_FUNCTION, param_value : 0.0, param_type : 2, param_count : 331, param_index : 123}
+2014-11-12 21:51:23.56: PARAM_VALUE {param_id : RC_SPEED, param_value : 490.0, param_type : 4, param_count : 331, param_index : 124}
+2014-11-12 21:51:23.58: PARAM_VALUE {param_id : ACRO_RP_P, param_value : 4.5, param_type : 9, param_count : 331, param_index : 125}
+2014-11-12 21:51:23.58: PARAM_VALUE {param_id : ACRO_YAW_P, param_value : 4.5, param_type : 9, param_count : 331, param_index : 126}
+2014-11-12 21:51:23.59: PARAM_VALUE {param_id : ACRO_BAL_ROLL, param_value : 1.0, param_type : 9, param_count : 331, param_index : 127}
+2014-11-12 21:51:23.63: PARAM_VALUE {param_id : ACRO_BAL_PITCH, param_value : 1.0, param_type : 9, param_count : 331, param_index : 128}
+2014-11-12 21:51:23.63: PARAM_VALUE {param_id : ACRO_TRAINER, param_value : 2.0, param_type : 2, param_count : 331, param_index : 129}
+2014-11-12 21:51:23.64: PARAM_VALUE {param_id : RATE_RLL_P, param_value : 0.142499998212, param_type : 9, param_count : 331, param_index : 130}
+2014-11-12 21:51:23.66: PARAM_VALUE {param_id : RATE_RLL_I, param_value : 0.142499998212, param_type : 9, param_count : 331, param_index : 131}
+2014-11-12 21:51:23.67: PARAM_VALUE {param_id : RATE_RLL_D, param_value : 0.00875000096858, param_type : 9, param_count : 331, param_index : 132}
+2014-11-12 21:51:23.67: PARAM_VALUE {param_id : RATE_RLL_IMAX, param_value : 500.0, param_type : 4, param_count : 331, param_index : 133}
+2014-11-12 21:51:23.70: PARAM_VALUE {param_id : RATE_PIT_P, param_value : 0.0949999913573, param_type : 9, param_count : 331, param_index : 134}
+2014-11-12 21:51:23.70: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:23.71: PARAM_VALUE {param_id : RATE_PIT_I, param_value : 0.0949999913573, param_type : 9, param_count : 331, param_index : 135}
+2014-11-12 21:51:23.71: PARAM_VALUE {param_id : RATE_PIT_D, param_value : 0.00774999987334, param_type : 9, param_count : 331, param_index : 136}
+2014-11-12 21:51:23.72: PARAM_VALUE {param_id : RATE_PIT_IMAX, param_value : 500.0, param_type : 4, param_count : 331, param_index : 137}
+2014-11-12 21:51:23.76: PARAM_VALUE {param_id : RATE_YAW_P, param_value : 0.20000000298, param_type : 9, param_count : 331, param_index : 138}
+2014-11-12 21:51:23.77: PARAM_VALUE {param_id : RATE_YAW_I, param_value : 0.019999999553, param_type : 9, param_count : 331, param_index : 139}
+2014-11-12 21:51:23.77: PARAM_VALUE {param_id : RATE_YAW_D, param_value : 0.0, param_type : 9, param_count : 331, param_index : 140}
+2014-11-12 21:51:23.79: PARAM_VALUE {param_id : RATE_YAW_IMAX, param_value : 800.0, param_type : 4, param_count : 331, param_index : 141}
+2014-11-12 21:51:23.80: PARAM_VALUE {param_id : LOITER_LAT_P, param_value : 1.0, param_type : 9, param_count : 331, param_index : 142}
+2014-11-12 21:51:23.80: PARAM_VALUE {param_id : LOITER_LAT_I, param_value : 0.5, param_type : 9, param_count : 331, param_index : 143}
+2014-11-12 21:51:23.84: PARAM_VALUE {param_id : LOITER_LAT_D, param_value : 0.0, param_type : 9, param_count : 331, param_index : 144}
+2014-11-12 21:51:23.85: PARAM_VALUE {param_id : LOITER_LAT_IMAX, param_value : 400.0, param_type : 4, param_count : 331, param_index : 145}
+2014-11-12 21:51:23.86: PARAM_VALUE {param_id : LOITER_LON_P, param_value : 1.0, param_type : 9, param_count : 331, param_index : 146}
+2014-11-12 21:51:23.88: PARAM_VALUE {param_id : LOITER_LON_I, param_value : 0.5, param_type : 9, param_count : 331, param_index : 147}
+2014-11-12 21:51:23.88: PARAM_VALUE {param_id : LOITER_LON_D, param_value : 0.0, param_type : 9, param_count : 331, param_index : 148}
+2014-11-12 21:51:23.89: PARAM_VALUE {param_id : LOITER_LON_IMAX, param_value : 400.0, param_type : 4, param_count : 331, param_index : 149}
+2014-11-12 21:51:23.91: PARAM_VALUE {param_id : THR_RATE_P, param_value : 5.0, param_type : 9, param_count : 331, param_index : 150}
+2014-11-12 21:51:23.91: PARAM_VALUE {param_id : THR_RATE_I, param_value : 0.0, param_type : 9, param_count : 331, param_index : 151}
+2014-11-12 21:51:23.92: PARAM_VALUE {param_id : THR_RATE_D, param_value : 0.0, param_type : 9, param_count : 331, param_index : 152}
+2014-11-12 21:51:23.95: PARAM_VALUE {param_id : THR_RATE_IMAX, param_value : 300.0, param_type : 4, param_count : 331, param_index : 153}
+2014-11-12 21:51:23.99: PARAM_VALUE {param_id : THR_ACCEL_P, param_value : 0.75, param_type : 9, param_count : 331, param_index : 154}
+2014-11-12 21:51:23.99: PARAM_VALUE {param_id : THR_ACCEL_I, param_value : 1.5, param_type : 9, param_count : 331, param_index : 155}
+2014-11-12 21:51:24.00: PARAM_VALUE {param_id : THR_ACCEL_D, param_value : 0.0, param_type : 9, param_count : 331, param_index : 156}
+2014-11-12 21:51:24.02: PARAM_VALUE {param_id : THR_ACCEL_IMAX, param_value : 500.0, param_type : 4, param_count : 331, param_index : 157}
+2014-11-12 21:51:24.02: PARAM_VALUE {param_id : OF_RLL_P, param_value : 2.5, param_type : 9, param_count : 331, param_index : 158}
+2014-11-12 21:51:24.03: PARAM_VALUE {param_id : OF_RLL_I, param_value : 0.5, param_type : 9, param_count : 331, param_index : 159}
+2014-11-12 21:51:24.06: PARAM_VALUE {param_id : OF_RLL_D, param_value : 0.119999997318, param_type : 9, param_count : 331, param_index : 160}
+2014-11-12 21:51:24.07: PARAM_VALUE {param_id : OF_RLL_IMAX, param_value : 100.0, param_type : 4, param_count : 331, param_index : 161}
+2014-11-12 21:51:24.07: PARAM_VALUE {param_id : OF_PIT_P, param_value : 2.5, param_type : 9, param_count : 331, param_index : 162}
+2014-11-12 21:51:24.09: PARAM_VALUE {param_id : OF_PIT_I, param_value : 0.5, param_type : 9, param_count : 331, param_index : 163}
+2014-11-12 21:51:24.10: PARAM_VALUE {param_id : OF_PIT_D, param_value : 0.119999997318, param_type : 9, param_count : 331, param_index : 164}
+2014-11-12 21:51:24.10: PARAM_VALUE {param_id : OF_PIT_IMAX, param_value : 100.0, param_type : 4, param_count : 331, param_index : 165}
+2014-11-12 21:51:24.12: PARAM_VALUE {param_id : STB_RLL_P, param_value : 10.1339998245, param_type : 9, param_count : 331, param_index : 166}
+2014-11-12 21:51:24.13: PARAM_VALUE {param_id : STB_RLL_I, param_value : 0.0, param_type : 9, param_count : 331, param_index : 167}
+2014-11-12 21:51:24.13: PARAM_VALUE {param_id : STB_RLL_IMAX, param_value : 0.0, param_type : 4, param_count : 331, param_index : 168}
+2014-11-12 21:51:24.16: PARAM_VALUE {param_id : STB_PIT_P, param_value : 7.40068292618, param_type : 9, param_count : 331, param_index : 169}
+2014-11-12 21:51:24.19: PARAM_VALUE {param_id : STB_PIT_I, param_value : 0.0, param_type : 9, param_count : 331, param_index : 170}
+2014-11-12 21:51:24.20: PARAM_VALUE {param_id : STB_PIT_IMAX, param_value : 0.0, param_type : 4, param_count : 331, param_index : 171}
+2014-11-12 21:51:24.21: PARAM_VALUE {param_id : STB_YAW_P, param_value : 6.0, param_type : 9, param_count : 331, param_index : 172}
+2014-11-12 21:51:24.22: PARAM_VALUE {param_id : STB_YAW_I, param_value : 0.0, param_type : 9, param_count : 331, param_index : 173}
+2014-11-12 21:51:24.23: PARAM_VALUE {param_id : STB_YAW_IMAX, param_value : 0.0, param_type : 4, param_count : 331, param_index : 174}
+2014-11-12 21:51:24.24: PARAM_VALUE {param_id : THR_ALT_P, param_value : 1.0, param_type : 9, param_count : 331, param_index : 175}
+2014-11-12 21:51:24.25: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:24.28: PARAM_VALUE {param_id : THR_ALT_I, param_value : 0.0, param_type : 9, param_count : 331, param_index : 176}
+2014-11-12 21:51:24.28: PARAM_VALUE {param_id : THR_ALT_IMAX, param_value : 300.0, param_type : 4, param_count : 331, param_index : 177}
+2014-11-12 21:51:24.29: PARAM_VALUE {param_id : HLD_LAT_P, param_value : 1.0, param_type : 9, param_count : 331, param_index : 178}
+2014-11-12 21:51:24.31: PARAM_VALUE {param_id : HLD_LAT_I, param_value : 0.0, param_type : 9, param_count : 331, param_index : 179}
+2014-11-12 21:51:24.31: PARAM_VALUE {param_id : HLD_LAT_IMAX, param_value : 0.0, param_type : 4, param_count : 331, param_index : 180}
+2014-11-12 21:51:24.32: PARAM_VALUE {param_id : HLD_LON_P, param_value : 1.0, param_type : 9, param_count : 331, param_index : 181}
+2014-11-12 21:51:24.34: PARAM_VALUE {param_id : HLD_LON_I, param_value : 0.0, param_type : 9, param_count : 331, param_index : 182}
+2014-11-12 21:51:24.35: PARAM_VALUE {param_id : HLD_LON_IMAX, param_value : 0.0, param_type : 4, param_count : 331, param_index : 183}
+2014-11-12 21:51:24.35: PARAM_VALUE {param_id : CAM_TRIGG_TYPE, param_value : 0.0, param_type : 2, param_count : 331, param_index : 184}
+2014-11-12 21:51:24.35: RADIO {rssi : 95, remrssi : 112, txbuf : 100, noise : 42, remnoise : 18, rxerrors : 923, fixed : 684}
+2014-11-12 21:51:24.36: RADIO_STATUS {rssi : 95, remrssi : 112, txbuf : 100, noise : 42, remnoise : 18, rxerrors : 923, fixed : 684}
+2014-11-12 21:51:24.41: PARAM_VALUE {param_id : CAM_DURATION, param_value : 10.0, param_type : 2, param_count : 331, param_index : 185}
+2014-11-12 21:51:24.42: PARAM_VALUE {param_id : CAM_SERVO_ON, param_value : 1300.0, param_type : 4, param_count : 331, param_index : 186}
+2014-11-12 21:51:24.42: PARAM_VALUE {param_id : CAM_SERVO_OFF, param_value : 1100.0, param_type : 4, param_count : 331, param_index : 187}
+2014-11-12 21:51:24.44: PARAM_VALUE {param_id : CAM_TRIGG_DIST, param_value : 0.0, param_type : 9, param_count : 331, param_index : 188}
+2014-11-12 21:51:24.45: PARAM_VALUE {param_id : RELAY_PIN, param_value : 54.0, param_type : 2, param_count : 331, param_index : 189}
+2014-11-12 21:51:24.45: PARAM_VALUE {param_id : RELAY_PIN2, param_value : -1.0, param_type : 2, param_count : 331, param_index : 190}
+2014-11-12 21:51:24.50: PARAM_VALUE {param_id : RELAY_PIN3, param_value : -1.0, param_type : 2, param_count : 331, param_index : 191}
+2014-11-12 21:51:24.50: PARAM_VALUE {param_id : RELAY_PIN4, param_value : -1.0, param_type : 2, param_count : 331, param_index : 192}
+2014-11-12 21:51:24.51: PARAM_VALUE {param_id : COMPASS_OFS_X, param_value : -65.2977371216, param_type : 9, param_count : 331, param_index : 193}
+2014-11-12 21:51:24.53: PARAM_VALUE {param_id : COMPASS_OFS_Y, param_value : -13.7608528137, param_type : 9, param_count : 331, param_index : 194}
+2014-11-12 21:51:24.53: PARAM_VALUE {param_id : COMPASS_OFS_Z, param_value : 14.5861968994, param_type : 9, param_count : 331, param_index : 195}
+2014-11-12 21:51:24.54: PARAM_VALUE {param_id : COMPASS_DEC, param_value : -0.251368045807, param_type : 9, param_count : 331, param_index : 196}
+2014-11-12 21:51:24.56: PARAM_VALUE {param_id : COMPASS_LEARN, param_value : 0.0, param_type : 2, param_count : 331, param_index : 197}
+2014-11-12 21:51:24.56: PARAM_VALUE {param_id : COMPASS_USE, param_value : 1.0, param_type : 2, param_count : 331, param_index : 198}
+2014-11-12 21:51:24.57: PARAM_VALUE {param_id : COMPASS_AUTODEC, param_value : 1.0, param_type : 2, param_count : 331, param_index : 199}
+2014-11-12 21:51:24.60: PARAM_VALUE {param_id : COMPASS_MOTCT, param_value : 0.0, param_type : 2, param_count : 331, param_index : 200}
+2014-11-12 21:51:24.63: PARAM_VALUE {param_id : COMPASS_MOT_X, param_value : 0.0, param_type : 9, param_count : 331, param_index : 201}
+2014-11-12 21:51:24.64: PARAM_VALUE {param_id : COMPASS_MOT_Y, param_value : 0.0, param_type : 9, param_count : 331, param_index : 202}
+2014-11-12 21:51:24.64: PARAM_VALUE {param_id : COMPASS_MOT_Z, param_value : 0.0, param_type : 9, param_count : 331, param_index : 203}
+2014-11-12 21:51:24.66: PARAM_VALUE {param_id : COMPASS_ORIENT, param_value : 0.0, param_type : 2, param_count : 331, param_index : 204}
+2014-11-12 21:51:24.67: PARAM_VALUE {param_id : COMPASS_EXTERNAL, param_value : 1.0, param_type : 2, param_count : 331, param_index : 205}
+2014-11-12 21:51:24.67: PARAM_VALUE {param_id : COMPASS_OFS2_X, param_value : 0.0, param_type : 9, param_count : 331, param_index : 206}
+2014-11-12 21:51:24.71: PARAM_VALUE {param_id : COMPASS_OFS2_Y, param_value : 0.0, param_type : 9, param_count : 331, param_index : 207}
+2014-11-12 21:51:24.72: PARAM_VALUE {param_id : COMPASS_OFS2_Z, param_value : 0.0, param_type : 9, param_count : 331, param_index : 208}
+2014-11-12 21:51:24.72: PARAM_VALUE {param_id : COMPASS_MOT2_X, param_value : 0.0, param_type : 9, param_count : 331, param_index : 209}
+2014-11-12 21:51:24.75: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:24.75: PARAM_VALUE {param_id : COMPASS_MOT2_Y, param_value : 0.0, param_type : 9, param_count : 331, param_index : 210}
+2014-11-12 21:51:24.76: PARAM_VALUE {param_id : COMPASS_MOT2_Z, param_value : 0.0, param_type : 9, param_count : 331, param_index : 211}
+2014-11-12 21:51:24.77: PARAM_VALUE {param_id : INS_PRODUCT_ID, param_value : 5.0, param_type : 4, param_count : 331, param_index : 212}
+2014-11-12 21:51:24.78: PARAM_VALUE {param_id : INS_ACCSCAL_X, param_value : 1.0, param_type : 9, param_count : 331, param_index : 213}
+2014-11-12 21:51:24.79: PARAM_VALUE {param_id : INS_ACCSCAL_Y, param_value : 1.0, param_type : 9, param_count : 331, param_index : 214}
+2014-11-12 21:51:24.79: PARAM_VALUE {param_id : INS_ACCSCAL_Z, param_value : 1.0, param_type : 9, param_count : 331, param_index : 215}
+2014-11-12 21:51:24.81: PARAM_VALUE {param_id : INS_ACCOFFS_X, param_value : -0.137072786689, param_type : 9, param_count : 331, param_index : 216}
+2014-11-12 21:51:24.85: PARAM_VALUE {param_id : INS_ACCOFFS_Y, param_value : -0.153725579381, param_type : 9, param_count : 331, param_index : 217}
+2014-11-12 21:51:24.85: PARAM_VALUE {param_id : INS_ACCOFFS_Z, param_value : -1.01396369934, param_type : 9, param_count : 331, param_index : 218}
+2014-11-12 21:51:24.86: PARAM_VALUE {param_id : INS_GYROFFS_X, param_value : -0.0163370147347, param_type : 9, param_count : 331, param_index : 219}
+2014-11-12 21:51:24.88: PARAM_VALUE {param_id : INS_GYROFFS_Y, param_value : 0.0268146060407, param_type : 9, param_count : 331, param_index : 220}
+2014-11-12 21:51:24.88: PARAM_VALUE {param_id : INS_GYROFFS_Z, param_value : -0.00898513011634, param_type : 9, param_count : 331, param_index : 221}
+2014-11-12 21:51:24.89: PARAM_VALUE {param_id : INS_MPU6K_FILTER, param_value : 0.0, param_type : 2, param_count : 331, param_index : 222}
+2014-11-12 21:51:24.93: PARAM_VALUE {param_id : INS_ACC2SCAL_X, param_value : 1.0, param_type : 9, param_count : 331, param_index : 223}
+2014-11-12 21:51:24.94: PARAM_VALUE {param_id : INS_ACC2SCAL_Y, param_value : 1.0, param_type : 9, param_count : 331, param_index : 224}
+2014-11-12 21:51:24.94: PARAM_VALUE {param_id : INS_ACC2SCAL_Z, param_value : 1.0, param_type : 9, param_count : 331, param_index : 225}
+2014-11-12 21:51:24.96: PARAM_VALUE {param_id : INS_ACC2OFFS_X, param_value : 1.2455508709, param_type : 9, param_count : 331, param_index : 226}
+2014-11-12 21:51:24.97: PARAM_VALUE {param_id : INS_ACC2OFFS_Y, param_value : 1.09506332874, param_type : 9, param_count : 331, param_index : 227}
+2014-11-12 21:51:24.97: PARAM_VALUE {param_id : INS_ACC2OFFS_Z, param_value : 1.02383422852, param_type : 9, param_count : 331, param_index : 228}
+2014-11-12 21:51:24.99: PARAM_VALUE {param_id : INS_GYR2OFFS_X, param_value : 0.00736665958539, param_type : 9, param_count : 331, param_index : 229}
+2014-11-12 21:51:25.00: PARAM_VALUE {param_id : INS_GYR2OFFS_Y, param_value : 0.0144863370806, param_type : 9, param_count : 331, param_index : 230}
+2014-11-12 21:51:25.01: PARAM_VALUE {param_id : INS_GYR2OFFS_Z, param_value : -0.00700116390362, param_type : 9, param_count : 331, param_index : 231}
+2014-11-12 21:51:25.03: PARAM_VALUE {param_id : INAV_TC_XY, param_value : 2.5, param_type : 9, param_count : 331, param_index : 232}
+2014-11-12 21:51:25.07: PARAM_VALUE {param_id : INAV_TC_Z, param_value : 5.0, param_type : 9, param_count : 331, param_index : 233}
+2014-11-12 21:51:25.08: PARAM_VALUE {param_id : WPNAV_SPEED, param_value : 462.0, param_type : 9, param_count : 331, param_index : 234}
+2014-11-12 21:51:25.08: PARAM_VALUE {param_id : WPNAV_RADIUS, param_value : 200.0, param_type : 9, param_count : 331, param_index : 235}
+2014-11-12 21:51:25.10: PARAM_VALUE {param_id : WPNAV_SPEED_UP, param_value : 250.0, param_type : 9, param_count : 331, param_index : 236}
+2014-11-12 21:51:25.11: PARAM_VALUE {param_id : WPNAV_SPEED_DN, param_value : 150.0, param_type : 9, param_count : 331, param_index : 237}
+2014-11-12 21:51:25.12: PARAM_VALUE {param_id : WPNAV_LOIT_SPEED, param_value : 600.0, param_type : 9, param_count : 331, param_index : 238}
+2014-11-12 21:51:25.15: PARAM_VALUE {param_id : WPNAV_ACCEL, param_value : 100.0, param_type : 9, param_count : 331, param_index : 239}
+2014-11-12 21:51:25.15: PARAM_VALUE {param_id : SR0_RAW_SENS, param_value : 0.0, param_type : 4, param_count : 331, param_index : 240}
+2014-11-12 21:51:25.16: PARAM_VALUE {param_id : SR0_EXT_STAT, param_value : 0.0, param_type : 4, param_count : 331, param_index : 241}
+2014-11-12 21:51:25.18: PARAM_VALUE {param_id : SR0_RC_CHAN, param_value : 0.0, param_type : 4, param_count : 331, param_index : 242}
+2014-11-12 21:51:25.19: PARAM_VALUE {param_id : SR0_RAW_CTRL, param_value : 0.0, param_type : 4, param_count : 331, param_index : 243}
+2014-11-12 21:51:25.19: PARAM_VALUE {param_id : SR0_POSITION, param_value : 0.0, param_type : 4, param_count : 331, param_index : 244}
+2014-11-12 21:51:25.21: PARAM_VALUE {param_id : SR0_EXTRA1, param_value : 0.0, param_type : 4, param_count : 331, param_index : 245}
+2014-11-12 21:51:25.22: PARAM_VALUE {param_id : SR0_EXTRA2, param_value : 0.0, param_type : 4, param_count : 331, param_index : 246}
+2014-11-12 21:51:25.22: PARAM_VALUE {param_id : SR0_EXTRA3, param_value : 0.0, param_type : 4, param_count : 331, param_index : 247}
+2014-11-12 21:51:25.24: PARAM_VALUE {param_id : SR0_PARAMS, param_value : 0.0, param_type : 4, param_count : 331, param_index : 248}
+2014-11-12 21:51:25.25: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:25.28: PARAM_VALUE {param_id : SR1_RAW_SENS, param_value : 4.0, param_type : 4, param_count : 331, param_index : 249}
+2014-11-12 21:51:25.29: PARAM_VALUE {param_id : SR1_EXT_STAT, param_value : 4.0, param_type : 4, param_count : 331, param_index : 250}
+2014-11-12 21:51:25.29: PARAM_VALUE {param_id : SR1_RC_CHAN, param_value : 4.0, param_type : 4, param_count : 331, param_index : 251}
+2014-11-12 21:51:25.31: PARAM_VALUE {param_id : SR1_RAW_CTRL, param_value : 4.0, param_type : 4, param_count : 331, param_index : 252}
+2014-11-12 21:51:25.32: PARAM_VALUE {param_id : SR1_POSITION, param_value : 4.0, param_type : 4, param_count : 331, param_index : 253}
+2014-11-12 21:51:25.32: PARAM_VALUE {param_id : SR1_EXTRA1, param_value : 4.0, param_type : 4, param_count : 331, param_index : 254}
+2014-11-12 21:51:25.36: PARAM_VALUE {param_id : SR1_EXTRA2, param_value : 4.0, param_type : 4, param_count : 331, param_index : 255}
+2014-11-12 21:51:25.37: PARAM_VALUE {param_id : SR1_EXTRA3, param_value : 4.0, param_type : 4, param_count : 331, param_index : 256}
+2014-11-12 21:51:25.37: PARAM_VALUE {param_id : SR1_PARAMS, param_value : 10.0, param_type : 4, param_count : 331, param_index : 257}
+2014-11-12 21:51:25.40: PARAM_VALUE {param_id : SR2_RAW_SENS, param_value : 0.0, param_type : 4, param_count : 331, param_index : 258}
+2014-11-12 21:51:25.40: PARAM_VALUE {param_id : SR2_EXT_STAT, param_value : 0.0, param_type : 4, param_count : 331, param_index : 259}
+2014-11-12 21:51:25.41: PARAM_VALUE {param_id : SR2_RC_CHAN, param_value : 0.0, param_type : 4, param_count : 331, param_index : 260}
+2014-11-12 21:51:25.43: PARAM_VALUE {param_id : SR2_RAW_CTRL, param_value : 0.0, param_type : 4, param_count : 331, param_index : 261}
+2014-11-12 21:51:25.43: PARAM_VALUE {param_id : SR2_POSITION, param_value : 0.0, param_type : 4, param_count : 331, param_index : 262}
+2014-11-12 21:51:25.44: PARAM_VALUE {param_id : SR2_EXTRA1, param_value : 0.0, param_type : 4, param_count : 331, param_index : 263}
+2014-11-12 21:51:25.44: RADIO {rssi : 95, remrssi : 112, txbuf : 100, noise : 43, remnoise : 18, rxerrors : 923, fixed : 684}
+2014-11-12 21:51:25.44: RADIO_STATUS {rssi : 95, remrssi : 112, txbuf : 100, noise : 43, remnoise : 18, rxerrors : 923, fixed : 684}
+2014-11-12 21:51:25.50: PARAM_VALUE {param_id : SR2_EXTRA2, param_value : 0.0, param_type : 4, param_count : 331, param_index : 264}
+2014-11-12 21:51:25.50: PARAM_VALUE {param_id : SR2_EXTRA3, param_value : 0.0, param_type : 4, param_count : 331, param_index : 265}
+2014-11-12 21:51:25.51: PARAM_VALUE {param_id : SR2_PARAMS, param_value : 0.0, param_type : 4, param_count : 331, param_index : 266}
+2014-11-12 21:51:25.54: PARAM_VALUE {param_id : AHRS_GPS_GAIN, param_value : 1.0, param_type : 9, param_count : 331, param_index : 267}
+2014-11-12 21:51:25.54: PARAM_VALUE {param_id : AHRS_GPS_USE, param_value : 1.0, param_type : 2, param_count : 331, param_index : 268}
+2014-11-12 21:51:25.55: PARAM_VALUE {param_id : AHRS_YAW_P, param_value : 0.10000000149, param_type : 9, param_count : 331, param_index : 269}
+2014-11-12 21:51:25.55: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:25.58: PARAM_VALUE {param_id : AHRS_RP_P, param_value : 0.10000000149, param_type : 9, param_count : 331, param_index : 270}
+2014-11-12 21:51:25.59: PARAM_VALUE {param_id : AHRS_WIND_MAX, param_value : 0.0, param_type : 2, param_count : 331, param_index : 271}
+2014-11-12 21:51:25.59: PARAM_VALUE {param_id : AHRS_TRIM_X, param_value : 0.0, param_type : 9, param_count : 331, param_index : 272}
+2014-11-12 21:51:25.61: PARAM_VALUE {param_id : AHRS_TRIM_Y, param_value : 0.0, param_type : 9, param_count : 331, param_index : 273}
+2014-11-12 21:51:25.62: PARAM_VALUE {param_id : AHRS_TRIM_Z, param_value : 0.0, param_type : 9, param_count : 331, param_index : 274}
+2014-11-12 21:51:25.63: PARAM_VALUE {param_id : AHRS_ORIENTATION, param_value : 0.0, param_type : 2, param_count : 331, param_index : 275}
+2014-11-12 21:51:25.65: PARAM_VALUE {param_id : AHRS_COMP_BETA, param_value : 0.10000000149, param_type : 9, param_count : 331, param_index : 276}
+2014-11-12 21:51:25.65: PARAM_VALUE {param_id : AHRS_GPS_MINSATS, param_value : 6.0, param_type : 2, param_count : 331, param_index : 277}
+2014-11-12 21:51:25.66: PARAM_VALUE {param_id : AHRS_GPS_DELAY, param_value : 1.0, param_type : 2, param_count : 331, param_index : 278}
+2014-11-12 21:51:25.68: PARAM_VALUE {param_id : MNT_MODE, param_value : 3.0, param_type : 2, param_count : 331, param_index : 279}
+2014-11-12 21:51:25.72: PARAM_VALUE {param_id : MNT_RETRACT_X, param_value : 0.0, param_type : 9, param_count : 331, param_index : 280}
+2014-11-12 21:51:25.72: PARAM_VALUE {param_id : MNT_RETRACT_Y, param_value : 0.0, param_type : 9, param_count : 331, param_index : 281}
+2014-11-12 21:51:25.73: PARAM_VALUE {param_id : MNT_RETRACT_Z, param_value : 0.0, param_type : 9, param_count : 331, param_index : 282}
+2014-11-12 21:51:25.75: PARAM_VALUE {param_id : MNT_NEUTRAL_X, param_value : 0.0, param_type : 9, param_count : 331, param_index : 283}
+2014-11-12 21:51:25.75: PARAM_VALUE {param_id : MNT_NEUTRAL_Y, param_value : 0.0, param_type : 9, param_count : 331, param_index : 284}
+2014-11-12 21:51:25.76: PARAM_VALUE {param_id : MNT_NEUTRAL_Z, param_value : 0.0, param_type : 9, param_count : 331, param_index : 285}
+2014-11-12 21:51:25.80: PARAM_VALUE {param_id : MNT_CONTROL_X, param_value : 0.0, param_type : 9, param_count : 331, param_index : 286}
+2014-11-12 21:51:25.80: PARAM_VALUE {param_id : MNT_CONTROL_Y, param_value : 0.0, param_type : 9, param_count : 331, param_index : 287}
+2014-11-12 21:51:25.81: PARAM_VALUE {param_id : MNT_CONTROL_Z, param_value : 0.0, param_type : 9, param_count : 331, param_index : 288}
+2014-11-12 21:51:25.83: PARAM_VALUE {param_id : MNT_STAB_ROLL, param_value : 0.0, param_type : 2, param_count : 331, param_index : 289}
+2014-11-12 21:51:25.84: PARAM_VALUE {param_id : MNT_STAB_TILT, param_value : 0.0, param_type : 2, param_count : 331, param_index : 290}
+2014-11-12 21:51:25.84: PARAM_VALUE {param_id : MNT_STAB_PAN, param_value : 0.0, param_type : 2, param_count : 331, param_index : 291}
+2014-11-12 21:51:25.86: PARAM_VALUE {param_id : MNT_RC_IN_ROLL, param_value : 0.0, param_type : 2, param_count : 331, param_index : 292}
+2014-11-12 21:51:25.87: PARAM_VALUE {param_id : MNT_ANGMIN_ROL, param_value : -4500.0, param_type : 4, param_count : 331, param_index : 293}
+2014-11-12 21:51:25.87: PARAM_VALUE {param_id : MNT_ANGMAX_ROL, param_value : 4500.0, param_type : 4, param_count : 331, param_index : 294}
+2014-11-12 21:51:25.90: PARAM_VALUE {param_id : MNT_RC_IN_TILT, param_value : 6.0, param_type : 2, param_count : 331, param_index : 295}
+2014-11-12 21:51:25.94: PARAM_VALUE {param_id : MNT_ANGMIN_TIL, param_value : -9000.0, param_type : 4, param_count : 331, param_index : 296}
+2014-11-12 21:51:25.95: PARAM_VALUE {param_id : MNT_ANGMAX_TIL, param_value : 0.0, param_type : 4, param_count : 331, param_index : 297}
+2014-11-12 21:51:25.95: PARAM_VALUE {param_id : MNT_RC_IN_PAN, param_value : 0.0, param_type : 2, param_count : 331, param_index : 298}
+2014-11-12 21:51:25.97: PARAM_VALUE {param_id : MNT_ANGMIN_PAN, param_value : -4500.0, param_type : 4, param_count : 331, param_index : 299}
+2014-11-12 21:51:25.98: PARAM_VALUE {param_id : MNT_ANGMAX_PAN, param_value : 4500.0, param_type : 4, param_count : 331, param_index : 300}
+2014-11-12 21:51:25.98: PARAM_VALUE {param_id : MNT_JSTICK_SPD, param_value : 0.0, param_type : 2, param_count : 331, param_index : 301}
+2014-11-12 21:51:26.02: PARAM_VALUE {param_id : BATT_MONITOR, param_value : 4.0, param_type : 2, param_count : 331, param_index : 302}
+2014-11-12 21:51:26.02: PARAM_VALUE {param_id : BATT_VOLT_PIN, param_value : 2.0, param_type : 2, param_count : 331, param_index : 303}
+2014-11-12 21:51:26.03: PARAM_VALUE {param_id : BATT_CURR_PIN, param_value : 3.0, param_type : 2, param_count : 331, param_index : 304}
+2014-11-12 21:51:26.05: PARAM_VALUE {param_id : BATT_VOLT_MULT, param_value : 12.0200004578, param_type : 9, param_count : 331, param_index : 305}
+2014-11-12 21:51:26.06: PARAM_VALUE {param_id : BATT_AMP_PERVOLT, param_value : 17.0, param_type : 9, param_count : 331, param_index : 306}
+2014-11-12 21:51:26.06: PARAM_VALUE {param_id : BATT_AMP_OFFSET, param_value : 0.0, param_type : 9, param_count : 331, param_index : 307}
+2014-11-12 21:51:26.08: PARAM_VALUE {param_id : BATT_CAPACITY, param_value : 3300.0, param_type : 6, param_count : 331, param_index : 308}
+2014-11-12 21:51:26.09: PARAM_VALUE {param_id : BRD_PWM_COUNT, param_value : 4.0, param_type : 2, param_count : 331, param_index : 309}
+2014-11-12 21:51:26.09: PARAM_VALUE {param_id : GND_ABS_PRESS, param_value : 101480.0, param_type : 9, param_count : 331, param_index : 310}
+2014-11-12 21:51:26.12: PARAM_VALUE {param_id : GND_TEMP, param_value : 30.0500011444, param_type : 9, param_count : 331, param_index : 311}
+2014-11-12 21:51:26.15: PARAM_VALUE {param_id : GND_ALT_OFFSET, param_value : 0.0, param_type : 2, param_count : 331, param_index : 312}
+2014-11-12 21:51:26.16: PARAM_VALUE {param_id : SCHED_DEBUG, param_value : 0.0, param_type : 2, param_count : 331, param_index : 313}
+2014-11-12 21:51:26.16: PARAM_VALUE {param_id : FENCE_ENABLE, param_value : 1.0, param_type : 2, param_count : 331, param_index : 314}
+2014-11-12 21:51:26.18: PARAM_VALUE {param_id : FENCE_TYPE, param_value : 1.0, param_type : 2, param_count : 331, param_index : 315}
+2014-11-12 21:51:26.19: PARAM_VALUE {param_id : FENCE_ACTION, param_value : 1.0, param_type : 2, param_count : 331, param_index : 316}
+2014-11-12 21:51:26.20: PARAM_VALUE {param_id : FENCE_ALT_MAX, param_value : 10.0, param_type : 9, param_count : 331, param_index : 317}
+2014-11-12 21:51:26.24: PARAM_VALUE {param_id : FENCE_RADIUS, param_value : 30.0, param_type : 9, param_count : 331, param_index : 318}
+2014-11-12 21:51:26.24: PARAM_VALUE {param_id : FENCE_MARGIN, param_value : 2.0, param_type : 9, param_count : 331, param_index : 319}
+2014-11-12 21:51:26.25: PARAM_VALUE {param_id : GPSGLITCH_ENABLE, param_value : 1.0, param_type : 2, param_count : 331, param_index : 320}
+2014-11-12 21:51:26.26: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:26.27: PARAM_VALUE {param_id : GPSGLITCH_RADIUS, param_value : 200.0, param_type : 9, param_count : 331, param_index : 321}
+2014-11-12 21:51:26.27: PARAM_VALUE {param_id : GPSGLITCH_ACCEL, param_value : 1000.0, param_type : 9, param_count : 331, param_index : 322}
+2014-11-12 21:51:26.28: PARAM_VALUE {param_id : MOT_TCRV_ENABLE, param_value : 1.0, param_type : 2, param_count : 331, param_index : 323}
+2014-11-12 21:51:26.30: PARAM_VALUE {param_id : MOT_TCRV_MIDPCT, param_value : 52.0, param_type : 2, param_count : 331, param_index : 324}
+2014-11-12 21:51:26.31: PARAM_VALUE {param_id : MOT_TCRV_MAXPCT, param_value : 93.0, param_type : 2, param_count : 331, param_index : 325}
+2014-11-12 21:51:26.31: PARAM_VALUE {param_id : MOT_SPIN_ARMED, param_value : 90.0, param_type : 4, param_count : 331, param_index : 326}
+2014-11-12 21:51:26.32: RADIO {rssi : 94, remrssi : 112, txbuf : 100, noise : 38, remnoise : 18, rxerrors : 923, fixed : 684}
+2014-11-12 21:51:26.32: RADIO_STATUS {rssi : 94, remrssi : 112, txbuf : 100, noise : 38, remnoise : 18, rxerrors : 923, fixed : 684}
+2014-11-12 21:51:26.38: PARAM_VALUE {param_id : RCMAP_ROLL, param_value : 1.0, param_type : 2, param_count : 331, param_index : 327}
+2014-11-12 21:51:26.38: PARAM_VALUE {param_id : RCMAP_PITCH, param_value : 2.0, param_type : 2, param_count : 331, param_index : 328}
+2014-11-12 21:51:26.39: PARAM_VALUE {param_id : RCMAP_THROTTLE, param_value : 3.0, param_type : 2, param_count : 331, param_index : 329}
+2014-11-12 21:51:26.39: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:26.41: PARAM_VALUE {param_id : RCMAP_YAW, param_value : 4.0, param_type : 2, param_count : 331, param_index : 330}
+2014-11-12 21:51:26.41: RAW_IMU {time_usec : 3675695637, xacc : 6, yacc : -1, zacc : -1019, xgyro : -5, ygyro : 10, zgyro : 0, xmag : 98, ymag : -148, zmag : 345}
+2014-11-12 21:51:26.42: SCALED_IMU2 {time_boot_ms : 3678560, xacc : 27, yacc : 29, zacc : -1003, xgyro : 4, ygyro : -10, zgyro : 24, xmag : 10, ymag : -298, zmag : 371}
+2014-11-12 21:51:26.44: SCALED_PRESSURE {time_boot_ms : 3678560, press_abs : 1014.75823975, press_diff : -0.0417187474668, temperature : 4980}
+2014-11-12 21:51:26.45: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101475, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:26.56: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 87, voltage_battery : 11475, current_battery : 20, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:26.60: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:26.60: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:26.60: GPS_RAW_INT {time_usec : 3678470000, fix_type : 3, lat : 423616052, lon : -710968408, alt : 240150, eph : 219, epv : 65535, vel : 23, cog : 9734, satellites_visible : 5}
+2014-11-12 21:51:26.61: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:26.61: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:26.62: GLOBAL_POSITION_INT {time_boot_ms : 3678470, lat : 423616077, lon : -710968398, alt : 240150, relative_alt : 320, vx : 13, vy : -19, vz : -19, hdg : 4131}
+2014-11-12 21:51:26.63: SERVO_OUTPUT_RAW {time_usec : 3675696952, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:26.67: RC_CHANNELS_RAW {time_boot_ms : 3678561, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:26.67: ATTITUDE {time_boot_ms : 3678562, roll : 0.00127491878811, pitch : 0.00702080596238, yaw : 0.721155643463, rollspeed : -0.00552275031805, pitchspeed : 0.0107243508101, yawspeed : 0.00099116936326}
+2014-11-12 21:51:26.68: VFR_HUD {airspeed : 0.229999989271, groundspeed : 0.229999989271, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:26.70: AHRS {omegaIx : 0.00552013143897, omegaIy : -0.0110615380108, omegaIz : -0.00162374705542, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000412600609707, error_yaw : 0.00477572344244}
+2014-11-12 21:51:26.70: HWSTATUS {Vcc : 5206, I2Cerr : 0}
+2014-11-12 21:51:26.71: SYSTEM_TIME {time_unix_usec : 1415847087112000, time_boot_ms : 3678562}
+2014-11-12 21:51:26.71: RAW_IMU {time_usec : 3676075773, xacc : 6, yacc : -1, zacc : -1021, xgyro : -6, ygyro : 10, zgyro : 2, xmag : 98, ymag : -145, zmag : 346}
+2014-11-12 21:51:26.73: SCALED_IMU2 {time_boot_ms : 3678940, xacc : 29, yacc : 29, zacc : -1001, xgyro : 8, ygyro : -12, zgyro : 22, xmag : 10, ymag : -297, zmag : 370}
+2014-11-12 21:51:26.74: SCALED_PRESSURE {time_boot_ms : 3678940, press_abs : 1014.76824951, press_diff : -0.031718749553, temperature : 4980}
+2014-11-12 21:51:26.75: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:26.77: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 80, voltage_battery : 11487, current_battery : 17, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:26.80: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:26.80: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:26.81: GPS_RAW_INT {time_usec : 3678870000, fix_type : 3, lat : 423616072, lon : -710968525, alt : 241030, eph : 219, epv : 65535, vel : 87, cog : 33905, satellites_visible : 5}
+2014-11-12 21:51:26.82: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:26.82: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:26.84: GLOBAL_POSITION_INT {time_boot_ms : 3678870, lat : 423616069, lon : -710968414, alt : 241030, relative_alt : 330, vx : 31, vy : -81, vz : 9, hdg : 4126}
+2014-11-12 21:51:26.84: SERVO_OUTPUT_RAW {time_usec : 3676077006, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:26.85: RC_CHANNELS_RAW {time_boot_ms : 3678941, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:26.87: ATTITUDE {time_boot_ms : 3678942, roll : 0.00124638504349, pitch : 0.00694530364126, yaw : 0.720287561417, rollspeed : -0.00613185577095, pitchspeed : 0.0109057761729, yawspeed : 0.00248021818697}
+2014-11-12 21:51:26.88: VFR_HUD {airspeed : 0.870000004768, groundspeed : 0.870000004768, heading : 41, throttle : 0, alt : 0.329999983311, climb : 0.0}
+2014-11-12 21:51:26.99: AHRS {omegaIx : 0.00552013143897, omegaIy : -0.0110615380108, omegaIz : -0.00162374705542, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000347833352862, error_yaw : 0.00467739254236}
+2014-11-12 21:51:27.01: HWSTATUS {Vcc : 5215, I2Cerr : 0}
+2014-11-12 21:51:27.01: SYSTEM_TIME {time_unix_usec : 1415847087492000, time_boot_ms : 3678942}
+2014-11-12 21:51:27.05: RAW_IMU {time_usec : 3676455687, xacc : 6, yacc : -2, zacc : -1017, xgyro : -5, ygyro : 9, zgyro : 1, xmag : 97, ymag : -145, zmag : 348}
+2014-11-12 21:51:27.06: SCALED_IMU2 {time_boot_ms : 3679320, xacc : 30, yacc : 22, zacc : -995, xgyro : 2, ygyro : -15, zgyro : 16, xmag : 10, ymag : -297, zmag : 371}
+2014-11-12 21:51:27.09: SCALED_PRESSURE {time_boot_ms : 3679320, press_abs : 1014.7598877, press_diff : -0.0400781258941, temperature : 4980}
+2014-11-12 21:51:27.10: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101475, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:27.20: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 84, voltage_battery : 11485, current_battery : 19, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:27.24: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:27.24: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:27.25: GPS_RAW_INT {time_usec : 3679270000, fix_type : 3, lat : 423616062, lon : -710968541, alt : 241960, eph : 219, epv : 65535, vel : 87, cog : 30207, satellites_visible : 5}
+2014-11-12 21:51:27.25: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:27.25: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:27.26: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:27.27: GLOBAL_POSITION_INT {time_boot_ms : 3679270, lat : 423616070, lon : -710968470, alt : 241960, relative_alt : 330, vx : 28, vy : -83, vz : 14, hdg : 4126}
+2014-11-12 21:51:27.28: SERVO_OUTPUT_RAW {time_usec : 3676457002, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:27.28: RC_CHANNELS_RAW {time_boot_ms : 3679321, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:27.31: ATTITUDE {time_boot_ms : 3679321, roll : 0.00112423812971, pitch : 0.00699121225625, yaw : 0.720244765282, rollspeed : -0.00595118477941, pitchspeed : 0.00996546447277, yawspeed : 0.00139861134812}
+2014-11-12 21:51:27.31: VFR_HUD {airspeed : 0.870000004768, groundspeed : 0.870000004768, heading : 41, throttle : 0, alt : 0.329999983311, climb : 0.0}
+2014-11-12 21:51:27.32: RADIO {rssi : 94, remrssi : 112, txbuf : 100, noise : 37, remnoise : 19, rxerrors : 923, fixed : 684}
+2014-11-12 21:51:27.32: RADIO_STATUS {rssi : 94, remrssi : 112, txbuf : 100, noise : 37, remnoise : 19, rxerrors : 923, fixed : 684}
+2014-11-12 21:51:27.43: AHRS {omegaIx : 0.00552013143897, omegaIy : -0.0110615380108, omegaIz : -0.00162374705542, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000408788328059, error_yaw : 0.00266347452998}
+2014-11-12 21:51:27.46: HWSTATUS {Vcc : 5199, I2Cerr : 0}
+2014-11-12 21:51:27.47: SYSTEM_TIME {time_unix_usec : 1415847087872000, time_boot_ms : 3679322}
+2014-11-12 21:51:27.47: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:27.48: RAW_IMU {time_usec : 3676835769, xacc : 7, yacc : -2, zacc : -1017, xgyro : -5, ygyro : 10, zgyro : 1, xmag : 95, ymag : -145, zmag : 347}
+2014-11-12 21:51:27.48: SCALED_IMU2 {time_boot_ms : 3679700, xacc : 30, yacc : 27, zacc : -991, xgyro : 4, ygyro : -15, zgyro : 16, xmag : 10, ymag : -297, zmag : 372}
+2014-11-12 21:51:27.49: SCALED_PRESSURE {time_boot_ms : 3679700, press_abs : 1014.7699585, press_diff : -0.0299999993294, temperature : 4980}
+2014-11-12 21:51:27.50: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101477, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:27.54: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 80, voltage_battery : 11456, current_battery : 16, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:27.54: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:27.54: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:27.55: GPS_RAW_INT {time_usec : 3679670000, fix_type : 3, lat : 423616033, lon : -710968530, alt : 243320, eph : 219, epv : 65535, vel : 83, cog : 29214, satellites_visible : 5}
+2014-11-12 21:51:27.57: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:27.58: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:27.58: GLOBAL_POSITION_INT {time_boot_ms : 3679670, lat : 423616064, lon : -710968503, alt : 243320, relative_alt : 320, vx : 28, vy : -79, vz : 24, hdg : 4131}
+2014-11-12 21:51:27.59: SERVO_OUTPUT_RAW {time_usec : 3676837042, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:27.60: RC_CHANNELS_RAW {time_boot_ms : 3679701, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:27.61: ATTITUDE {time_boot_ms : 3679702, roll : 0.00119448220357, pitch : 0.00682920403779, yaw : 0.721125423908, rollspeed : -0.00532744824886, pitchspeed : 0.0108780227602, yawspeed : 0.00154832238331}
+2014-11-12 21:51:27.61: VFR_HUD {airspeed : 0.829999983311, groundspeed : 0.829999983311, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:27.64: AHRS {omegaIx : 0.00552013143897, omegaIy : -0.0110615380108, omegaIz : -0.00162374705542, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000735244364478, error_yaw : 0.00425467407331}
+2014-11-12 21:51:27.66: HWSTATUS {Vcc : 5214, I2Cerr : 0}
+2014-11-12 21:51:27.66: SYSTEM_TIME {time_unix_usec : 1415847088252000, time_boot_ms : 3679702}
+2014-11-12 21:51:27.85: RAW_IMU {time_usec : 3677215612, xacc : 6, yacc : -2, zacc : -1018, xgyro : -5, ygyro : 11, zgyro : 1, xmag : 96, ymag : -145, zmag : 347}
+2014-11-12 21:51:27.89: SCALED_IMU2 {time_boot_ms : 3680080, xacc : 21, yacc : 28, zacc : -996, xgyro : 4, ygyro : -3, zgyro : 18, xmag : 10, ymag : -297, zmag : 372}
+2014-11-12 21:51:27.89: SCALED_PRESSURE {time_boot_ms : 3680080, press_abs : 1014.77160645, press_diff : -0.0283593740314, temperature : 4980}
+2014-11-12 21:51:27.90: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101477, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:27.97: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:27.97: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:27.98: GLOBAL_POSITION_INT {time_boot_ms : 3680070, lat : 423616046, lon : -710968535, alt : 244640, relative_alt : 320, vx : 26, vy : -66, vz : 32, hdg : 4133}
+2014-11-12 21:51:28.19: SERVO_OUTPUT_RAW {time_usec : 3677216862, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:28.19: RC_CHANNELS_RAW {time_boot_ms : 3680081, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:28.20: ATTITUDE {time_boot_ms : 3680081, roll : 0.0012872609077, pitch : 0.00700102513656, yaw : 0.721385836601, rollspeed : -0.00570603460073, pitchspeed : 0.0114732570946, yawspeed : 0.00147391390055}
+2014-11-12 21:51:28.23: VFR_HUD {airspeed : 0.709999978542, groundspeed : 0.709999978542, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:28.23: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000412603432778, error_yaw : 0.00462733581662}
+2014-11-12 21:51:28.23: HWSTATUS {Vcc : 5217, I2Cerr : 0}
+2014-11-12 21:51:28.24: SYSTEM_TIME {time_unix_usec : 1415847088632000, time_boot_ms : 3680082}
+2014-11-12 21:51:28.24: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:28.25: RAW_IMU {time_usec : 3677595654, xacc : 7, yacc : 0, zacc : -1016, xgyro : -5, ygyro : 11, zgyro : 1, xmag : 97, ymag : -147, zmag : 349}
+2014-11-12 21:51:28.26: SCALED_IMU2 {time_boot_ms : 3680460, xacc : 23, yacc : 29, zacc : -988, xgyro : 11, ygyro : -14, zgyro : 17, xmag : 9, ymag : -297, zmag : 371}
+2014-11-12 21:51:28.26: SCALED_PRESSURE {time_boot_ms : 3680460, press_abs : 1014.76824951, press_diff : -0.031718749553, temperature : 4980}
+2014-11-12 21:51:28.27: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:28.27: PARAM_REQUEST_READ {target_system : 1, target_component : 1, param_id : , param_index : 84}
+2014-11-12 21:51:28.27: PARAM_REQUEST_READ {target_system : 1, target_component : 1, param_id : , param_index : 85}
+2014-11-12 21:51:28.27: PARAM_REQUEST_READ {target_system : 1, target_component : 1, param_id : , param_index : 86}
+2014-11-12 21:51:28.29: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:28.33: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 86, voltage_battery : 11468, current_battery : 21, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:28.33: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:28.34: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:28.34: GPS_RAW_INT {time_usec : 3680270000, fix_type : 3, lat : 423615996, lon : -710968500, alt : 244840, eph : 219, epv : 65535, vel : 50, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:28.36: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:28.36: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:28.37: GLOBAL_POSITION_INT {time_boot_ms : 3680270, lat : 423616022, lon : -710968553, alt : 244840, relative_alt : 310, vx : 13, vy : -48, vz : 21, hdg : 4136}
+2014-11-12 21:51:28.40: SERVO_OUTPUT_RAW {time_usec : 3677596913, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:28.41: RC_CHANNELS_RAW {time_boot_ms : 3680461, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:28.42: ATTITUDE {time_boot_ms : 3680462, roll : 0.00139044283424, pitch : 0.00701312255114, yaw : 0.721971273422, rollspeed : -0.00554992258549, pitchspeed : 0.0119614377618, yawspeed : 0.00177227938548}
+2014-11-12 21:51:28.44: VFR_HUD {airspeed : 0.5, groundspeed : 0.5, heading : 41, throttle : 0, alt : 0.310000002384, climb : 0.0}
+2014-11-12 21:51:28.44: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000731907202862, error_yaw : 0.00196984410286}
+2014-11-12 21:51:28.45: HWSTATUS {Vcc : 5219, I2Cerr : 0}
+2014-11-12 21:51:28.45: SYSTEM_TIME {time_unix_usec : 1415847089012000, time_boot_ms : 3680462}
+2014-11-12 21:51:28.48: RADIO {rssi : 95, remrssi : 112, txbuf : 95, noise : 44, remnoise : 18, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:28.48: RADIO_STATUS {rssi : 95, remrssi : 112, txbuf : 95, noise : 44, remnoise : 18, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:28.58: RAW_IMU {time_usec : 3677975756, xacc : 6, yacc : -1, zacc : -1018, xgyro : -5, ygyro : 12, zgyro : 1, xmag : 96, ymag : -146, zmag : 348}
+2014-11-12 21:51:28.59: SCALED_IMU2 {time_boot_ms : 3680840, xacc : 23, yacc : 34, zacc : -1010, xgyro : 5, ygyro : -14, zgyro : 18, xmag : 9, ymag : -297, zmag : 373}
+2014-11-12 21:51:28.59: SCALED_PRESSURE {time_boot_ms : 3680840, press_abs : 1014.75488281, press_diff : -0.045078124851, temperature : 4980}
+2014-11-12 21:51:28.63: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101475, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:28.63: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 81, voltage_battery : 11467, current_battery : 18, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:28.66: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:28.66: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:28.67: GPS_RAW_INT {time_usec : 3680670000, fix_type : 3, lat : 423615957, lon : -710968381, alt : 245090, eph : 219, epv : 65535, vel : 15, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:28.67: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:28.67: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:28.69: GLOBAL_POSITION_INT {time_boot_ms : 3680670, lat : 423615991, lon : -710968529, alt : 245090, relative_alt : 320, vx : -1, vy : 14, vz : -14, hdg : 4131}
+2014-11-12 21:51:28.70: SERVO_OUTPUT_RAW {time_usec : 3677977013, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:28.70: RC_CHANNELS_RAW {time_boot_ms : 3680841, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:28.73: ATTITUDE {time_boot_ms : 3680842, roll : 0.00119925127365, pitch : 0.00715958187357, yaw : 0.721074283123, rollspeed : -0.00544132478535, pitchspeed : 0.0120561756194, yawspeed : 0.00167083274573}
+2014-11-12 21:51:28.76: VFR_HUD {airspeed : 0.149999991059, groundspeed : 0.149999991059, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:28.77: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000578729028348, error_yaw : 0.00730195641518}
+2014-11-12 21:51:28.77: HWSTATUS {Vcc : 5215, I2Cerr : 0}
+2014-11-12 21:51:28.77: SYSTEM_TIME {time_unix_usec : 1415847089392000, time_boot_ms : 3680842}
+2014-11-12 21:51:28.79: PARAM_VALUE {param_id : RC6_MAX, param_value : 2017.0, param_type : 4, param_count : 331, param_index : 84}
+2014-11-12 21:51:28.80: PARAM_VALUE {param_id : RC6_REV, param_value : 1.0, param_type : 2, param_count : 331, param_index : 85}
+2014-11-12 21:51:28.80: PARAM_VALUE {param_id : RC6_DZ, param_value : 0.0, param_type : 4, param_count : 331, param_index : 86}
+2014-11-12 21:51:29.06: RAW_IMU {time_usec : 3678355718, xacc : 8, yacc : -2, zacc : -1015, xgyro : -6, ygyro : 10, zgyro : 1, xmag : 96, ymag : -146, zmag : 348}
+2014-11-12 21:51:29.06: SCALED_IMU2 {time_boot_ms : 3681220, xacc : 28, yacc : 27, zacc : -997, xgyro : 5, ygyro : -12, zgyro : 14, xmag : 10, ymag : -297, zmag : 373}
+2014-11-12 21:51:29.07: SCALED_PRESSURE {time_boot_ms : 3681220, press_abs : 1014.76489258, press_diff : -0.0350781232119, temperature : 4980}
+2014-11-12 21:51:29.27: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:29.28: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:29.29: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 87, voltage_battery : 11462, current_battery : 18, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:29.31: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:29.31: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:29.32: GPS_RAW_INT {time_usec : 3681070000, fix_type : 3, lat : 423615950, lon : -710968343, alt : 244930, eph : 219, epv : 65535, vel : 24, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:29.33: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:29.33: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:29.35: GLOBAL_POSITION_INT {time_boot_ms : 3681070, lat : 423615958, lon : -710968470, alt : 244930, relative_alt : 330, vx : -2, vy : 24, vz : -37, hdg : 4139}
+2014-11-12 21:51:29.35: SERVO_OUTPUT_RAW {time_usec : 3678356951, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:29.36: RC_CHANNELS_RAW {time_boot_ms : 3681221, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:29.36: RADIO {rssi : 93, remrssi : 112, txbuf : 100, noise : 39, remnoise : 18, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:29.37: RADIO_STATUS {rssi : 93, remrssi : 112, txbuf : 100, noise : 39, remnoise : 18, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:29.42: ATTITUDE {time_boot_ms : 3681222, roll : 0.00117519020569, pitch : 0.00707505783066, yaw : 0.722441792488, rollspeed : -0.00651928968728, pitchspeed : 0.0109138526022, yawspeed : 0.00165157578886}
+2014-11-12 21:51:29.43: VFR_HUD {airspeed : 0.239999994636, groundspeed : 0.239999994636, heading : 41, throttle : 0, alt : 0.329999983311, climb : 0.0}
+2014-11-12 21:51:29.43: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000502141134348, error_yaw : 0.00481448695064}
+2014-11-12 21:51:29.43: HWSTATUS {Vcc : 5217, I2Cerr : 0}
+2014-11-12 21:51:29.45: SYSTEM_TIME {time_unix_usec : 1415847089772000, time_boot_ms : 3681222}
+2014-11-12 21:51:29.45: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:29.46: RAW_IMU {time_usec : 3678735892, xacc : 7, yacc : 0, zacc : -1018, xgyro : -5, ygyro : 10, zgyro : 1, xmag : 97, ymag : -145, zmag : 348}
+2014-11-12 21:51:29.46: SCALED_IMU2 {time_boot_ms : 3681600, xacc : 33, yacc : 29, zacc : -1003, xgyro : 9, ygyro : -12, zgyro : 15, xmag : 10, ymag : -297, zmag : 371}
+2014-11-12 21:51:29.49: SCALED_PRESSURE {time_boot_ms : 3681600, press_abs : 1014.76489258, press_diff : -0.0350781232119, temperature : 4980}
+2014-11-12 21:51:29.49: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:29.60: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 78, voltage_battery : 11480, current_battery : 22, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:29.64: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:29.64: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:29.65: GPS_RAW_INT {time_usec : 3681470000, fix_type : 3, lat : 423615947, lon : -710968334, alt : 245040, eph : 219, epv : 65535, vel : 24, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:29.65: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:29.66: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:29.66: GLOBAL_POSITION_INT {time_boot_ms : 3681470, lat : 423615940, lon : -710968431, alt : 245040, relative_alt : 330, vx : 0, vy : 24, vz : -47, hdg : 4137}
+2014-11-12 21:51:29.67: SERVO_OUTPUT_RAW {time_usec : 3678737114, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:29.71: RC_CHANNELS_RAW {time_boot_ms : 3681602, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:29.72: ATTITUDE {time_boot_ms : 3681602, roll : 0.00118962372653, pitch : 0.00697983196005, yaw : 0.722134411335, rollspeed : -0.00592380017042, pitchspeed : 0.0109554938972, yawspeed : 0.00110347289592}
+2014-11-12 21:51:29.72: VFR_HUD {airspeed : 0.239999994636, groundspeed : 0.239999994636, heading : 41, throttle : 0, alt : 0.329999983311, climb : 0.0}
+2014-11-12 21:51:29.75: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000406262581237, error_yaw : 0.00311629963107}
+2014-11-12 21:51:29.75: HWSTATUS {Vcc : 5198, I2Cerr : 0}
+2014-11-12 21:51:29.75: SYSTEM_TIME {time_unix_usec : 1415847090152000, time_boot_ms : 3681602}
+2014-11-12 21:51:29.76: RAW_IMU {time_usec : 3679115690, xacc : 6, yacc : 0, zacc : -1015, xgyro : -6, ygyro : 11, zgyro : 0, xmag : 97, ymag : -145, zmag : 347}
+2014-11-12 21:51:29.78: SCALED_IMU2 {time_boot_ms : 3681980, xacc : 25, yacc : 29, zacc : -996, xgyro : 13, ygyro : -10, zgyro : 18, xmag : 10, ymag : -297, zmag : 372}
+2014-11-12 21:51:29.78: SCALED_PRESSURE {time_boot_ms : 3681980, press_abs : 1014.76159668, press_diff : -0.0383593738079, temperature : 4980}
+2014-11-12 21:51:29.79: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:29.82: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 87, voltage_battery : 11474, current_battery : 20, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:29.85: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:29.85: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:29.86: GPS_RAW_INT {time_usec : 3681870000, fix_type : 3, lat : 423615899, lon : -710968252, alt : 246220, eph : 219, epv : 65535, vel : 43, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:29.86: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:29.87: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:29.88: GLOBAL_POSITION_INT {time_boot_ms : 3681870, lat : 423615914, lon : -710968376, alt : 246220, relative_alt : 320, vx : -6, vy : 42, vz : -48, hdg : 4134}
+2014-11-12 21:51:29.89: SERVO_OUTPUT_RAW {time_usec : 3679116933, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:29.89: RC_CHANNELS_RAW {time_boot_ms : 3681981, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:29.92: ATTITUDE {time_boot_ms : 3681981, roll : 0.0010888914112, pitch : 0.00699449935928, yaw : 0.721635520458, rollspeed : -0.0064501632005, pitchspeed : 0.0114318244159, yawspeed : 0.000771524384618}
+2014-11-12 21:51:29.93: VFR_HUD {airspeed : 0.42999997735, groundspeed : 0.42999997735, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:30.04: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000387560809031, error_yaw : 0.00498434528708}
+2014-11-12 21:51:30.06: HWSTATUS {Vcc : 5199, I2Cerr : 0}
+2014-11-12 21:51:30.06: SYSTEM_TIME {time_unix_usec : 1415847090532000, time_boot_ms : 3681982}
+2014-11-12 21:51:30.08: RAW_IMU {time_usec : 3679495707, xacc : 4, yacc : 0, zacc : -1021, xgyro : -6, ygyro : 10, zgyro : 1, xmag : 96, ymag : -146, zmag : 349}
+2014-11-12 21:51:30.09: SCALED_IMU2 {time_boot_ms : 3682360, xacc : 24, yacc : 29, zacc : -999, xgyro : 8, ygyro : -11, zgyro : 20, xmag : 11, ymag : -297, zmag : 372}
+2014-11-12 21:51:30.10: SCALED_PRESSURE {time_boot_ms : 3682360, press_abs : 1014.76824951, press_diff : -0.031718749553, temperature : 4980}
+2014-11-12 21:51:30.15: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:30.16: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 80, voltage_battery : 11460, current_battery : 15, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:30.18: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:30.18: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:30.19: GPS_RAW_INT {time_usec : 3682270000, fix_type : 3, lat : 423615828, lon : -710968178, alt : 248670, eph : 219, epv : 65535, vel : 43, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:30.20: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:30.20: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:30.22: GLOBAL_POSITION_INT {time_boot_ms : 3682270, lat : 423615870, lon : -710968295, alt : 248670, relative_alt : 320, vx : -19, vy : 39, vz : -17, hdg : 4138}
+2014-11-12 21:51:30.22: SERVO_OUTPUT_RAW {time_usec : 3679497003, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:30.23: RC_CHANNELS_RAW {time_boot_ms : 3682361, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:30.25: ATTITUDE {time_boot_ms : 3682361, roll : 0.00105827627704, pitch : 0.00699491845444, yaw : 0.722303390503, rollspeed : -0.00607305578887, pitchspeed : 0.0108327716589, yawspeed : 0.00170658668503}
+2014-11-12 21:51:30.28: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:30.29: VFR_HUD {airspeed : 0.42999997735, groundspeed : 0.42999997735, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:30.29: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000280362874037, error_yaw : 0.00351908802986}
+2014-11-12 21:51:30.30: HWSTATUS {Vcc : 5193, I2Cerr : 0}
+2014-11-12 21:51:30.30: SYSTEM_TIME {time_unix_usec : 1415847090912000, time_boot_ms : 3682362}
+2014-11-12 21:51:30.30: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:30.35: RADIO {rssi : 94, remrssi : 112, txbuf : 100, noise : 40, remnoise : 20, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:30.35: RADIO_STATUS {rssi : 94, remrssi : 112, txbuf : 100, noise : 40, remnoise : 20, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:30.58: RAW_IMU {time_usec : 3679875615, xacc : 6, yacc : -2, zacc : -1016, xgyro : -5, ygyro : 11, zgyro : 2, xmag : 97, ymag : -146, zmag : 349}
+2014-11-12 21:51:30.59: SCALED_IMU2 {time_boot_ms : 3682740, xacc : 32, yacc : 19, zacc : -992, xgyro : 10, ygyro : -3, zgyro : 21, xmag : 9, ymag : -297, zmag : 372}
+2014-11-12 21:51:30.59: SCALED_PRESSURE {time_boot_ms : 3682740, press_abs : 1014.77160645, press_diff : -0.0283593740314, temperature : 4981}
+2014-11-12 21:51:30.80: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101477, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:30.81: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 83, voltage_battery : 11477, current_battery : 21, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:30.84: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:30.84: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:30.84: GPS_RAW_INT {time_usec : 3682670000, fix_type : 3, lat : 423615799, lon : -710968225, alt : 250920, eph : 219, epv : 65535, vel : 13, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:30.85: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:30.85: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:30.87: GLOBAL_POSITION_INT {time_boot_ms : 3682670, lat : 423615815, lon : -710968221, alt : 250920, relative_alt : 320, vx : -2, vy : -12, vz : 24, hdg : 4138}
+2014-11-12 21:51:30.87: SERVO_OUTPUT_RAW {time_usec : 3679877667, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:30.88: RC_CHANNELS_RAW {time_boot_ms : 3682742, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:30.90: ATTITUDE {time_boot_ms : 3682742, roll : 0.000939058663789, pitch : 0.00692778779194, yaw : 0.722267270088, rollspeed : -0.00583922863007, pitchspeed : 0.0114359892905, yawspeed : 0.00215340126306}
+2014-11-12 21:51:30.94: VFR_HUD {airspeed : 0.129999995232, groundspeed : 0.129999995232, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:30.94: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000801181071438, error_yaw : 0.00393312051892}
+2014-11-12 21:51:30.94: HWSTATUS {Vcc : 5215, I2Cerr : 0}
+2014-11-12 21:51:30.95: SYSTEM_TIME {time_unix_usec : 1415847091292000, time_boot_ms : 3682742}
+2014-11-12 21:51:30.96: RAW_IMU {time_usec : 3680215637, xacc : 8, yacc : 0, zacc : -1017, xgyro : -5, ygyro : 11, zgyro : 1, xmag : 96, ymag : -144, zmag : 347}
+2014-11-12 21:51:30.97: SCALED_IMU2 {time_boot_ms : 3683080, xacc : 24, yacc : 23, zacc : -1000, xgyro : 5, ygyro : -9, zgyro : 20, xmag : 10, ymag : -297, zmag : 373}
+2014-11-12 21:51:30.97: SCALED_PRESSURE {time_boot_ms : 3683080, press_abs : 1014.76654053, press_diff : -0.0334374979138, temperature : 4981}
+2014-11-12 21:51:31.02: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:31.03: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 87, voltage_battery : 11461, current_battery : 19, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:31.05: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:31.05: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:31.06: GPS_RAW_INT {time_usec : 3683070000, fix_type : 3, lat : 423615798, lon : -710968296, alt : 252080, eph : 219, epv : 65535, vel : 42, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:31.07: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:31.07: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:31.09: GLOBAL_POSITION_INT {time_boot_ms : 3683070, lat : 423615779, lon : -710968204, alt : 252080, relative_alt : 320, vx : 6, vy : -41, vz : 42, hdg : 4140}
+2014-11-12 21:51:31.09: SERVO_OUTPUT_RAW {time_usec : 3680217460, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:31.10: RC_CHANNELS_RAW {time_boot_ms : 3683082, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:31.13: ATTITUDE {time_boot_ms : 3683082, roll : 0.000945818435866, pitch : 0.0068876282312, yaw : 0.722575306892, rollspeed : -0.00542218051851, pitchspeed : 0.0111762322485, yawspeed : 0.0011994317174}
+2014-11-12 21:51:31.17: VFR_HUD {airspeed : 0.419999986887, groundspeed : 0.419999986887, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:31.17: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000271408644039, error_yaw : 0.00497595453635}
+2014-11-12 21:51:31.18: HWSTATUS {Vcc : 5217, I2Cerr : 0}
+2014-11-12 21:51:31.18: SYSTEM_TIME {time_unix_usec : 1415847091632000, time_boot_ms : 3683082}
+2014-11-12 21:51:31.18: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:31.19: RAW_IMU {time_usec : 3680555823, xacc : 6, yacc : -1, zacc : -1018, xgyro : -5, ygyro : 10, zgyro : 1, xmag : 95, ymag : -146, zmag : 348}
+2014-11-12 21:51:31.19: SCALED_IMU2 {time_boot_ms : 3683420, xacc : 27, yacc : 30, zacc : -994, xgyro : 3, ygyro : -13, zgyro : 15, xmag : 10, ymag : -297, zmag : 373}
+2014-11-12 21:51:31.23: SCALED_PRESSURE {time_boot_ms : 3683420, press_abs : 1014.76269531, press_diff : -0.037265624851, temperature : 4980}
+2014-11-12 21:51:31.24: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:31.29: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:31.32: RADIO {rssi : 95, remrssi : 112, txbuf : 100, noise : 36, remnoise : 15, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:31.32: RADIO_STATUS {rssi : 95, remrssi : 112, txbuf : 100, noise : 36, remnoise : 15, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:31.38: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 81, voltage_battery : 11458, current_battery : 18, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:31.38: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:31.38: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:31.39: GPS_RAW_INT {time_usec : 3683270000, fix_type : 3, lat : 423615784, lon : -710968278, alt : 252690, eph : 219, epv : 65535, vel : 34, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:31.41: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:31.41: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:31.42: GLOBAL_POSITION_INT {time_boot_ms : 3683270, lat : 423615742, lon : -710968205, alt : 252690, relative_alt : 310, vx : 4, vy : -34, vz : 42, hdg : 4140}
+2014-11-12 21:51:31.42: SERVO_OUTPUT_RAW {time_usec : 3680557537, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:31.45: RC_CHANNELS_RAW {time_boot_ms : 3683422, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:31.46: ATTITUDE {time_boot_ms : 3683422, roll : 0.0010895653395, pitch : 0.00684905890375, yaw : 0.722584068775, rollspeed : -0.00580416433513, pitchspeed : 0.0105152502656, yawspeed : 0.00111075118184}
+2014-11-12 21:51:31.46: VFR_HUD {airspeed : 0.340000003576, groundspeed : 0.340000003576, heading : 41, throttle : 0, alt : 0.310000002384, climb : 0.0}
+2014-11-12 21:51:31.48: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000666775100399, error_yaw : 0.00333317369223}
+2014-11-12 21:51:31.48: HWSTATUS {Vcc : 5212, I2Cerr : 0}
+2014-11-12 21:51:31.48: SYSTEM_TIME {time_unix_usec : 1415847091972000, time_boot_ms : 3683422}
+2014-11-12 21:51:31.51: RAW_IMU {time_usec : 3680895629, xacc : 7, yacc : 0, zacc : -1018, xgyro : -6, ygyro : 11, zgyro : 0, xmag : 97, ymag : -146, zmag : 350}
+2014-11-12 21:51:31.51: SCALED_IMU2 {time_boot_ms : 3683760, xacc : 26, yacc : 33, zacc : -987, xgyro : 6, ygyro : -10, zgyro : 19, xmag : 10, ymag : -297, zmag : 373}
+2014-11-12 21:51:31.52: SCALED_PRESSURE {time_boot_ms : 3683760, press_abs : 1014.76824951, press_diff : -0.031718749553, temperature : 4980}
+2014-11-12 21:51:31.53: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:31.67: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 89, voltage_battery : 11471, current_battery : 17, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:31.68: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:31.68: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:31.68: GPS_RAW_INT {time_usec : 3683670000, fix_type : 3, lat : 423615720, lon : -710968148, alt : 254080, eph : 219, epv : 65535, vel : 21, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:31.71: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:31.71: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:31.72: GLOBAL_POSITION_INT {time_boot_ms : 3683670, lat : 423615709, lon : -710968184, alt : 254080, relative_alt : 310, vx : -9, vy : 18, vz : 25, hdg : 4139}
+2014-11-12 21:51:31.72: SERVO_OUTPUT_RAW {time_usec : 3680897524, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:31.74: RC_CHANNELS_RAW {time_boot_ms : 3683762, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:31.74: ATTITUDE {time_boot_ms : 3683762, roll : 0.00119554810226, pitch : 0.0069024222903, yaw : 0.722466289997, rollspeed : -0.00608884356916, pitchspeed : 0.0113792270422, yawspeed : 0.000944159924984}
+2014-11-12 21:51:31.75: VFR_HUD {airspeed : 0.209999993443, groundspeed : 0.209999993443, heading : 41, throttle : 0, alt : 0.310000002384, climb : 0.0}
+2014-11-12 21:51:31.77: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000525092356838, error_yaw : 0.004845301155}
+2014-11-12 21:51:31.79: HWSTATUS {Vcc : 5202, I2Cerr : 0}
+2014-11-12 21:51:31.80: SYSTEM_TIME {time_unix_usec : 1415847092312000, time_boot_ms : 3683762}
+2014-11-12 21:51:31.84: RAW_IMU {time_usec : 3681235696, xacc : 8, yacc : -3, zacc : -1018, xgyro : -5, ygyro : 11, zgyro : 1, xmag : 95, ymag : -145, zmag : 348}
+2014-11-12 21:51:31.85: SCALED_IMU2 {time_boot_ms : 3684100, xacc : 37, yacc : 29, zacc : -994, xgyro : 2, ygyro : -12, zgyro : 19, xmag : 10, ymag : -297, zmag : 374}
+2014-11-12 21:51:31.85: SCALED_PRESSURE {time_boot_ms : 3684100, press_abs : 1014.75823975, press_diff : -0.0417187474668, temperature : 4980}
+2014-11-12 21:51:31.89: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101475, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:31.89: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 81, voltage_battery : 11445, current_battery : 17, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:31.92: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:31.92: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:31.93: GPS_RAW_INT {time_usec : 3684070000, fix_type : 3, lat : 423615687, lon : -710968106, alt : 255190, eph : 219, epv : 65535, vel : 30, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:31.93: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:31.94: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:31.95: GLOBAL_POSITION_INT {time_boot_ms : 3684070, lat : 423615670, lon : -710968138, alt : 255190, relative_alt : 320, vx : -14, vy : 26, vz : 25, hdg : 4140}
+2014-11-12 21:51:31.96: SERVO_OUTPUT_RAW {time_usec : 3681237101, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:31.96: RC_CHANNELS_RAW {time_boot_ms : 3684102, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:31.99: ATTITUDE {time_boot_ms : 3684102, roll : 0.00119550898671, pitch : 0.00698413141072, yaw : 0.722738027573, rollspeed : -0.00579940155149, pitchspeed : 0.0112961418927, yawspeed : 0.00130171515048}
+2014-11-12 21:51:32.03: VFR_HUD {airspeed : 0.299999982119, groundspeed : 0.299999982119, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:32.04: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000348205910996, error_yaw : 0.00529925525188}
+2014-11-12 21:51:32.04: HWSTATUS {Vcc : 5202, I2Cerr : 0}
+2014-11-12 21:51:32.04: SYSTEM_TIME {time_unix_usec : 1415847092652000, time_boot_ms : 3684102}
+2014-11-12 21:51:32.19: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:32.30: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:32.32: RAW_IMU {time_usec : 3681575752, xacc : 7, yacc : 0, zacc : -1017, xgyro : -5, ygyro : 11, zgyro : 1, xmag : 96, ymag : -146, zmag : 349}
+2014-11-12 21:51:32.32: SCALED_IMU2 {time_boot_ms : 3684440, xacc : 25, yacc : 25, zacc : -990, xgyro : 7, ygyro : -9, zgyro : 17, xmag : 9, ymag : -297, zmag : 374}
+2014-11-12 21:51:32.33: SCALED_PRESSURE {time_boot_ms : 3684440, press_abs : 1014.76824951, press_diff : -0.031718749553, temperature : 4981}
+2014-11-12 21:51:32.33: RADIO {rssi : 94, remrssi : 112, txbuf : 100, noise : 40, remnoise : 19, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:32.33: RADIO_STATUS {rssi : 94, remrssi : 112, txbuf : 100, noise : 40, remnoise : 19, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:32.54: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:32.55: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 87, voltage_battery : 11455, current_battery : 11, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:32.57: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:32.57: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:32.58: GPS_RAW_INT {time_usec : 3684270000, fix_type : 3, lat : 423615685, lon : -710968125, alt : 255600, eph : 219, epv : 65535, vel : 17, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:32.59: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:32.59: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:32.61: GLOBAL_POSITION_INT {time_boot_ms : 3684270, lat : 423615625, lon : -710968088, alt : 255600, relative_alt : 320, vx : -11, vy : 13, vz : 26, hdg : 4146}
+2014-11-12 21:51:32.61: SERVO_OUTPUT_RAW {time_usec : 3681577754, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:32.62: RC_CHANNELS_RAW {time_boot_ms : 3684442, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:32.64: ATTITUDE {time_boot_ms : 3684442, roll : 0.0012614086736, pitch : 0.00690154638141, yaw : 0.723733961582, rollspeed : -0.0055978000164, pitchspeed : 0.0113193057477, yawspeed : 0.00161200109869}
+2014-11-12 21:51:32.68: VFR_HUD {airspeed : 0.170000001788, groundspeed : 0.170000001788, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:32.69: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000802759022918, error_yaw : 0.00413851067424}
+2014-11-12 21:51:32.69: HWSTATUS {Vcc : 5212, I2Cerr : 0}
+2014-11-12 21:51:32.69: SYSTEM_TIME {time_unix_usec : 1415847092993000, time_boot_ms : 3684443}
+2014-11-12 21:51:32.71: RAW_IMU {time_usec : 3681915979, xacc : 6, yacc : 0, zacc : -1016, xgyro : -4, ygyro : 11, zgyro : 1, xmag : 97, ymag : -145, zmag : 350}
+2014-11-12 21:51:32.71: SCALED_IMU2 {time_boot_ms : 3684780, xacc : 30, yacc : 24, zacc : -994, xgyro : 5, ygyro : -14, zgyro : 18, xmag : 10, ymag : -297, zmag : 373}
+2014-11-12 21:51:32.72: SCALED_PRESSURE {time_boot_ms : 3684780, press_abs : 1014.75823975, press_diff : -0.0417187474668, temperature : 4980}
+2014-11-12 21:51:32.76: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101475, raw_temp : 4980, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:32.76: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 83, voltage_battery : 11473, current_battery : 20, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:32.79: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:32.79: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:32.80: GPS_RAW_INT {time_usec : 3684670000, fix_type : 3, lat : 423615658, lon : -710968161, alt : 257670, eph : 219, epv : 65535, vel : 28, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:32.80: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:32.81: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:32.82: GLOBAL_POSITION_INT {time_boot_ms : 3684670, lat : 423615597, lon : -710968068, alt : 257670, relative_alt : 320, vx : -2, vy : -28, vz : 57, hdg : 4142}
+2014-11-12 21:51:32.83: SERVO_OUTPUT_RAW {time_usec : 3681917337, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:32.83: RC_CHANNELS_RAW {time_boot_ms : 3684782, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:32.86: ATTITUDE {time_boot_ms : 3684782, roll : 0.00113927619532, pitch : 0.00691010430455, yaw : 0.72291880846, rollspeed : -0.00486918538809, pitchspeed : 0.0116827897727, yawspeed : 0.0013654907234}
+2014-11-12 21:51:32.89: VFR_HUD {airspeed : 0.280000001192, groundspeed : 0.280000001192, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:32.90: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000209696634556, error_yaw : 0.00550222909078}
+2014-11-12 21:51:32.90: HWSTATUS {Vcc : 5215, I2Cerr : 0}
+2014-11-12 21:51:32.90: SYSTEM_TIME {time_unix_usec : 1415847093332000, time_boot_ms : 3684782}
+2014-11-12 21:51:32.92: RAW_IMU {time_usec : 3682255617, xacc : 9, yacc : 0, zacc : -1012, xgyro : -5, ygyro : 11, zgyro : 2, xmag : 97, ymag : -148, zmag : 349}
+2014-11-12 21:51:32.92: SCALED_IMU2 {time_boot_ms : 3685120, xacc : 32, yacc : 30, zacc : -994, xgyro : 8, ygyro : -12, zgyro : 19, xmag : 9, ymag : -296, zmag : 374}
+2014-11-12 21:51:32.93: SCALED_PRESSURE {time_boot_ms : 3685120, press_abs : 1014.765625, press_diff : -0.0343750007451, temperature : 4981}
+2014-11-12 21:51:32.97: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:32.98: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 85, voltage_battery : 11477, current_battery : 18, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:33.01: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:33.01: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:33.01: GPS_RAW_INT {time_usec : 3685070000, fix_type : 3, lat : 423615601, lon : -710968122, alt : 259990, eph : 219, epv : 65535, vel : 21, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:33.02: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:33.02: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:33.04: GLOBAL_POSITION_INT {time_boot_ms : 3685070, lat : 423615559, lon : -710968061, alt : 259990, relative_alt : 320, vx : -12, vy : -18, vz : 79, hdg : 4140}
+2014-11-12 21:51:33.05: SERVO_OUTPUT_RAW {time_usec : 3682257368, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:33.05: RC_CHANNELS_RAW {time_boot_ms : 3685122, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:33.08: ATTITUDE {time_boot_ms : 3685122, roll : 0.00102284608874, pitch : 0.00689172372222, yaw : 0.72266972065, rollspeed : -0.00563836470246, pitchspeed : 0.0112972520292, yawspeed : 0.00232998328283}
+2014-11-12 21:51:33.12: VFR_HUD {airspeed : 0.209999993443, groundspeed : 0.209999993443, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:33.12: AHRS {omegaIx : 0.00552894221619, omegaIy : -0.0110637675971, omegaIz : -0.00158990337513, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000678995274939, error_yaw : 0.00125824660063}
+2014-11-12 21:51:33.12: HWSTATUS {Vcc : 5204, I2Cerr : 0}
+2014-11-12 21:51:33.13: SYSTEM_TIME {time_unix_usec : 1415847093672000, time_boot_ms : 3685122}
+2014-11-12 21:51:33.16: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:33.19: RAW_IMU {time_usec : 3682596169, xacc : 6, yacc : 0, zacc : -1012, xgyro : -5, ygyro : 11, zgyro : 2, xmag : 95, ymag : -145, zmag : 350}
+2014-11-12 21:51:33.19: SCALED_IMU2 {time_boot_ms : 3685461, xacc : 26, yacc : 26, zacc : -993, xgyro : 2, ygyro : -6, zgyro : 19, xmag : 9, ymag : -298, zmag : 375}
+2014-11-12 21:51:33.23: SCALED_PRESSURE {time_boot_ms : 3685461, press_abs : 1014.75653076, press_diff : -0.043437499553, temperature : 4981}
+2014-11-12 21:51:33.23: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101475, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:33.24: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 82, voltage_battery : 11470, current_battery : 17, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:33.26: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:33.26: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:33.27: GPS_RAW_INT {time_usec : 3685270000, fix_type : 3, lat : 423615570, lon : -710968110, alt : 261320, eph : 219, epv : 65535, vel : 29, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:33.27: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:33.27: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:33.29: GLOBAL_POSITION_INT {time_boot_ms : 3685270, lat : 423615523, lon : -710968049, alt : 261320, relative_alt : 330, vx : -19, vy : -22, vz : 94, hdg : 4149}
+2014-11-12 21:51:33.30: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:33.32: SERVO_OUTPUT_RAW {time_usec : 3682597631, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:33.33: RC_CHANNELS_RAW {time_boot_ms : 3685462, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:33.33: ATTITUDE {time_boot_ms : 3685462, roll : 0.00114838767331, pitch : 0.00689105829224, yaw : 0.724142253399, rollspeed : -0.00599752739072, pitchspeed : 0.0119859911501, yawspeed : 0.00216341856867}
+2014-11-12 21:51:33.35: VFR_HUD {airspeed : 0.289999991655, groundspeed : 0.289999991655, heading : 41, throttle : 0, alt : 0.329999983311, climb : 0.0}
+2014-11-12 21:51:33.36: AHRS {omegaIx : 0.00553574506193, omegaIy : -0.011071885936, omegaIz : -0.00155303068459, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000583560729865, error_yaw : 0.00775879621506}
+2014-11-12 21:51:33.36: HWSTATUS {Vcc : 5219, I2Cerr : 0}
+2014-11-12 21:51:33.37: SYSTEM_TIME {time_unix_usec : 1415847094013000, time_boot_ms : 3685463}
+2014-11-12 21:51:33.49: RADIO {rssi : 94, remrssi : 112, txbuf : 100, noise : 35, remnoise : 18, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:33.49: RADIO_STATUS {rssi : 94, remrssi : 112, txbuf : 100, noise : 35, remnoise : 18, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:33.55: RAW_IMU {time_usec : 3682935926, xacc : 7, yacc : -1, zacc : -1016, xgyro : -5, ygyro : 11, zgyro : 1, xmag : 97, ymag : -144, zmag : 350}
+2014-11-12 21:51:33.55: SCALED_IMU2 {time_boot_ms : 3685800, xacc : 31, yacc : 26, zacc : -994, xgyro : 3, ygyro : -9, zgyro : 18, xmag : 9, ymag : -296, zmag : 373}
+2014-11-12 21:51:33.56: SCALED_PRESSURE {time_boot_ms : 3685800, press_abs : 1014.75823975, press_diff : -0.0417187474668, temperature : 4981}
+2014-11-12 21:51:33.58: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101475, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:33.59: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 84, voltage_battery : 11448, current_battery : 21, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:33.59: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:33.62: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:33.63: GPS_RAW_INT {time_usec : 3685670000, fix_type : 3, lat : 423615523, lon : -710968165, alt : 264500, eph : 219, epv : 65535, vel : 59, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:33.63: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:33.63: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:33.66: GLOBAL_POSITION_INT {time_boot_ms : 3685670, lat : 423615483, lon : -710968050, alt : 264500, relative_alt : 320, vx : -13, vy : -57, vz : 144, hdg : 4144}
+2014-11-12 21:51:33.66: SERVO_OUTPUT_RAW {time_usec : 3682937150, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:33.67: RC_CHANNELS_RAW {time_boot_ms : 3685802, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:33.69: ATTITUDE {time_boot_ms : 3685802, roll : 0.00119262095541, pitch : 0.00684528145939, yaw : 0.723402023315, rollspeed : -0.00581603869796, pitchspeed : 0.0110933184624, yawspeed : 0.00143987499177}
+2014-11-12 21:51:33.70: VFR_HUD {airspeed : 0.589999973774, groundspeed : 0.589999973774, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:33.70: AHRS {omegaIx : 0.00553574506193, omegaIy : -0.011071885936, omegaIz : -0.00155303068459, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000349443289451, error_yaw : 0.00532216811553}
+2014-11-12 21:51:33.70: HWSTATUS {Vcc : 5215, I2Cerr : 0}
+2014-11-12 21:51:33.83: SYSTEM_TIME {time_unix_usec : 1415847094352000, time_boot_ms : 3685802}
+2014-11-12 21:51:33.84: RAW_IMU {time_usec : 3683235688, xacc : 7, yacc : -1, zacc : -1019, xgyro : -5, ygyro : 11, zgyro : 1, xmag : 94, ymag : -146, zmag : 350}
+2014-11-12 21:51:33.84: SCALED_IMU2 {time_boot_ms : 3686100, xacc : 25, yacc : 17, zacc : -991, xgyro : 7, ygyro : -10, zgyro : 18, xmag : 10, ymag : -297, zmag : 375}
+2014-11-12 21:51:33.93: SCALED_PRESSURE {time_boot_ms : 3686100, press_abs : 1014.76171875, press_diff : -0.0382812507451, temperature : 4981}
+2014-11-12 21:51:34.06: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:34.07: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 81, voltage_battery : 11456, current_battery : 17, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:34.09: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:34.09: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:34.10: GPS_RAW_INT {time_usec : 3686070000, fix_type : 3, lat : 423615487, lon : -710968128, alt : 265720, eph : 219, epv : 65535, vel : 34, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:34.11: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:34.11: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:34.12: GLOBAL_POSITION_INT {time_boot_ms : 3686070, lat : 423615444, lon : -710968062, alt : 265720, relative_alt : 320, vx : -25, vy : -22, vz : 132, hdg : 4145}
+2014-11-12 21:51:34.13: SERVO_OUTPUT_RAW {time_usec : 3683236850, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:34.13: RC_CHANNELS_RAW {time_boot_ms : 3686101, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:34.16: ATTITUDE {time_boot_ms : 3686101, roll : 0.00117402523756, pitch : 0.00682026520371, yaw : 0.723468780518, rollspeed : -0.00550196692348, pitchspeed : 0.0110328793526, yawspeed : 0.00165757350624}
+2014-11-12 21:51:34.20: VFR_HUD {airspeed : 0.340000003576, groundspeed : 0.340000003576, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
+2014-11-12 21:51:34.21: AHRS {omegaIx : 0.00553574506193, omegaIy : -0.011071885936, omegaIz : -0.00155303068459, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000283390574623, error_yaw : 0.0123076243326}
+2014-11-12 21:51:34.21: HWSTATUS {Vcc : 5219, I2Cerr : 0}
+2014-11-12 21:51:34.21: SYSTEM_TIME {time_unix_usec : 1415847094652000, time_boot_ms : 3686102}
+2014-11-12 21:51:34.23: RAW_IMU {time_usec : 3683535831, xacc : 8, yacc : -3, zacc : -1014, xgyro : -5, ygyro : 10, zgyro : 1, xmag : 98, ymag : -146, zmag : 348}
+2014-11-12 21:51:34.23: SCALED_IMU2 {time_boot_ms : 3686400, xacc : 31, yacc : 24, zacc : -992, xgyro : 12, ygyro : -12, zgyro : 19, xmag : 10, ymag : -296, zmag : 373}
+2014-11-12 21:51:34.24: SCALED_PRESSURE {time_boot_ms : 3686400, press_abs : 1014.7565918, press_diff : -0.0433593727648, temperature : 4981}
+2014-11-12 21:51:34.27: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101475, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:34.28: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 84, voltage_battery : 11462, current_battery : 15, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:34.30: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:34.31: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:34.31: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:34.32: GPS_RAW_INT {time_usec : 3686270000, fix_type : 3, lat : 423615468, lon : -710968128, alt : 266740, eph : 219, epv : 65535, vel : 30, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:34.32: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:34.32: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:34.34: GLOBAL_POSITION_INT {time_boot_ms : 3686270, lat : 423615408, lon : -710968065, alt : 266740, relative_alt : 330, vx : -16, vy : -26, vz : 139, hdg : 4141}
+2014-11-12 21:51:34.35: SERVO_OUTPUT_RAW {time_usec : 3683537649, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:34.35: RC_CHANNELS_RAW {time_boot_ms : 3686402, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:34.36: RADIO {rssi : 93, remrssi : 112, txbuf : 100, noise : 42, remnoise : 19, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:34.36: RADIO_STATUS {rssi : 93, remrssi : 112, txbuf : 100, noise : 42, remnoise : 19, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:34.42: ATTITUDE {time_boot_ms : 3686402, roll : 0.00122942670714, pitch : 0.00681394198909, yaw : 0.722758948803, rollspeed : -0.00589278899133, pitchspeed : 0.0108688436449, yawspeed : 0.00149558437988}
+2014-11-12 21:51:34.42: VFR_HUD {airspeed : 0.299999982119, groundspeed : 0.299999982119, heading : 41, throttle : 0, alt : 0.329999983311, climb : 0.0}
+2014-11-12 21:51:34.43: AHRS {omegaIx : 0.00553574506193, omegaIy : -0.011071885936, omegaIz : -0.00155303068459, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000536612060387, error_yaw : 0.00511595094576}
+2014-11-12 21:51:34.43: HWSTATUS {Vcc : 5204, I2Cerr : 0}
+2014-11-12 21:51:34.45: SYSTEM_TIME {time_unix_usec : 1415847094953000, time_boot_ms : 3686403}
+2014-11-12 21:51:34.45: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:34.46: RAW_IMU {time_usec : 3683835738, xacc : 6, yacc : -1, zacc : -1020, xgyro : -5, ygyro : 11, zgyro : 1, xmag : 94, ymag : -146, zmag : 349}
+2014-11-12 21:51:34.46: SCALED_IMU2 {time_boot_ms : 3686700, xacc : 32, yacc : 29, zacc : -988, xgyro : 8, ygyro : -11, zgyro : 21, xmag : 10, ymag : -296, zmag : 374}
+2014-11-12 21:51:34.48: SCALED_PRESSURE {time_boot_ms : 3686700, press_abs : 1014.76660156, press_diff : -0.033359374851, temperature : 4981}
+2014-11-12 21:51:34.49: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:34.53: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 89, voltage_battery : 11460, current_battery : 15, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:34.53: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:34.53: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:34.54: GPS_RAW_INT {time_usec : 3686670000, fix_type : 3, lat : 423615433, lon : -710968132, alt : 268520, eph : 219, epv : 65535, vel : 35, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:34.56: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:34.56: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:34.57: GLOBAL_POSITION_INT {time_boot_ms : 3686670, lat : 423615373, lon : -710968069, alt : 268520, relative_alt : 330, vx : -29, vy : -19, vz : 150, hdg : 4144}
+2014-11-12 21:51:34.58: SERVO_OUTPUT_RAW {time_usec : 3683836970, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:34.60: RC_CHANNELS_RAW {time_boot_ms : 3686701, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:34.64: ATTITUDE {time_boot_ms : 3686701, roll : 0.0012238684576, pitch : 0.00692532025278, yaw : 0.723406553268, rollspeed : -0.00553951971233, pitchspeed : 0.0117444321513, yawspeed : 0.00176360411569}
+2014-11-12 21:51:34.65: VFR_HUD {airspeed : 0.34999999404, groundspeed : 0.34999999404, heading : 41, throttle : 0, alt : 0.329999983311, climb : 0.0}
+2014-11-12 21:51:34.65: AHRS {omegaIx : 0.00553574506193, omegaIy : -0.011071885936, omegaIz : -0.00155303068459, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000271034863545, error_yaw : 0.00763146067038}
+2014-11-12 21:51:34.65: HWSTATUS {Vcc : 5206, I2Cerr : 0}
+2014-11-12 21:51:34.80: SYSTEM_TIME {time_unix_usec : 1415847095252000, time_boot_ms : 3686702}
+2014-11-12 21:51:34.93: RAW_IMU {time_usec : 3684135755, xacc : 8, yacc : -3, zacc : -1017, xgyro : -6, ygyro : 11, zgyro : 1, xmag : 98, ymag : -145, zmag : 349}
+2014-11-12 21:51:34.93: SCALED_IMU2 {time_boot_ms : 3687000, xacc : 30, yacc : 24, zacc : -999, xgyro : 8, ygyro : -12, zgyro : 19, xmag : 9, ymag : -297, zmag : 373}
+2014-11-12 21:51:34.93: SCALED_PRESSURE {time_boot_ms : 3687000, press_abs : 1014.75488281, press_diff : -0.045078124851, temperature : 4981}
+2014-11-12 21:51:35.15: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101475, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:35.15: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 84, voltage_battery : 11432, current_battery : 18, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:35.18: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:35.18: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:35.19: GPS_RAW_INT {time_usec : 3686870000, fix_type : 3, lat : 423615404, lon : -710968103, alt : 269550, eph : 219, epv : 65535, vel : 33, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:35.19: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:35.20: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:35.21: GLOBAL_POSITION_INT {time_boot_ms : 3686870, lat : 423615340, lon : -710968074, alt : 269550, relative_alt : 330, vx : -33, vy : 0, vz : 153, hdg : 4139}
+2014-11-12 21:51:35.22: SERVO_OUTPUT_RAW {time_usec : 3684136994, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:35.22: RC_CHANNELS_RAW {time_boot_ms : 3687001, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:35.24: REQUEST_DATA_STREAM {target_system : 1, target_component : 1, req_stream_id : 0, req_message_rate : 4, start_stop : 1}
+2014-11-12 21:51:35.25: ATTITUDE {time_boot_ms : 3687001, roll : 0.00115863478277, pitch : 0.00693176826462, yaw : 0.722544312477, rollspeed : -0.0062471292913, pitchspeed : 0.0110662318766, yawspeed : 0.0014325985685}
+2014-11-12 21:51:35.29: VFR_HUD {airspeed : 0.329999983311, groundspeed : 0.329999983311, heading : 41, throttle : 0, alt : 0.329999983311, climb : 0.0}
+2014-11-12 21:51:35.29: AHRS {omegaIx : 0.00553574506193, omegaIy : -0.011071885936, omegaIz : -0.00155303068459, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000420747557655, error_yaw : 0.00894328486174}
+2014-11-12 21:51:35.30: HWSTATUS {Vcc : 5215, I2Cerr : 0}
+2014-11-12 21:51:35.30: SYSTEM_TIME {time_unix_usec : 1415847095553000, time_boot_ms : 3687003}
+2014-11-12 21:51:35.31: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:35.32: RAW_IMU {time_usec : 3684435766, xacc : 7, yacc : -1, zacc : -1015, xgyro : -5, ygyro : 11, zgyro : 1, xmag : 95, ymag : -145, zmag : 349}
+2014-11-12 21:51:35.32: SCALED_IMU2 {time_boot_ms : 3687300, xacc : 29, yacc : 25, zacc : -992, xgyro : 3, ygyro : -15, zgyro : 18, xmag : 9, ymag : -297, zmag : 374}
+2014-11-12 21:51:35.33: SCALED_PRESSURE {time_boot_ms : 3687300, press_abs : 1014.76568604, press_diff : -0.0342968739569, temperature : 4981}
+2014-11-12 21:51:35.36: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:35.37: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 85, voltage_battery : 11461, current_battery : 17, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:35.40: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:35.40: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:35.40: GPS_RAW_INT {time_usec : 3687270000, fix_type : 3, lat : 423615340, lon : -710967990, alt : 271030, eph : 219, epv : 65535, vel : 70, cog : 28933, satellites_visible : 5}
+2014-11-12 21:51:35.41: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:35.41: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:35.43: GLOBAL_POSITION_INT {time_boot_ms : 3687270, lat : 423615303, lon : -710968063, alt : 271030, relative_alt : 330, vx : -47, vy : 52, vz : 135, hdg : 4143}
+2014-11-12 21:51:35.43: SERVO_OUTPUT_RAW {time_usec : 3684437005, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:35.44: RC_CHANNELS_RAW {time_boot_ms : 3687301, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:35.45: RADIO {rssi : 94, remrssi : 112, txbuf : 100, noise : 40, remnoise : 17, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:35.45: RADIO_STATUS {rssi : 94, remrssi : 112, txbuf : 100, noise : 40, remnoise : 17, rxerrors : 924, fixed : 684}
+2014-11-12 21:51:35.51: ATTITUDE {time_boot_ms : 3687302, roll : 0.00122413865756, pitch : 0.00703794136643, yaw : 0.723187685013, rollspeed : -0.00585645250976, pitchspeed : 0.011376414448, yawspeed : 0.00142090162262}
+2014-11-12 21:51:35.52: VFR_HUD {airspeed : 0.699999988079, groundspeed : 0.699999988079, heading : 41, throttle : 0, alt : 0.329999983311, climb : 0.0}
+2014-11-12 21:51:35.52: AHRS {omegaIx : 0.00553574506193, omegaIy : -0.011071885936, omegaIz : -0.00155303068459, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000440132862423, error_yaw : 0.00424728309736}
+2014-11-12 21:51:35.53: HWSTATUS {Vcc : 5212, I2Cerr : 0}
+2014-11-12 21:51:35.53: SYSTEM_TIME {time_unix_usec : 1415847095852000, time_boot_ms : 3687302}
+2014-11-12 21:51:35.53: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:35.54: RAW_IMU {time_usec : 3684735632, xacc : 5, yacc : -1, zacc : -1017, xgyro : -5, ygyro : 11, zgyro : 1, xmag : 96, ymag : -145, zmag : 351}
+2014-11-12 21:51:35.57: SCALED_IMU2 {time_boot_ms : 3687600, xacc : 39, yacc : 27, zacc : -985, xgyro : 8, ygyro : -11, zgyro : 19, xmag : 9, ymag : -298, zmag : 372}
+2014-11-12 21:51:35.57: SCALED_PRESSURE {time_boot_ms : 3687600, press_abs : 1014.76660156, press_diff : -0.033359374851, temperature : 4981}
+2014-11-12 21:51:35.69: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:35.73: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 83, voltage_battery : 11467, current_battery : 15, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:35.73: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:35.73: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:35.74: GPS_RAW_INT {time_usec : 3687470000, fix_type : 3, lat : 423615323, lon : -710967935, alt : 271110, eph : 219, epv : 65535, vel : 95, cog : 20581, satellites_visible : 5}
+2014-11-12 21:51:35.75: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:35.75: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:35.80: GLOBAL_POSITION_INT {time_boot_ms : 3687470, lat : 423615261, lon : -710968025, alt : 271110, relative_alt : 330, vx : -58, vy : 76, vz : 116, hdg : 4143}
+2014-11-12 21:51:35.80: SERVO_OUTPUT_RAW {time_usec : 3684736841, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:35.81: RC_CHANNELS_RAW {time_boot_ms : 3687601, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:35.84: ATTITUDE {time_boot_ms : 3687601, roll : 0.00128011906054, pitch : 0.00701818196103, yaw : 0.723195135593, rollspeed : -0.00557273253798, pitchspeed : 0.0110904537141, yawspeed : 0.00151396263391}
+2014-11-12 21:51:35.84: VFR_HUD {airspeed : 0.949999988079, groundspeed : 0.949999988079, heading : 41, throttle : 0, alt : 0.329999983311, climb : 0.0}
+2014-11-12 21:51:35.85: AHRS {omegaIx : 0.00553574506193, omegaIy : -0.011071885936, omegaIz : -0.00155303068459, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000720917247236, error_yaw : 0.00108701491263}
+2014-11-12 21:51:35.85: HWSTATUS {Vcc : 5206, I2Cerr : 0}
+2014-11-12 21:51:36.02: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101475, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:36.02: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 86, voltage_battery : 11455, current_battery : 18, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:36.05: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:36.05: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:36.06: GPS_RAW_INT {time_usec : 3687870000, fix_type : 3, lat : 423615297, lon : -710967870, alt : 271450, eph : 219, epv : 65535, vel : 119, cog : 13526, satellites_visible : 5}
+2014-11-12 21:51:36.06: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:36.07: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:36.08: GLOBAL_POSITION_INT {time_boot_ms : 3687870, lat : 423615224, lon : -710967968, alt : 271450, relative_alt : 330, vx : -59, vy : 102, vz : 94, hdg : 4145}
+2014-11-12 21:51:36.09: SERVO_OUTPUT_RAW {time_usec : 3685037608, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:36.09: RC_CHANNELS_RAW {time_boot_ms : 3687902, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:36.12: ATTITUDE {time_boot_ms : 3687902, roll : 0.00128370302264, pitch : 0.00698281917721, yaw : 0.7235455513, rollspeed : -0.00562160089612, pitchspeed : 0.0108769573271, yawspeed : 0.00127753755078}
+2014-11-12 21:51:36.16: VFR_HUD {airspeed : 1.18999993801, groundspeed : 1.18999993801, heading : 41, throttle : 0, alt : 0.329999983311, climb : 0.0}
+2014-11-12 21:51:36.16: AHRS {omegaIx : 0.00553574506193, omegaIy : -0.011071885936, omegaIz : -0.00155303068459, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.00045636924915, error_yaw : 0.0056162676774}
+2014-11-12 21:51:36.17: HWSTATUS {Vcc : 5211, I2Cerr : 0}
+2014-11-12 21:51:36.17: SYSTEM_TIME {time_unix_usec : 1415847096453000, time_boot_ms : 3687903}
+2014-11-12 21:51:36.19: RAW_IMU {time_usec : 3685335614, xacc : 5, yacc : -1, zacc : -1019, xgyro : -5, ygyro : 11, zgyro : 1, xmag : 95, ymag : -146, zmag : 349}
+2014-11-12 21:51:36.19: SCALED_IMU2 {time_boot_ms : 3688200, xacc : 29, yacc : 29, zacc : -997, xgyro : 7, ygyro : -15, zgyro : 19, xmag : 10, ymag : -296, zmag : 372}
+2014-11-12 21:51:36.20: SCALED_PRESSURE {time_boot_ms : 3688200, press_abs : 1014.75506592, press_diff : -0.044921875, temperature : 4981}
+2014-11-12 21:51:36.23: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101475, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:36.24: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 84, voltage_battery : 11459, current_battery : 19, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:36.27: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:36.27: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:36.27: GPS_RAW_INT {time_usec : 3688070000, fix_type : 3, lat : 423615290, lon : -710967871, alt : 271820, eph : 219, epv : 65535, vel : 106, cog : 12851, satellites_visible : 5}
+2014-11-12 21:51:36.28: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:36.28: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:36.30: GLOBAL_POSITION_INT {time_boot_ms : 3688070, lat : 423615192, lon : -710967910, alt : 271820, relative_alt : 330, vx : -52, vy : 91, vz : 93, hdg : 4149}
+2014-11-12 21:51:36.31: SERVO_OUTPUT_RAW {time_usec : 3685336845, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:36.31: RC_CHANNELS_RAW {time_boot_ms : 3688201, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:36.31: HEARTBEAT {type : 6, autopilot : 8, base_mode : 0, custom_mode : 0, system_status : 0, mavlink_version : 3}
+2014-11-12 21:51:36.33: ATTITUDE {time_boot_ms : 3688201, roll : 0.00119935849216, pitch : 0.00689605297521, yaw : 0.724229514599, rollspeed : -0.00554678961635, pitchspeed : 0.0112075917423, yawspeed : 0.00190734211355}
+2014-11-12 21:51:36.37: VFR_HUD {airspeed : 1.05999994278, groundspeed : 1.05999994278, heading : 41, throttle : 0, alt : 0.329999983311, climb : 0.0}
+2014-11-12 21:51:36.38: AHRS {omegaIx : 0.00553574506193, omegaIy : -0.011071885936, omegaIz : -0.00155303068459, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.000195536238607, error_yaw : 0.00334116327576}
+2014-11-12 21:51:36.38: HWSTATUS {Vcc : 5212, I2Cerr : 0}
+2014-11-12 21:51:36.38: SYSTEM_TIME {time_unix_usec : 1415847096752000, time_boot_ms : 3688202}
+2014-11-12 21:51:36.39: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}
+2014-11-12 21:51:36.40: RAW_IMU {time_usec : 3685635768, xacc : 7, yacc : -1, zacc : -1019, xgyro : -5, ygyro : 11, zgyro : 1, xmag : 94, ymag : -145, zmag : 349}
+2014-11-12 21:51:36.41: SCALED_IMU2 {time_boot_ms : 3688500, xacc : 28, yacc : 25, zacc : -998, xgyro : 9, ygyro : -15, zgyro : 23, xmag : 9, ymag : -297, zmag : 374}
+2014-11-12 21:51:36.41: SCALED_PRESSURE {time_boot_ms : 3688500, press_abs : 1014.7699585, press_diff : -0.0299999993294, temperature : 4981}
+2014-11-12 21:51:36.45: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101477, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:36.46: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 81, voltage_battery : 11457, current_battery : 19, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:36.48: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:36.49: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:36.49: GPS_RAW_INT {time_usec : 3688470000, fix_type : 3, lat : 423615293, lon : -710967889, alt : 272020, eph : 219, epv : 65535, vel : 73, cog : 12326, satellites_visible : 5}
+2014-11-12 21:51:36.50: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:36.50: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:36.52: GLOBAL_POSITION_INT {time_boot_ms : 3688470, lat : 423615169, lon : -710967868, alt : 272020, relative_alt : 330, vx : -35, vy : 64, vz : 81, hdg : 4156}
+2014-11-12 21:51:36.52: SERVO_OUTPUT_RAW {time_usec : 3685637001, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:36.53: RC_CHANNELS_RAW {time_boot_ms : 3688501, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:36.54: RADIO {rssi : 95, remrssi : 112, txbuf : 100, noise : 38, remnoise : 20, rxerrors : 925, fixed : 684}
+2014-11-12 21:51:36.54: RADIO_STATUS {rssi : 95, remrssi : 112, txbuf : 100, noise : 38, remnoise : 20, rxerrors : 925, fixed : 684}
+2014-11-12 21:51:36.62: SYSTEM_TIME {time_unix_usec : 1415847097052000, time_boot_ms : 3688502}
+2014-11-12 21:51:36.63: RAW_IMU {time_usec : 3685936348, xacc : 7, yacc : -2, zacc : -1016, xgyro : -5, ygyro : 11, zgyro : 1, xmag : 97, ymag : -146, zmag : 349}
+2014-11-12 21:51:36.63: SCALED_IMU2 {time_boot_ms : 3688801, xacc : 29, yacc : 21, zacc : -987, xgyro : 11, ygyro : -8, zgyro : 18, xmag : 9, ymag : -297, zmag : 374}
+2014-11-12 21:51:36.66: SCALED_PRESSURE {time_boot_ms : 3688801, press_abs : 1014.7598877, press_diff : -0.0400781258941, temperature : 4981}
+2014-11-12 21:51:36.67: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101475, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:36.77: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 85, voltage_battery : 11457, current_battery : 18, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:36.80: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:36.81: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:36.81: GPS_RAW_INT {time_usec : 3688670000, fix_type : 3, lat : 423615285, lon : -710967856, alt : 271940, eph : 219, epv : 65535, vel : 93, cog : 12089, satellites_visible : 5}
+2014-11-12 21:51:36.82: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:36.82: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:36.84: GLOBAL_POSITION_INT {time_boot_ms : 3688670, lat : 423615156, lon : -710967839, alt : 271940, relative_alt : 330, vx : -45, vy : 81, vz : 66, hdg : 4158}
+2014-11-12 21:51:36.84: SERVO_OUTPUT_RAW {time_usec : 3685937642, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:36.85: RC_CHANNELS_RAW {time_boot_ms : 3688802, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:36.88: ATTITUDE {time_boot_ms : 3688802, roll : 0.00126154650934, pitch : 0.00684944400564, yaw : 0.725873410702, rollspeed : -0.00593469664454, pitchspeed : 0.011093672365, yawspeed : 0.00157107692212}
+2014-11-12 21:51:36.88: VFR_HUD {airspeed : 0.930000007153, groundspeed : 0.930000007153, heading : 41, throttle : 0, alt : 0.329999983311, climb : 0.0}
+2014-11-12 21:51:36.99: AHRS {omegaIx : 0.00553574506193, omegaIy : -0.011071885936, omegaIz : -0.00155303068459, accel_weight : 1.0, renorm_val : 0.0, error_rp : 0.00077541481005, error_yaw : 0.00354179251008}
+2014-11-12 21:51:37.02: HWSTATUS {Vcc : 5193, I2Cerr : 0}
+2014-11-12 21:51:37.03: SYSTEM_TIME {time_unix_usec : 1415847097352000, time_boot_ms : 3688802}
+2014-11-12 21:51:37.03: RAW_IMU {time_usec : 3686235781, xacc : 6, yacc : -1, zacc : -1017, xgyro : -5, ygyro : 10, zgyro : 0, xmag : 96, ymag : -145, zmag : 350}
+2014-11-12 21:51:37.04: SCALED_IMU2 {time_boot_ms : 3689100, xacc : 26, yacc : 33, zacc : -995, xgyro : 10, ygyro : -10, zgyro : 14, xmag : 10, ymag : -297, zmag : 373}
+2014-11-12 21:51:37.04: SCALED_PRESSURE {time_boot_ms : 3689100, press_abs : 1014.76654053, press_diff : -0.0334374979138, temperature : 4981}
+2014-11-12 21:51:37.06: SENSOR_OFFSETS {mag_ofs_x : -65, mag_ofs_y : -13, mag_ofs_z : 14, mag_declination : -0.251368045807, raw_press : 101476, raw_temp : 4981, gyro_cal_x : -0.0163370147347, gyro_cal_y : 0.0268146060407, gyro_cal_z : -0.00898513011634, accel_cal_x : -0.137072786689, accel_cal_y : -0.153725579381, accel_cal_z : -1.01396369934}
+2014-11-12 21:51:37.07: SYS_STATUS {onboard_control_sensors_present : 64559, onboard_control_sensors_enabled : 39983, onboard_control_sensors_health : 64559, load : 84, voltage_battery : 11449, current_battery : 15, battery_remaining : 94, drop_rate_comm : 0, errors_comm : 0, errors_count1 : 0, errors_count2 : 0, errors_count3 : 0, errors_count4 : 0}
+2014-11-12 21:51:37.07: MEMINFO {brkval : 0, freemem : 65535}
+2014-11-12 21:51:37.10: MISSION_CURRENT {seq : 0}
+2014-11-12 21:51:37.11: GPS_RAW_INT {time_usec : 3689070000, fix_type : 3, lat : 423615223, lon : -710967719, alt : 272940, eph : 219, epv : 65535, vel : 134, cog : 11740, satellites_visible : 5}
+2014-11-12 21:51:37.11: NAV_CONTROLLER_OUTPUT {nav_roll : 0.0, nav_pitch : 0.0, nav_bearing : 41, target_bearing : 0, wp_dist : 0, alt_error : 0.0, aspd_error : 0.0, xtrack_error : 0.0}
+2014-11-12 21:51:37.11: FENCE_STATUS {breach_status : 0, breach_count : 0, breach_type : 0, breach_time : 0}
+2014-11-12 21:51:37.14: GLOBAL_POSITION_INT {time_boot_ms : 3689070, lat : 423615144, lon : -710967798, alt : 272940, relative_alt : 320, vx : -61, vy : 118, vz : 50, hdg : 4161}
+2014-11-12 21:51:37.14: SERVO_OUTPUT_RAW {time_usec : 3686237343, port : 0, servo1_raw : 1104, servo2_raw : 1104, servo3_raw : 1104, servo4_raw : 1104, servo5_raw : 0, servo6_raw : 0, servo7_raw : 0, servo8_raw : 0}
+2014-11-12 21:51:37.15: RC_CHANNELS_RAW {time_boot_ms : 3689102, port : 0, chan1_raw : 0, chan2_raw : 0, chan3_raw : 0, chan4_raw : 0, chan5_raw : 0, chan6_raw : 0, chan7_raw : 0, chan8_raw : 0, rssi : 0}
+2014-11-12 21:51:37.17: ATTITUDE {time_boot_ms : 3689102, roll : 0.00133672403172, pitch : 0.00692066410556, yaw : 0.726242899895, rollspeed : -0.00548104941845, pitchspeed : 0.010349098593, yawspeed : 0.000673308968544}
+2014-11-12 21:51:37.18: VFR_HUD {airspeed : 1.33999991417, groundspeed : 1.33999991417, heading : 41, throttle : 0, alt : 0.319999992847, climb : 0.0}
