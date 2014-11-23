@@ -28,7 +28,6 @@ date = date[:-3] #substringing the last two decimal places and decimal off
 os.system(ROOT+'/runMavproxy.sh '+date+' '+ROOT) #passing in the unique label as input, and the root
 
 myFile = ROOT+'/logs/quadlog'+date+'_decode.txt'
-#myFile = ROOT+'../comm/logs/quadlog_decode.txt'
 
 print "Preparing to parse "+myFile
 with open(myFile) as f:
