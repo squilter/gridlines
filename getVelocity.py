@@ -20,7 +20,7 @@ from uav_msgs.msg import GridLinePosPost
 
 
 date = str(time.time()) #so we make a unique log each run
-date = date[:-2] #substringing the last two decimal places off
+date = date[:3] #substringing the last two decimal places and decimal off
 
 os.system('../comm/runMavproxy.sh '+date) #passing in the unique label as input
 
