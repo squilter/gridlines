@@ -15,7 +15,8 @@ decode='_decode'
 myLog=$quadfull$invalue$dottxt
 myLogDecode=$quadfull$invalue$decode$dottxt
 
-mavproxy.py --master=/dev/ttyUSB0 --baudrate=57600 --logfile=$myLog --cmd='status GPS_RAW_INT;exit'
+#mavproxy.py --master=/dev/ttyUSB0 --baudrate=57600 --logfile=$myLog --cmd='status GPS_RAW_INT;exit'
+mavproxy.py --master=127.0.0.1:14550 --baudrate=57600 --logfile=$myLog --cmd='status GPS_RAW_INT;exit'
 mavlogdump.py $myLog > $myLogDecode
 
 echo 'Got to the end of the shell script'
