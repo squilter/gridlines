@@ -85,6 +85,7 @@ def getVelocity():
 
 		#rate1.sleep()
 	print getParameters().__getitem__('INS_ACC2OFFS_X')
+	print getParameters().__getitem__('INS_ACC2OFFS_X')
 
 	setOrigin(8,8,7)
 	#sys.exit()
