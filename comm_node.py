@@ -7,6 +7,7 @@ from uav_msgs.msg import IMUSample
 from uav_msgs.msg import OptFlowSample
 
 # use MavRos bridge
+# must sudo apt-get install ros-indigo-mavros
 from mavros.msg import Mavlink
 
 # mavlink message ids
