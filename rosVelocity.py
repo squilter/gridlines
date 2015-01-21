@@ -80,25 +80,13 @@ class UAV():
 		print 'airspeed: '+str(self.v.airspeed)
 		print 'groundspeed: '+str(self.v.groundspeed)								
 
-		while not self.api.exit: 
-			vx_vy_vz = self.v.velocity
-			attitude = self.v.attitude
-			#time = rospy.now() todo
-			#quality = 155 #has to be in range [0 255]
+		
+		vx_vy_vz = self.v.velocity
+		attitude = self.v.attitude
+		#time = rospy.now() todo
+	
 
-			print "Get velocity is working..."
-					
-			#print "location: "+str(v.location)
-			#print "attitude: "+str(attitude)
 
-			time.sleep(3)
-		#	omsg = OpticalFlowPost()
-		#	omsg.x_vel = vx_vy_vz[0]
-		#	omsg.y_vel = vx_vy_vz[1]
-			#omsg.z_vel = vx_vy_vz[2]
-			#omsg.quality = quality
-			#omsg.uncertainty = 1 - (quality/255)
-		#	opticalFlowPub.publish(omsg)
 			#rate1.sleep()
 
 	#	setOrigin(8,8,7)
@@ -210,6 +198,14 @@ class UAV():
 			print
 			print "flow_x: "+str(packet.flow_x)+" flow_y: "+str(packet.flow_y)+" quality: "+str(packet.quality)
 			print "ground_distance: "+str(packet.ground_distance)
+			#omsg = OpticalFlowPost()
+			#omsg.x_vel = vx_vy_vz[0]
+			#omsg.y_vel = vx_vy_vz[1]
+			#omsg.z_vel = vx_vy_vz[2]
+			#omsg.quality = quality
+			#omsg.uncertainty = 1 - (quality/255)
+			#opticalFlowPub.publish(omsg)
+
 		elif str(typ) == "OPTICAL_FLOW_RAD" or str(typ) == "HIL_OPTICAL_FLOW" or str(typ) == "MAV_SYS_STATUS_SENSOR_OPTICAL_FLOW":
 			print "more flow data!!!"
 		else:
