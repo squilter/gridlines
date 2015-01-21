@@ -7,28 +7,15 @@ import serial
 
 from uav_msgs.msg import IMUSample
 from uav_msgs.msg import OptFlowSample
+from uav_msgs.msg import UavCmd
 
 import mavlink.mavlink as mavlink
-
-# mavlink message ids
-MAV_ID_HEARTBEAT 			= 00
-MAV_ID_SYS_STATUS			= 01
-MAV_ID_SYSTEM_TIME			= 02
-MAV_ID_PING					= 04
-MAV_ID_SET_MODE				= 11
-MAV_ID_SCALED_IMU 			= 26
-MAV_ID_SCALED_PRESSURE 		= 29
-MAV_ID_ATTITUDE 			= 30
-MAV_ID_LOCAL_POSITION_NED	= 32
-MAV_ID_MISSION_ITEM			= 39
-MAV_ID_OPTICAL_FLOW			= 100
-MAV_ID_BATTERY_STATUS 		= 147
 
 class MavNode:
 
 	# UAV start time (in ros time) -- used for synchronization
 	uav_time_start = None
-	uav_time_smpl_count = 0
+	uav_latency = None
 
 	# Mavlink-facing interface
 	port = None
@@ -38,13 +25,15 @@ class MavNode:
 	comp_id = 1
 
 	# ROS-facing interface
+	# NOTE: Define additional publishers/subscribers here
 	imu_pub = None
 	of_pub = None
+	cmd_sub = None
 
 	def __init__(self, serial_name):
 
-		uav_time_start = None
-		uav_time_smpl_count = 0
+		self.uav_time_start = None
+		self.uav_latency = None
 
 		rospy.loginfo('Opening serial port.')
 		self.serial_name = serial_name
@@ -52,8 +41,11 @@ class MavNode:
 		self.mav = mavlink.MAVLink(self.port, self.sys_id, self.comp_id)
 
 		rospy.loginfo('Initializing ROS-facing interface...')
+		# NOTE: Here is where you initialize any additional ROS publishers
 		self.imu_pub = rospy.Publisher('uav_telemetry/imu', IMUSample, queue_size=5)
 		self.of_pub = rospy.Publisher('uav_telemetry/opt_flow', OptFlowSample, queue_size=5)
+		# NOTE: And here you initialize ROS subscribers and link them to their callback functions
+		self.cmd_sub = rospy.Subscriber('uav_cmds/cmd', UavCmd, self.rosUavCmd)
 		
 		return
 
@@ -61,27 +53,58 @@ class MavNode:
 	def uavTimeToRosTime(self, mav_time_ms, msg_receive_rostime):
 		if not isinstance(msg_receive_rostime, rospy.Time):
 			raise Exception('Invalid argument type received for msg_receive_rostime.')
-		
-		return msg_receive_rostime
-		# TODO: actually do estimate
-		
+
+		# if clock synchronization not initialized yet
+		if self.uav_time_start is None or self.uav_latency is None:
+			return msg_receive_rostime
+
+		# otherwise perform estimation
+		else:
+			# update start time estimate with crude LPF
+			dt = rospy.Duration.from_ms(mav_time_ms)
+			t0 = msg_receive_rostime - self.uav_latency - dt
+			
+			correction = 0.1*(t0 - self.uav_time_start)
+			self.uav_time_start += correction
+
+			return self.uav_time_start + dt
+
+	def spin(self):
+		while True:
+			self.mavCheck()
+		return
+
 	def mavCheck(self):
 		rx_time = rospy.Time.now()
 
-		in_chars = self.port.read(1)
+		count = self.port.inWaiting()
+		if count == 0:
+			return
+		in_chars = self.port.read(ount)
+
 		msgs = self.mav.parse_buffer(in_chars)
 		for m in msgs:
 			self.mavHandler(m, rx_time)
 		return
 
+	## incoming ROS message handlers
+	def rosUavCmd(self, uav_cmd):
+		# do something with incoming command message from ROS
+		# probably send Mission Item message to UAV
+		pass
+
+	## incoming MAVLink message handlers
 	def mavHandler(self, msg, rx_time_ros):
-		if isinstance(msg, mavlink.MAVLink_heartbeat_message):
+		mid = msg.get_msgId()
+
+		# NOTE: Here add if clauses to catch additional Mavlink message types
+		if mid == mavlink.MAVLINK_MSG_ID_HEARTBEAT:
 			pass
-		if isinstance(msg, mavlink.MAVLink_system_status_message):
+		elif mid == mavlink.MAVLINK_MSG_ID_SYSTEM_STATUS:
 			pass
-		if isinstance(msg, mavlink.MAVLink_scaled_imu_message):
+		elif mid == mavlink.MAVLINK_MSG_ID_SCALED_IMU:
 			self.mavScaledImu(msg, rx_time_ros)
-		elif isinstance(msg, mavlink.MAVLink_optical_flow_message):
+		elif mid == mavlink.MAVLINK_MSG_ID_OPTICAL_FLOW:
 			self.mavOpticalFlow(msg, rx_time_ros)
 		else:
 			rospy.logwarn('Received unrecognized message with id %d.', msg.get_msgId())
@@ -115,11 +138,6 @@ class MavNode:
 		of.timestamp = uavTimeToRosTime(msg.time_us, rx_time_ros)
 
 		self.of_pub.publish(of)
-		return
-
-	def spin(self):
-		while True:
-			self.mavCheck()
 		return
 
 rospy.init_node('comm_node')
