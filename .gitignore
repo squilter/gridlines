@@ -2,3 +2,5 @@
 CMakeLists.txt
 package.xml
 *decode.txt
+mav.tlog*
+*.pyc
