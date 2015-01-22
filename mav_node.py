@@ -7,7 +7,7 @@ import serial
 
 from uav_msgs.msg import IMUSample
 from uav_msgs.msg import OptFlowSample
-from uav_msgs.msg import UavCmd
+#from uav_msgs.msg import UavCmd
 
 import mavlink.mavlink as mavlink
 
@@ -21,8 +21,8 @@ class MavNode:
 	port = None
 	serial_name = None
 	mav = None 		# MAVLink object
-	sys_id = 37
-	comp_id = 1
+	sys_id = 81#37
+	comp_id = 50#1
 
 	# ROS-facing interface
 	# NOTE: Define additional publishers/subscribers here
@@ -45,7 +45,7 @@ class MavNode:
 		self.imu_pub = rospy.Publisher('uav_telemetry/imu', IMUSample, queue_size=5)
 		self.of_pub = rospy.Publisher('uav_telemetry/opt_flow', OptFlowSample, queue_size=5)
 		# NOTE: And here you initialize ROS subscribers and link them to their callback functions
-		self.cmd_sub = rospy.Subscriber('uav_cmds/cmd', UavCmd, self.rosUavCmd)
+		#self.cmd_sub = rospy.Subscriber('uav_cmds/cmd', UavCmd, self.rosUavCmd)
 		
 		return
 
@@ -80,7 +80,7 @@ class MavNode:
 		count = self.port.inWaiting()
 		if count == 0:
 			return
-		in_chars = self.port.read(ount)
+		in_chars = self.port.read(count)
 
 		msgs = self.mav.parse_buffer(in_chars)
 		try:
