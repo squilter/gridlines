@@ -59,7 +59,7 @@ class UAV():
 		#topic = rospy.get_param('~topic','imu_data')
 		#rospy.loginfo('rate = %d',rate)
 		#rospy.loginfo('topic = %s',topic)
-		vehicles = api.get_vehicles()
+		vehicles = self.api.get_vehicles()
 		self.v = vehicles[0]	
 		
 	def handleMavlink(self):
@@ -169,7 +169,6 @@ class UAV():
 	def mavlinkCallback(self,packet):
 		typ = packet.get_type()
 		#print typ
-		#return
 
 		if str(typ) == "RAW_IMU":		
 			imu = IMUSample()
@@ -184,16 +183,16 @@ class UAV():
 			imu.mag_z = packet.zmag
 			imu.timestamp = packet.time_usec
 			#imu.timestamp = MavCommNode.uavTimetoRosTime(packet.time_usec)
-			print "about to publish"
+			#print
 			try:
-				pub_imu.publish(imu)
-			except e:
-				print e
-			print
-			print packet.time_usec
-			print "xacc: "+str(packet.xacc)+" yacc: "+str(packet.yacc)+" zacc: "+str(packet.zacc)
-			print "xgyro: "+str(packet.xgyro)+" ygyro: "+str(packet.ygyro)+" zgyro: "+str(packet.zgyro)
-			print "xmag: "+str(packet.xmag)+" ymag: "+str(packet.ymag)+" zmag: "+str(packet.zmag)
+				self.pub_imu.publish(imu)
+				#rospy.loginfo('Published imu message')
+			except:
+				print "error publishing."			
+			#print "packet time: "+str(packet.time_usec)
+			#print "xacc: "+str(packet.xacc)+" yacc: "+str(packet.yacc)+" zacc: "+str(packet.zacc)
+			#print "xgyro: "+str(packet.xgyro)+" ygyro: "+str(packet.ygyro)+" zgyro: "+str(packet.zgyro)
+			#print "xmag: "+str(packet.xmag)+" ymag: "+str(packet.ymag)+" zmag: "+str(packet.zmag)
 		elif str(typ) == "OPTICAL_FLOW":
 			print
 			print "flow_x: "+str(packet.flow_x)+" flow_y: "+str(packet.flow_y)+" quality: "+str(packet.quality)
@@ -209,17 +208,7 @@ class UAV():
 		elif str(typ) == "OPTICAL_FLOW_RAD" or str(typ) == "HIL_OPTICAL_FLOW" or str(typ) == "MAV_SYS_STATUS_SENSOR_OPTICAL_FLOW":
 			print "more flow data!!!"
 		else:
-			pass
-
-	    #print packet    
-	     #   if 'OPTICAL_FLOW' == mytype or 'OPTICAL_FLOW_RAD' == mytype or 'HIL_OPTICAL_FLOW' == mytype or 'MAV_SYS_STATUS_SENSOR_OPTICAL_FLOW' == mytype: #GPS_RAW_INT
-	      #              mpstate.console.writeln(str(mytype))
-	       #             mpstate.console.writeln("optical flow data!!! "+str(msg.alt))                                        
-	        #    except: 
-	         #       "failed sudos second test"     
-	     
-
-	#if __name__=='__main__':
+			pass 	     
 
 try:	
 	uav = UAV()

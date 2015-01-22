@@ -54,15 +54,15 @@ class UAV():
 	 	    #if (gpsd.valid & gps.LATLON_SET) != 0:
 		        
 	 	dest = droneapi.lib.Location(a.x,a.y,a.z, is_relative=True)
-	        print "Going to: %s" % dest
+	    print "Going to: %s" % dest
 		#cmds.add(dest)
-	        cmds.goto(dest)
-	        is_guided = True
-	        self.v.flush()
+        cmds.goto(dest)
+        is_guided = True
+        self.v.flush()
 
 	        # Send a new target every ___ seconds
 	        
-	        time.sleep(.1)
+        time.sleep(.1)
 
 uav=UAV()
 uav.initialize()

@@ -70,15 +70,19 @@ class MavNode:
 
 		in_chars = self.port.read(1)
 		msgs = self.mav.parse_buffer(in_chars)
-		for m in msgs:
-			self.mavHandler(m, rx_time)
+		try:
+			for m in msgs:
+				self.mavHandler(m, rx_time)
+		except TypeError:
+			pass
 		return
 
 	def mavHandler(self, msg, rx_time_ros):
+		print msg.get_type()
 		if isinstance(msg, mavlink.MAVLink_heartbeat_message):
 			pass
-		if isinstance(msg, mavlink.MAVLink_system_status_message):
-			pass
+		#if isinstance(msg, mavlink.MAVLink_system_status_message):
+		#	pass
 		if isinstance(msg, mavlink.MAVLink_scaled_imu_message):
 			self.mavScaledImu(msg, rx_time_ros)
 		elif isinstance(msg, mavlink.MAVLink_optical_flow_message):
