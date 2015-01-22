@@ -12,7 +12,7 @@ parentDir = os.path.dirname(currentDir)
 sys.path.insert(0,parentDir)
 
 from uav_msgs.msg import IMUSample
-#from uav_msgs.msg import UavEstState
+from uav_msgs.msg import OptFlowSample
 
 import droneapi.lib
 from pymavlink import mavutil
@@ -53,12 +53,9 @@ class UAV():
 
 	def __init__(self):
 		self.api = local_connect()		
-		rospy.init_node('testing123',disable_signals=True) #to start time
-		self.pub_imu = rospy.Publisher('imu_data', IMUSample, queue_size=10)
-		#rate = float(rospy.get_param('~rate','1.0'))
-		#topic = rospy.get_param('~topic','imu_data')
-		#rospy.loginfo('rate = %d',rate)
-		#rospy.loginfo('topic = %s',topic)
+		rospy.init_node('comm_node',disable_signals=True) #to start time
+		self.pub_imu = rospy.Publisher('uav_telemetry/imu', IMUSample, queue_size=10)
+		self.of_pub = rospy.Publisher('uav_telemetry/opt_flow', OptFlowSample, queue_size=5)
 		vehicles = self.api.get_vehicles()
 		self.v = vehicles[0]	
 		
@@ -80,18 +77,12 @@ class UAV():
 		print 'airspeed: '+str(self.v.airspeed)
 		print 'groundspeed: '+str(self.v.groundspeed)								
 
-		
 		vx_vy_vz = self.v.velocity
 		attitude = self.v.attitude
 		#time = rospy.now() todo
-	
-
-
-			#rate1.sleep()
-
+		#rate1.sleep()
 	#	setOrigin(8,8,7)
 		#sys.exit()
-
 		#optFlowFrequency = 20
 		#rospy.init_node('simulator', anonymous=True)
 		#rate_velocity = rospy.Rate(optFlowFrequency)
@@ -181,29 +172,33 @@ class UAV():
 			imu.mag_x = packet.xmag
 			imu.mag_y = packet.ymag
 			imu.mag_z = packet.zmag
-			imu.timestamp = packet.time_usec
 			#imu.timestamp = MavCommNode.uavTimetoRosTime(packet.time_usec)
-			#print
 			try:
 				self.pub_imu.publish(imu)
-				#rospy.loginfo('Published imu message')
+				rospy.loginfo('Published imu message')
 			except:
-				print "error publishing."			
+				print "error publishing imu."			
+			
 			#print "packet time: "+str(packet.time_usec)
 			#print "xacc: "+str(packet.xacc)+" yacc: "+str(packet.yacc)+" zacc: "+str(packet.zacc)
 			#print "xgyro: "+str(packet.xgyro)+" ygyro: "+str(packet.ygyro)+" zgyro: "+str(packet.zgyro)
 			#print "xmag: "+str(packet.xmag)+" ymag: "+str(packet.ymag)+" zmag: "+str(packet.zmag)
 		elif str(typ) == "OPTICAL_FLOW":
-			print
+			of = OptFlowSample()
+			of.x_vel = packet.flow_comp_m_x
+			of.y_vel = packet.flow_comp_m_y
+			of.ground_distance = packet.ground_distance
+			of.quality = packet.quality
+
+			#of.timestamp = packet.time_usec #uavTimeToRosTime(msg.time_us, rx_time_ros)
+			try:
+				self.of_pub.publish(of)
+				rospy.loginfo('Published flow message')
+			except:
+				print "error publishing flow"
+
 			print "flow_x: "+str(packet.flow_x)+" flow_y: "+str(packet.flow_y)+" quality: "+str(packet.quality)
 			print "ground_distance: "+str(packet.ground_distance)
-			#omsg = OpticalFlowPost()
-			#omsg.x_vel = vx_vy_vz[0]
-			#omsg.y_vel = vx_vy_vz[1]
-			#omsg.z_vel = vx_vy_vz[2]
-			#omsg.quality = quality
-			#omsg.uncertainty = 1 - (quality/255)
-			#opticalFlowPub.publish(omsg)
 
 		elif str(typ) == "OPTICAL_FLOW_RAD" or str(typ) == "HIL_OPTICAL_FLOW" or str(typ) == "MAV_SYS_STATUS_SENSOR_OPTICAL_FLOW":
 			print "more flow data!!!"
