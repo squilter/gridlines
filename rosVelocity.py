@@ -159,9 +159,9 @@ class UAV():
 
 	def mavlinkCallback(self,packet):
 		typ = packet.get_type()
-		#print typ
+		print typ
 
-		if str(typ) == "RAW_IMU":		
+		if str(typ) == "RAW_IMU" or str(typ) == "HIGHRES_IMU":		
 			imu = IMUSample()
 			imu.gyro_x = packet.xgyro
 			imu.gyro_y = packet.ygyro
@@ -184,6 +184,8 @@ class UAV():
 			#print "xgyro: "+str(packet.xgyro)+" ygyro: "+str(packet.ygyro)+" zgyro: "+str(packet.zgyro)
 			#print "xmag: "+str(packet.xmag)+" ymag: "+str(packet.ymag)+" zmag: "+str(packet.zmag)
 		elif str(typ) == "OPTICAL_FLOW":
+			rospy.loginfo("opt flow data!")
+			print "flow data"
 			of = OptFlowSample()
 			of.x_vel = packet.flow_comp_m_x
 			of.y_vel = packet.flow_comp_m_y
