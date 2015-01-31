@@ -159,7 +159,7 @@ class UAV():
 
 	def mavlinkCallback(self,packet):
 		typ = packet.get_type()
-		print typ
+		printAll = True
 
 		if str(typ) == "RAW_IMU" or str(typ) == "HIGHRES_IMU":		
 			imu = IMUSample()
@@ -183,7 +183,7 @@ class UAV():
 			#print "xacc: "+str(packet.xacc)+" yacc: "+str(packet.yacc)+" zacc: "+str(packet.zacc)
 			#print "xgyro: "+str(packet.xgyro)+" ygyro: "+str(packet.ygyro)+" zgyro: "+str(packet.zgyro)
 			#print "xmag: "+str(packet.xmag)+" ymag: "+str(packet.ymag)+" zmag: "+str(packet.zmag)
-		elif str(typ) == "OPTICAL_FLOW":
+		elif str(typ) == "OPTICAL_FLOW" or str(typ) == "OPTICAL_FLOW_RAD":
 			rospy.loginfo("opt flow data!")
 			print "flow data"
 			of = OptFlowSample()
@@ -204,8 +204,22 @@ class UAV():
 
 		elif str(typ) == "OPTICAL_FLOW_RAD" or str(typ) == "HIL_OPTICAL_FLOW" or str(typ) == "MAV_SYS_STATUS_SENSOR_OPTICAL_FLOW":
 			print "more flow data!!!"
+
+		elif not printAll and (str(typ) == "ATTITUDE" or str(typ) == "PARAM_VALUE" or str(typ) == "LOCAL_POSITION_NED" or str(typ) == "SYS_STATUS"
+			or str(typ) == "VFR_HUD" or str(typ) == "ATTITUDE_TARGET" or str(typ) == "POSITION_TARGET_GLOBAL_INT" or str(typ) == "HEARTBEAT"):
+			pass
+
 		else:
-			pass 	     
+			try:
+				print "flow_x: "+str(packet.flow_x)+" flow_y: "+str(packet.flow_y)+" quality: "+str(packet.quality)
+				print "ground_distance: "+str(packet.ground_distance)
+				print "alert! watch this packet: "+packet.get_type()
+			except:
+				print typ
+				
+			
+
+
 
 try:	
 	uav = UAV()
