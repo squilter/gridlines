@@ -479,13 +479,13 @@ def process_master(m):
     msgs = m.mav.parse_buffer(s)
     if msgs:
         for msg in msgs:
-            try:
-                mytype = msg.get_type()
-                if 'OPTICAL_FLOW' == mytype or 'OPTICAL_FLOW_RAD' == mytype or 'HIL_OPTICAL_FLOW' == mytype or 'MAV_SYS_STATUS_SENSOR_OPTICAL_FLOW' == mytype: #GPS_RAW_INT
-                    mpstate.console.writeln(str(mytype))
-                    mpstate.console.writeln("optical flow data!!! "+str(msg.alt))                                        
-            except: 
-                "failed sudos second test"
+            # try:
+            #     mytype = msg.get_type()
+            #     if 'OPTICAL_FLOW' == mytype or 'OPTICAL_FLOW_RAD' == mytype or 'HIL_OPTICAL_FLOW' == mytype or 'MAV_SYS_STATUS_SENSOR_OPTICAL_FLOW' == mytype: #GPS_RAW_INT
+            #         mpstate.console.writeln(str(mytype))
+            #         mpstate.console.writeln("optical flow data!!! "+str(msg.alt))                                        
+            # except: 
+            #     "failed sudos second test"
             if getattr(m, '_timestamp', None) is None:
                 m.post_message(msg)
             if msg.get_type() == "BAD_DATA":
