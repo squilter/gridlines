@@ -99,22 +99,35 @@ class MavNode:
 	## incoming MAVLink message handlers
 	def mavHandler(self, msg, rx_time_ros):
 		mid = msg.get_msgId()
+		#print mid
 
 		# NOTE: Here add if clauses to catch additional Mavlink message types
-		if mid == mavlink.MAVLINK_MSG_ID_HEARTBEAT:
+		if mid == 0: #mavlink.MAVLINK_MSG_ID_HEARTBEAT:
 			pass
-		elif mid == mavlink.MAVLINK_MSG_ID_SYSTEM_STATUS:
+		elif mid == 1: #mavlink.MAVLINK_MSG_ID_SYSTEM_STATUS:
 			pass
-		elif mid == mavlink.MAVLINK_MSG_ID_SCALED_IMU:
+		elif mid == 105: #HIGHRES_IMU actually. mavlink.MAVLINK_MSG_ID_SCALED_IMU:
 			self.mavScaledImu(msg, rx_time_ros)
-		elif mid == mavlink.MAVLINK_MSG_ID_OPTICAL_FLOW:
+		elif mid == 106: #mavlink.MAVLINK_MSG_ID_OPTICAL_FLOW:
 			self.mavOpticalFlow(msg, rx_time_ros)
+		elif mid == 74: #VFR_HUD
+			pass
+		elif mid == 32: #LOCAL_POSITION_NED
+			pass
+		elif mid == 87: #POSITION_TARGET_GLOBAL_INT
+			pass
+		elif mid == 83: #ATTITUDE_TARGET
+			pass
+		elif mid == 30: #ATTITUDE
+			pass
+		elif mid == 22: #PARAM_VALUE
+			pass
 		else:
 			rospy.logwarn('Received unrecognized message with id %d.', msg.get_msgId())
 
 		return
 
-	def mavScaledImu(self, msg, rx_time_ros):
+	def mavScaledImu(self, msg, rx_time_ros):		
 		imu = IMUSample()
 		imu.gyro_x = msg.xgyro * 0.001			# to [rad/s]
 		imu.gyro_y = msg.ygyro * 0.001
@@ -126,21 +139,29 @@ class MavNode:
 		imu.mag_y = msg.ymag * 0.001
 		imu.mag_z = msg.zmag * 0.001
 
-		imu.timestamp = uavTimeToRosTime(msg.time_boot_ms, rx_time_ros)
+		imu.timestamp = self.uavTimeToRosTime(msg.time_usec, rx_time_ros)
 
 		self.imu_pub.publish(imu)
+		rospy.loginfo('Published imu message')
 		return
 
 	def mavOpticalFlow(self, msg, rx_time_ros):
 		of = OptFlowSample()
-		of.x_vel = msg.flow_comp_m_x
-		of.y_vel = msg.flow_comp_m_y
-		of.ground_distance = msg.ground_distance
+		of.x_vel = msg.integrated_x
+		of.y_vel = msg.integrated_y
+		#of.xgyro = msg.integrated_xgyro
+		#of.ygyro = msg.integrated_ygyro
+		#of.ground_distance = msg.distance #not working for some reason. 
+		#OptFlowSample has no attribute ground_distance
+		#of.x_vel = msg.flow_comp_m_x
+		#of.y_vel = msg.flow_comp_m_y
+		#of.ground_distance = msg.ground_distance
 		of.quality = msg.quality
 
-		of.timestamp = uavTimeToRosTime(msg.time_us, rx_time_ros)
+		of.timestamp = self.uavTimeToRosTime(msg.time_usec, rx_time_ros)
 
 		self.of_pub.publish(of)
+		rospy.loginfo('Published optical flow message')
 		return
 
 rospy.init_node('comm_node')
