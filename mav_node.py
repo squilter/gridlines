@@ -147,15 +147,14 @@ class MavNode:
 
 	def mavOpticalFlow(self, msg, rx_time_ros):
 		of = OptFlowSample()
-		of.x_vel = msg.integrated_x
-		of.y_vel = msg.integrated_y
-		#of.xgyro = msg.integrated_xgyro
-		#of.ygyro = msg.integrated_ygyro
-		#of.ground_distance = msg.distance #not working for some reason. 
-		#OptFlowSample has no attribute ground_distance
-		#of.x_vel = msg.flow_comp_m_x
-		#of.y_vel = msg.flow_comp_m_y
-		#of.ground_distance = msg.ground_distance
+
+		of.integrated_xgyro = msg.integrated_xgyro
+		of.integratd_ygyro = msg.integrated_ygyro
+		of.integrated_x = msg.flow_comp_m_x
+		of.integrated_y = msg.flow_comp_m_y
+		of.ground_distance = msg.ground_distance
+		of.temperature = msg.temperature
+		of.time_delta_distance_us = msg.time_delta_distance_us
 		of.quality = msg.quality
 
 		of.timestamp = self.uavTimeToRosTime(msg.time_usec, rx_time_ros)
