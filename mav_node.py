@@ -106,9 +106,9 @@ class MavNode:
 			pass
 		elif mid == 1: #mavlink.MAVLINK_MSG_ID_SYSTEM_STATUS:
 			pass
-		elif mid == 105: #HIGHRES_IMU actually. mavlink.MAVLINK_MSG_ID_SCALED_IMU:
+		elif mid == 105: #HIGHRES_IMU
 			self.mavScaledImu(msg, rx_time_ros)
-		elif mid == 106: #mavlink.MAVLINK_MSG_ID_OPTICAL_FLOW:
+		elif mid == 106: #OPTICAL_FLOW_RAD:
 			self.mavOpticalFlow(msg, rx_time_ros)
 		elif mid == 74: #VFR_HUD
 			pass
@@ -127,17 +127,17 @@ class MavNode:
 
 		return
 
-	def mavScaledImu(self, msg, rx_time_ros):		
+	def mavHighResImu(self, msg, rx_time_ros):		
 		imu = IMUSample()
-		imu.gyro_x = msg.xgyro * 0.001			# to [rad/s]
-		imu.gyro_y = msg.ygyro * 0.001
-		imu.gyro_z = msg.zgyro * 0.001
-		imu.acc_x = msg.xacc * 0.001 * 9.80665 	# to [m/s^2]
-		imu.acc_y = msg.yacc * 0.001 * 9.80665
-		imu.acc_z = msg.zacc * 0.001 * 9.80665
-		imu.mag_x = msg.xmag * 0.001			# to [T]
-		imu.mag_y = msg.ymag * 0.001
-		imu.mag_z = msg.zmag * 0.001
+		imu.gyro_x = msg.xgyro 	# [rad/s]
+		imu.gyro_y = msg.ygyro
+		imu.gyro_z = msg.zgyro
+		imu.acc_x = msg.xacc	# [m/s^2]
+		imu.acc_y = msg.yacc 
+		imu.acc_z = msg.zacc 
+		imu.mag_x = msg.xmag 	# to [Gauss]
+		imu.mag_y = msg.ymag 
+		imu.mag_z = msg.zmag 
 
 		imu.timestamp = self.uavTimeToRosTime(msg.time_usec, rx_time_ros)
 
@@ -150,10 +150,12 @@ class MavNode:
 
 		of.integrated_xgyro = msg.integrated_xgyro
 		of.integratd_ygyro = msg.integrated_ygyro
-		of.integrated_x = msg.flow_comp_m_x
-		of.integrated_y = msg.flow_comp_m_y
+		of.integrated_x = msg.integrated_x
+		of.integrated_y = msg.integrated_y
 		of.ground_distance = msg.ground_distance
 		of.temperature = msg.temperature
+		of.integration_time_us = msg.integration_time_us
+
 		of.time_delta_distance_us = msg.time_delta_distance_us
 		of.quality = msg.quality
 
