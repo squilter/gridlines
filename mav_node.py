@@ -39,6 +39,7 @@ class MavNode:
 		self.serial_name = serial_name
 		self.port = serial.Serial(port=self.serial_name, timeout=0)
 		self.mav = mavlink.MAVLink(self.port, self.sys_id, self.comp_id)
+		self.port.baudrate = 57600
 
 		rospy.loginfo('Initializing ROS-facing interface...')
 		# NOTE: Here is where you initialize any additional ROS publishers
@@ -106,9 +107,9 @@ class MavNode:
 			pass
 		elif mid == 1: #mavlink.MAVLINK_MSG_ID_SYSTEM_STATUS:
 			pass
-		elif mid == 105: #HIGHRES_IMU
-			self.mavScaledImu(msg, rx_time_ros)
-		elif mid == 106: #OPTICAL_FLOW_RAD:
+		elif mid == mavlink.MAVLINK_MSG_ID_HIGHRES_IMU: #HIGHRES_IMU
+			self.mavHighResImu(msg, rx_time_ros)
+		elif mid == mavlink.MAVLINK_MSG_ID_OPTICAL_FLOW_RAD
 			self.mavOpticalFlow(msg, rx_time_ros)
 		elif mid == 74: #VFR_HUD
 			pass
