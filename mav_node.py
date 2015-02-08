@@ -108,9 +108,9 @@ class MavNode:
 			pass
 		elif mid == 1: #mavlink.MAVLINK_MSG_ID_SYSTEM_STATUS:
 			pass
-		elif mid == mavlink.MAVLINK_MSG_ID_HIGHRES_IMU: #HIGHRES_IMU #105
+		elif mid == mavlink.MAVLINK_MSG_ID_HIGHRES_IMU:    # HIGHRES_IMU #105
 			self.mavHighResImu(msg, rx_time_ros)
-		elif mid == mavlink.MAVLINK_MSG_ID_OPTICAL_FLOW_RAD #106
+		elif mid == mavlink.MAVLINK_MSG_ID_OPTICAL_FLOW_RAD:  # 106
 			self.mavOpticalFlow(msg, rx_time_ros)
 		elif mid == 74: #VFR_HUD
 			pass
@@ -169,4 +169,7 @@ class MavNode:
 rospy.init_node('comm_node')
 
 mav_node = MavNode(serial_name='/dev/ttyACM0', baud_rate=None)
-mav_node.spin()
+r = rospy.Rate(1)
+
+while not rospy.is_shutdown():
+	r.sleep()
