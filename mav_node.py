@@ -30,7 +30,7 @@ class MavNode:
 	of_pub = None
 	cmd_sub = None
 
-	def __init__(self, serial_name):
+	def __init__(self, serial_name, baud_rate=None):
 
 		self.uav_time_start = None
 		self.uav_latency = None
@@ -39,7 +39,8 @@ class MavNode:
 		self.serial_name = serial_name
 		self.port = serial.Serial(port=self.serial_name, timeout=0)
 		self.mav = mavlink.MAVLink(self.port, self.sys_id, self.comp_id)
-		self.port.baudrate = 57600
+		if (baud_rate != None):
+			self.port.baudrate = baud_rate
 
 		rospy.loginfo('Initializing ROS-facing interface...')
 		# NOTE: Here is where you initialize any additional ROS publishers
@@ -168,5 +169,5 @@ class MavNode:
 
 rospy.init_node('comm_node')
 
-mav_node = MavNode('/dev/ttyACM0')
+mav_node = MavNode(serial_name='/dev/ttyACM0', baud_rate=None)
 mav_node.spin()
