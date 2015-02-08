@@ -30,16 +30,17 @@ class MavNode:
 	of_pub = None
 	cmd_sub = None
 
-	def __init__(self, serial_name):
+	def __init__(self, serial_name, baud_rate=None):
 
 		self.uav_time_start = None
 		self.uav_latency = None
 
 		rospy.loginfo('Opening serial port.')
 		self.serial_name = serial_name
-		self.port = serial.Serial(port=self.serial_name, timeout=0, baudrate=57600)
+		self.port = serial.Serial(port=self.serial_name, timeout=0)
 		self.mav = mavlink.MAVLink(self.port, self.sys_id, self.comp_id)
-		#self.port.baudrate = 57600
+		if (baud_rate != None):
+			self.port.baudrate = baud_rate
 
 		rospy.loginfo('Initializing ROS-facing interface...')
 		# NOTE: Here is where you initialize any additional ROS publishers
@@ -110,7 +111,7 @@ class MavNode:
 			pass
 		elif mid == 1: #mavlink.MAVLINK_MSG_ID_SYSTEM_STATUS:
 			pass
-		elif mid == mavlink.MAVLINK_MSG_ID_HIGHRES_IMU: #HIGHRES_IMU #105
+		elif mid == mavlink.MAVLINK_MSG_ID_HIGHRES_IMU:    # HIGHRES_IMU #105
 			self.mavHighResImu(msg, rx_time_ros)
 		elif mid == mavlink.MAVLINK_MSG_ID_OPTICAL_FLOW_RAD: #106
 			self.mavOpticalFlow(msg, rx_time_ros)
@@ -170,5 +171,8 @@ class MavNode:
 
 rospy.init_node('comm_node')
 
-mav_node = MavNode('/dev/ttyUSB0')
-mav_node.spin()
+mav_node = MavNode(serial_name='/dev/ttyACM0', baud_rate=None)
+r = rospy.Rate(1)
+
+while not rospy.is_shutdown():
+	r.sleep()
