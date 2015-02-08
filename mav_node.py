@@ -108,9 +108,9 @@ class MavNode:
 			pass
 		elif mid == 1: #mavlink.MAVLINK_MSG_ID_SYSTEM_STATUS:
 			pass
-		elif mid == mavlink.MAVLINK_MSG_ID_HIGHRES_IMU: #HIGHRES_IMU
+		elif mid == mavlink.MAVLINK_MSG_ID_HIGHRES_IMU: #HIGHRES_IMU #105
 			self.mavHighResImu(msg, rx_time_ros)
-		elif mid == mavlink.MAVLINK_MSG_ID_OPTICAL_FLOW_RAD
+		elif mid == mavlink.MAVLINK_MSG_ID_OPTICAL_FLOW_RAD #106
 			self.mavOpticalFlow(msg, rx_time_ros)
 		elif mid == 74: #VFR_HUD
 			pass
@@ -148,13 +148,12 @@ class MavNode:
 		return
 
 	def mavOpticalFlow(self, msg, rx_time_ros):
-		of = OptFlowSample()
-
+		of = OptFlowSample()	
 		of.integrated_xgyro = msg.integrated_xgyro
-		of.integratd_ygyro = msg.integrated_ygyro
+		of.integrated_ygyro = msg.integrated_ygyro
 		of.integrated_x = msg.integrated_x
 		of.integrated_y = msg.integrated_y
-		of.ground_distance = msg.ground_distance
+		of.ground_distance = msg.distance
 		of.temperature = msg.temperature
 		of.integration_time_us = msg.integration_time_us
 
