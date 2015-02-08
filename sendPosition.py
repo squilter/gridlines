@@ -1,7 +1,6 @@
 #!/usr/bin/env python
-
 import mavproxy
-from subprocess import Popen
+from subprocess import Popen	
 import os
 import time
 import rospy
