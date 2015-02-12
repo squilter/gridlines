@@ -171,8 +171,9 @@ class MavNode:
 
 rospy.init_node('comm_node')
 
-mav_node = MavNode(serial_name='/dev/ttyACM0', baud_rate=None)
+mav_node = MavNode(serial_name='/dev/ttyUSB0', baud_rate=57600*2)
 r = rospy.Rate(1)
 
-while not rospy.is_shutdown():
-	r.sleep()
+#while not rospy.is_shutdown():
+	#r.sleep()
+mav_node.spin();
