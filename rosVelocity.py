@@ -13,9 +13,11 @@ sys.path.insert(0,parentDir)
 
 from uav_msgs.msg import IMUSample
 from uav_msgs.msg import OptFlowSample
+from uav_msgs.msg import EstUavState
 
 import droneapi.lib
 from pymavlink import mavutil
+import custommsg
 #from comm_node import MavCommNode
 
 
@@ -50,6 +52,7 @@ class UAV():
 	api = None
 	v = None
 	pub_imu = None
+	sub_pos = None
 
 	def __init__(self):
 		self.api = local_connect()		
@@ -63,6 +66,12 @@ class UAV():
 		print 'Setting mavlink callback'
 		self.v.set_mavlink_callback(self.mavlinkCallback)
 		print 'Mavlink callback successfully set'
+
+	def handleROSPosition(self):
+		print 'Handling ROS position'
+		self.sub_pos = rospy.Subscriber('uav_position/uavstate',EstUavState,self.setPosition,queue_size=1)
+
+		print 'ROS position handled'
 
 	def spin(self):
 		rospy.spin()
@@ -93,22 +102,40 @@ class UAV():
 		#    print("Unloading module %s" % m.name)
 		#    m.unload()
 
-	def setPosition(self,x,y,z,yaw="none"):
+	def setPosition(self,uavstate):
 		#https://github.com/mavlink/mavlink/blob/master/message_definitions/v1.0/pixhawk.xml
 
+		if not isinstance(uavstate, EstUavState):
+            print 'uav.setPosition: invalid object type passed in parameter uavstate'
+            raise Exception
+
+        usec = uavstate.timestamp
+        x = uavstate.state[7]
+        y = uavstate.state[8]
+        alt = uavstate.state[9]
+        yaw = uavstate.state[2]
+        quality = 255
+
+        msg = custommsg.MAVLink_mit_current_loc_message(usec,x,y,alt,quality)
+        print "Created msg: %s" % msg
+        self.v.send_mavlink(msg)
+
+        
+
 		#construct a message to set a new offset from the currently controlled position
-		if yaw=="none":
-			msg = self.v.message_factory.set_position_control_offset_encode(x,y,z)
-		else:
-			msg = self.v.message_factory.set_position_control_offset_encode(x,y,z,yaw)
-		self.v.send_mavlink(msg)
+		# if yaw=="none":
+		# 	msg = self.v.message_factory.set_position_control_offset_encode(x,y,z)
+		# else:
+		# 	msg = self.v.message_factory.set_position_control_offset_encode(x,y,z,yaw)
+		
+		# self.v.send_mavlink(msg)
 		#Bitmask to indicate which dimensions should be ignored by the vehicle: 
 		#a value of 0b0000000000000000 or 0b0000001000000000 indicates that none of the setpoint dimensions should be ignored. 
 		#If bit 10 is set the floats afx afy afz should be interpreted as force instead of acceleration. 
 		#Mapping: bit 1: x, bit 2: y, bit 3: z, bit 4: vx, bit 5: vy, bit 6: vz, 
 		#bit 7: ax, bit 8: ay, bit 9: az, bit 10: is force setpoint, bit 11: yaw, bit 12: yaw rate
-		msg2 = self.v.message_factory.position_target_local_ned_encode(x,y,z,vx,vy,vz,afx,afy,afz,yaw,yaw_rate)
-		response2 = self.v.send_mavlink(msg2)
+		# msg2 = self.v.message_factory.position_target_local_ned_encode(x,y,z,vx,vy,vz,afx,afy,afz,yaw,yaw_rate)
+		# response2 = self.v.send_mavlink(msg2)
 
 	def setAttitude(self,roll,pitch,yaw):
 		msg = self.v.message_factory.attitude_control_encode(roll,pitch,yaw)
@@ -224,6 +251,7 @@ class UAV():
 try:	
 	uav = UAV()
 	uav.handleMavlink()
+	uav.handleROSPosition()
 	uav.getVelocity()
 	uav.spin()	
 	print "Finished"
