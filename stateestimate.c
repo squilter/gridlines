@@ -1,6 +1,10 @@
+#include <nuttx/config.h>
 #include <uORB/uORB.h>
 #include <uORB/topics/estimator_status.h>
 #include <mavlink/mavlink_log.h>
+#include <nuttx/config.h>
+#include <stdio.h>
+#include <errno.h>
 //#include <string> not sure
 
 static int mavlink_fd;
@@ -23,13 +27,26 @@ void check_topic()
  
 	if (updated) {
 		/* make a local copy of the updated data structure */
+		printf("Topic has been updated since last time we read it.\n")
 		orb_copy(ORB_ID(estimator_status), topic_handle, &esr);
-
 //		std::string hostname;	not sure
 		mavlink_log_info(mavlink_fd, "ESR("+esr.n_states+"): "+esr.timestamp+", "+esr.states[0]+", "+esr.states[1]+", "+esr.states[2]+", "+esr.states[3]);
+		printf("Logged ESR info.\n")
 	}
 }
 
+__EXPORT int px4_state_estimate_main(int argc, char *argv[]);
+ 
+int px4_state_estimate_main(int argc, char *argv[])
+{
+	printf("Hello mit uav team!\n");
+	
+	init();
+	while (true) {
+		check_topic();
+	}
+	return 0;
+}
 
 
 
