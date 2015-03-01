@@ -26,6 +26,7 @@ class UAV():
 	def initialize(self):
 	 	#api = local_connect()
 		self.v = self.api.get_vehicles()[0]
+		self.initialyaw = self.v.attitude.yaw
 		if self.v.mode.name == "INITIALISING":
 		    print "Vehicle still booting, try again later"
 		    return
