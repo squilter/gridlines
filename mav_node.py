@@ -71,9 +71,10 @@ class MavNode:
 		for i in range(3):
 			self.port.write(chr(0x0d))
 		self.port.write('mavlink start -d /dev/ttyACM0 -b 921600 -x\n')
-		# wait a second
-		rospy.sleep(1.0);
 		self.port.flush()
+		# wait a second
+		rospy.sleep(1.0)
+		self.port.flushInput()
 		self.port.baudrate = 921600
 		
 		for i in range(3):
@@ -81,10 +82,10 @@ class MavNode:
 		self.port.write('mavlink stream -d /dev/ttyACM0 -s HIGHRES_IMU -r 100\n')
 		for i in range(3):
 			self.port.write(chr(0x0d))
-		self.port.write('mavlink stream -d /dev/ttyACM0 -s OPTICAL_FLOW_RAD -r 200\n')
+		self.port.write('mavlink stream -d /dev/ttyACM0 -s OPTICAL_FLOW_RAD -r 10\n')
 		for i in range(3):
 			self.port.write(chr(0x0d))
-		self.port.write('exit\n')
+		# self.port.write('exit\n')
 		for i in range(3):
 			self.port.write(chr(0x0d))
 
@@ -92,6 +93,7 @@ class MavNode:
 			self.port.write(chr(0x0d))
 		self.port.write(chr(0))
 		self.port.flush()
+		self.port.flushInput()
 
 		rospy.sleep(1.0)
 		self.port.flushInput()
@@ -239,8 +241,8 @@ class MavNode:
 
 rospy.init_node('comm_node')
 
-mav_node = MavNode(serial_name='/dev/ttyACM0', baud_rate=921600)
-#mav_node.sendPx4PortOpenCmd()
+mav_node = MavNode(serial_name='/dev/ttyACM0', baud_rate=57600)
+mav_node.sendPx4PortOpenCmd()
 
 rospy.loginfo('Initialized Mavlink stream over USB.')
 
