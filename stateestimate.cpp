@@ -8,7 +8,7 @@
 //#include <string> not sure
 
 static int mavlink_fd;
-mavlink_fd = get_mavlink_fd(); //open(MAVLINK_LOG_DEVICE, 0);
+mavlink_fd = open(MAVLINK_LOG_DEVICE, 0);
 
 static int topic_handle; 
 int init()
