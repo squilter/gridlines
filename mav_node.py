@@ -70,16 +70,16 @@ class MavNode:
 		self.port.write('mavlink stop-all\n')
 		for i in range(3):
 			self.port.write(chr(0x0d))
-		self.port.write('mavlink start -d /dev/ttyACM0 -b 921600 -x\n')
+		self.port.write('mavlink start -d /dev/ttyACM0 -b 57600 -x\n')
 		self.port.flush()
 		# wait a second
 		rospy.sleep(1.0)
 		self.port.flushInput()
-		self.port.baudrate = 921600
+		# self.port.baudrate = 921600
 		
 		for i in range(3):
 			self.port.write(chr(0x0d))
-		self.port.write('mavlink stream -d /dev/ttyACM0 -s HIGHRES_IMU -r 100\n')
+		self.port.write('mavlink stream -d /dev/ttyACM0 -s HIGHRES_IMU -r 10\n')
 		for i in range(3):
 			self.port.write(chr(0x0d))
 		self.port.write('mavlink stream -d /dev/ttyACM0 -s OPTICAL_FLOW_RAD -r 10\n')
