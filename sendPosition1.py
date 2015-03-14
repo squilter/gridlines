@@ -39,7 +39,7 @@ class UAV():
 		if self.v.mode.name == "INITIALISING":
 		    print "Vehicle still booting, try again later"
 		    return
-		rospy.Subscriber('simple_uav_cmd',SimpleUavCmd,self.next_cmd)
+		rospy.Subscriber('simple_uav_cmd',impleUavCmd,self.next_cmd)
 
 	def convert_to_gps(self,x,y):
 		theta=math.atan(y/x)
@@ -54,7 +54,7 @@ class UAV():
 			yaw=math.pi-dif
 
 		print "theta: "+str(self.v.location.lat)
-		if (self.v.location.lat != None):
+		if (self.v.location.lat != None):#???
 			lat = self.v.location.lat + (r*math.sin(theta+yaw)/6378137)
  			lon = self.v.location.lon + (r*math.cos(theta+yaw)/6378137)/math.cos(lat)
  			self.lat_go_to=lat
@@ -89,13 +89,17 @@ class UAV():
         
         # Send a new target every ___ seconds
  #        time.sleep(.1)
-
+ 	def doSquare(a,b): #dimensions of square x,y
+ 		vectors=[(0,b),(-a,0),(0,-b),(a,0)]
+ 		for i in vectors:
+ 			self.next_cmd(i)
+ 			
 	def testAttitude(self):
 		if (self.v != None):
 			while(True):
 				time.sleep(.1)
 				print self.v.attitude.yaw;
-
+dr
 	def testNextCmd(self):
 		if (self.v != None):
 			uav.next_cmd(fakeLoc(100,50,10));
