@@ -241,12 +241,12 @@ class MavNode:
 
 rospy.init_node('comm_node')
 
-mav_node = MavNode(serial_name='/dev/ttyACM0', baud_rate=57600)
-mav_node.sendPx4PortOpenCmd()
+mav_node = MavNode(serial_name='/dev/ttyUSB0', baud_rate=921600)
+#mav_node.sendPx4PortOpenCmd()
 
 rospy.loginfo('Initialized Mavlink stream over USB.')
 
-r = rospy.Rate(10)
+r = rospy.Rate(100)
 
 while not rospy.is_shutdown():
 	mav_node.mavCheck()
