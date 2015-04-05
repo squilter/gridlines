@@ -17,9 +17,9 @@ velocityFreq=20
 
 class fakeLoc():
 	def __init__(self,x,y,z):
-		self.x = x
-		self.y = y
-		self.z = z
+		self.x_dir = x
+		self.y_dir = y
+		self.z_dir = z
 
 class UAV():
 
@@ -39,7 +39,7 @@ class UAV():
 		if self.v.mode.name == "INITIALISING":
 		    print "Vehicle still booting, try again later"
 		    return
-		rospy.Subscriber('simple_uav_cmd',impleUavCmd,self.next_cmd)
+		rospy.Subscriber('simple_uav_cmd',SimpleUavCmd,self.next_cmd)
 
 	def convert_to_gps(self,x,y):
 		theta=math.atan(y/x)
@@ -53,7 +53,8 @@ class UAV():
 			dif=theta+math.pi+self.v.attitude.yaw
 			yaw=math.pi-dif
 
-		print "theta: "+str(self.v.location.lat)
+		print "yaw: "+str(yaw)
+		print "latitude: "+str(self.v.location.lat)
 		if (self.v.location.lat != None):#???
 			lat = self.v.location.lat + (r*math.sin(theta+yaw)/6378137)
  			lon = self.v.location.lon + (r*math.cos(theta+yaw)/6378137)/math.cos(lat)
@@ -68,11 +69,17 @@ class UAV():
 		#	return
 		# Use the python gps package to access the laptop GPS
 		# gpsd = gps.gps(mode=gps.WATCH_ENABLE)
-		self.convert_to_gps(a.x,a.y)
+		if(a.x_dir == None or a.x_dir == 0):
+			print "no destination"
+			return
+		self.convert_to_gps(a.x_dir,a.y_dir)
 		cmds = self.v.commands
 		if (self.lat_go_to != None):
 			dest = droneapi.lib.Location(self.lat_go_to,self.lon_go_to,self.current_altitude, is_relative=False)
-			cmds.goto(dest)
+			if (self.v.mode.name == "GUIDED"):
+				cmds.goto(dest)
+			else:
+				print "Mode is not GUIDED"
 			is_guided = True
 			self.v.flush()
 		else:
@@ -99,7 +106,6 @@ class UAV():
 			while(True):
 				time.sleep(.1)
 				print self.v.attitude.yaw;
-dr
 	def testNextCmd(self):
 		if (self.v != None):
 			uav.next_cmd(fakeLoc(100,50,10));
@@ -109,6 +115,12 @@ dr
 			while(True):
 				time.sleep(.1)
 				print self.v.location
+	def testAuto(self):
+		if (self.v != None):
+			while(True):
+				time.sleep(.1)
+				print 'sam: '+self.v.mode.name
+
 
 	def spin(self):
 		rospy.spin()
@@ -116,6 +128,7 @@ dr
 uav=UAV(2)
 uav.initialize()
 uav.spin()
+#uav.testAuto()
 # uav.testAttitude()
 #uav.testNextCmd()
 #uav.testLocation()
