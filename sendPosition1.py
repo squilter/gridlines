@@ -17,9 +17,9 @@ velocityFreq=20
 
 class fakeLoc():
 	def __init__(self,x,y,z):
-		self.x = x
-		self.y = y
-		self.z = z
+		self.x_dir = x
+		self.y_dir = y
+		self.z_dir = z
 
 class UAV():
 
@@ -39,7 +39,7 @@ class UAV():
 		if self.v.mode.name == "INITIALISING":
 		    print "Vehicle still booting, try again later"
 		    return
-		#rospy.Subscriber('simple_uav_cmd',SimpleUavCmd,self.next_cmd)
+		rospy.Subscriber('simple_uav_cmd',SimpleUavCmd,self.next_cmd)
 
 	def convert_to_gps(self,x,y):
 		theta=math.atan(y/x)
@@ -54,7 +54,8 @@ class UAV():
 			yaw=math.pi-dif
 
 		print "yaw: "+str(yaw)
-		if (self.v.location.lat != None):
+		print "latitude: "+str(self.v.location.lat)
+		if (self.v.location.lat != None):#???
 			lat = self.v.location.lat + (r*math.sin(theta+yaw)/6378137)
  			lon = self.v.location.lon + (r*math.cos(theta+yaw)/6378137)/math.cos(lat)
  			self.lat_go_to=lat
@@ -75,8 +76,10 @@ class UAV():
 		cmds = self.v.commands
 		if (self.lat_go_to != None):
 			dest = droneapi.lib.Location(self.lat_go_to,self.lon_go_to,self.current_altitude, is_relative=False)
-			if (self.v.mode.name == "Mode(131072)"):
+			if (self.v.mode.name == "GUIDED"):
 				cmds.goto(dest)
+			else:
+				print "Mode is not GUIDED"
 			is_guided = True
 			self.v.flush()
 		else:
@@ -93,13 +96,16 @@ class UAV():
         
         # Send a new target every ___ seconds
  #        time.sleep(.1)
-
+ 	def doSquare(a,b): #dimensions of square x,y
+ 		vectors=[(0,b),(-a,0),(0,-b),(a,0)]
+ 		for i in vectors:
+ 			self.next_cmd(i)
+ 			
 	def testAttitude(self):
 		if (self.v != None):
 			while(True):
 				time.sleep(.1)
 				print self.v.attitude.yaw;
-
 	def testNextCmd(self):
 		if (self.v != None):
 			uav.next_cmd(fakeLoc(100,50,10));
@@ -111,9 +117,9 @@ class UAV():
 				print self.v.location
 	def testAuto(self):
 		if (self.v != None):
-			# while(True):
-			time.sleep(.1)
-				# print 'sam: '+self.v.mode.name
+			while(True):
+				time.sleep(.1)
+				print 'sam: '+self.v.mode.name
 
 
 	def spin(self):
@@ -121,9 +127,9 @@ class UAV():
 
 uav=UAV(2)
 uav.initialize()
-#uav.spin()
-# uav.testAuto()
+uav.spin()
+#uav.testAuto()
 # uav.testAttitude()
 #uav.testNextCmd()
-uav.testLocation()
+#uav.testLocation()
 # uav.next_cmd(fakeLoc(100,50,10))
