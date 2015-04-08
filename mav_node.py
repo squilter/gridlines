@@ -7,7 +7,7 @@ import serial
 
 from uav_msgs.msg import IMUSample
 from uav_msgs.msg import OptFlowSample
-#from uav_msgs.msg import UavCmd
+from uav_msgs.msg import UavCmd
 
 import mavlink.mavlink as mavlink
 
@@ -35,6 +35,9 @@ class MavNode:
 	imu_pub = None
 	of_pub = None
 	cmd_sub = None
+
+	# last position command send time
+	last_cmd_send_time = None
 
 	def __init__(self, serial_name, baud_rate):
 
@@ -126,8 +129,11 @@ class MavNode:
 		return
 
 	def mavCheck(self):
+		# first make sure we've sent a (at least empty) command recently
 		rx_time = rospy.Time.now()
-
+		if ((rx_time - self.last_cmd_send_time).to_sec() > 3.0):
+			self.sendPosCmd()
+				
 		count = self.port.inWaiting()
 		if count == 0:
 			return
@@ -239,6 +245,25 @@ class MavNode:
 		self.of_pub.publish(of)
 		return
 
+	def sendPosCmd(self, uav_cmd=None):
+		self.last_cmd_send_time = rospy.get_rostime()
+
+		# called by subscriber passing UavCmd
+		target_system = 1 # fix this
+		target_component = 50
+		coord_frame = mavlink.MAV_FRAME_LOCAL_NED
+		type_mask = 0
+		x = 0
+		y = 0
+		z = 0
+		if uav_cmd not None:
+			x = uav_cmd.x
+			y = uav_cmd.y
+			z = uav_cmd.z
+			type_mask = 0x111				
+		
+		self.mav.set_position_target_local_ned_send(time_boot_ms=0, target_system, target_component, coord_frame, type_mask, x, y, z, 0,0,0,0,0,0,0,0)
+
 rospy.init_node('comm_node')
 
 mav_node = MavNode(serial_name='/dev/ttyUSB0', baud_rate=921600)
@@ -246,8 +271,15 @@ mav_node = MavNode(serial_name='/dev/ttyUSB0', baud_rate=921600)
 
 rospy.loginfo('Initialized Mavlink stream over USB.')
 
+# send empty position command
+sendPosCmd()
+
+rospy.loginfo('Transitioned to OFFBOARD control mode.')
+
 r = rospy.Rate(100)
 
+
 while not rospy.is_shutdown():
+
 	mav_node.mavCheck()
 	r.sleep()
