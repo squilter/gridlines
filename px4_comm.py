@@ -4,11 +4,12 @@ import rospy
 import numpy as np
 import struct
 
-from uav_msgs import IMUSample
-from uav_msgs import OptFlowSample
+from uav_msgs import HighResImu
+from uav_msgs import OpticalFlowRad
 from uav_msgs import UavCmd
 
-from mavros import Mavlink # Mavros mavlink message container
+from mavros.msg import Mavlink # generic Mavros mavlink message container
+from mavros.srv import *
 
 import mavlink.mavlink as mv
 
@@ -19,10 +20,6 @@ PX4_SYS_ID = 1
 PX4_COMP_ID = 50
 
 seq = 0
-# Initialize publishers
-mav_pub = rospy.Publisher('mavlink/to', Mavlink, queue_size=2)
-imu_pub = rospy.Publisher('uav_telemetry/imu', IMUSample, queue_size=5)
-of_pub = rospy.Publisher('uav_telemetry/opt_flow', OptFlowSample, queue_size=5)
 
 def str_to_dw_array(string):
 	l = []	
@@ -39,81 +36,149 @@ def str_to_dw_array(string):
 			i = 0
 	return l
 
-# subscriber handles
-def ros_h_UavCmd(uav_cmd=None):
-	time_boot_ms = 0
-	target_system = PX4_SYS_ID
-	target_component = PX4_COMP_ID
-	coordinate_frame = mv.MAV_FRAME_LOCAL_NED
-	type_mask = 0
-	x = 0.0
-	y = 0.0
-	z = 0.0
-	if uav_cmd not None:
-		type_mask = 0x7 # meaningful x,y,z
-		x = uav_cmd.pos_x
-		y = uav_cmd.pos_y
-		z = uav_cmd.pos_z
+def unpack_payload(format, payload):
+	l_dw = len(payload)
+	b = bytearray()
+	for dw in payload:
+		dw_ = dw # make a copy
+		for i in range(4):
+			b.append(dw_ & 0xFF)
+			dw_ = dw_ >> 8
+	# now unpack
+	return struct.unpack(format, b)
 
-	mav = Mavlink()
-	mav.sysid = ODROID_SYS_ID
-	mav.compid = ODROID_COMP_ID
-	mav.fromlcm = False
-	mav.seq = seq
-	mav.msgid = 84 # SET_POSITION_TARGET_LOCAL_NED
-	mav.len = 53/8 + 1 # 53 bytes / (8 bytes per 64 bits)
+class OffboardController:
 
-	mav.payload = str_to_dw_array( struct.pack('<IBHfffffffffff', time_boot_ms, target_system, target_component, coordinate_frame, type_mask, x, y, z, 0,0,0, 0,0,0, 0,0) )
+	def OffboardController(self):
+		rospy.init_node('px4_comm')
 
-	# publish message
-	mav_pub.publish(mav)
-	seq += 1
-	return
+		# Initialize mavros publishers/clients/subscribers
+		self.mav_pub = rospy.Publisher('/mavlink/to', Mavlink, queue_size=2)
+		self.guided_enable_client = rospy.ServiceProxy('/mavros/cmd/guided_enable', CommandBool);
+		self.mav_sub = rospy.Subscriber('/mavlink/from', Mavlink, self.mav_h_Mavlink)
 
-def mav_h_Mavlink(mav):
-	if mav.sysid != ODROID_SYS_ID:
-		rospy.logwarn('wrong sysid! %d:%d', mav.sysid, mav.compid) 
+		# Initialize ros publishers
+		self.imu_pub = rospy.Publisher('/uav_telemetry/imu', HighResImu, queue_size=5)
+		self.of_pub = rospy.Publisher('/uav_telemetry/opt_flow', OpticalFlowRad, queue_size=5)
+
+		return
+
+	# subscriber handles
+	def ros_h_UavCmd(self, uav_cmd=None):
+		time_boot_ms = 0
+		target_system = PX4_SYS_ID
+		target_component = PX4_COMP_ID
+		coordinate_frame = mv.MAV_FRAME_LOCAL_NED
+		type_mask = 0
+		x = 0.0
+		y = 0.0
+		z = 0.0
+		if uav_cmd not None:
+			type_mask = 0x7 # meaningful x,y,z
+			x = uav_cmd.pos_x
+			y = uav_cmd.pos_y
+			z = uav_cmd.pos_z
+
+		mav = Mavlink()
+		mav.sysid = ODROID_SYS_ID
+		mav.compid = ODROID_COMP_ID
+		mav.fromlcm = False
+		mav.seq = seq
+		mav.msgid = 84 # SET_POSITION_TARGET_LOCAL_NED
+		mav.len = 53/8 + 1 # 53 bytes / (8 bytes per 64 bits)
+
+		mav.payload = str_to_dw_array( struct.pack('<IBHfffffffffff', time_boot_ms, target_system, target_component, coordinate_frame, type_mask, x, y, z, 0,0,0, 0,0,0, 0,0) )
+
+		# publish message
+		mav_pub.publish(mav)
+		seq += 1
+		return
+
+	def enableOffboardControl(self, enable):
+		self.guided_enable_client(enable)
+		return self.guided_enable_client.success
+
+	def enableGPSFailCircuitBreaker(self):
+		rospy.loginfo('Enabling GPSFAIL circuit breaker.')
+
+		param_pull_client = rospy.ServiceProxy('mavros/param/pull', ParamPull)
+		param_get_client = rospy.ServiceProxy('mavros/param/get', ParamGet)
+		param_push_client = rospy.ServiceProxy('mavros/param/push', ParamPush)
+		param_set_client = rospy.ServiceProxy('mavros/param/set', ParamSet)
+
+		# pull parameters
+		param_pull_client(True)
+		if not param_pull_client.success:
+			rospy.logerr('Failed to pull parameters.')
+			return
+		
+		# get CBRK_GPSFAIL param
+		param_get_client('CBRK_GPSFAIL')
+		if param_get_client.success:
+			rospy.loginfo('CBRK_GPSFAIL originally set to %l', param.param_get_client.integer)
+
+		param_set_client('CBRK_GPSFAIL', 240024, 0.0)
+		if not param_set_client.success:
+			rospy.logerr('Unable to set CBRK_GPSFAIL.')
+			return
+
+		param_push_client() # push updated parameter list
+		if not param_push_client.success:
+			rospy.logerr('Unable to push new parameter list.')
+			return
+		
+		return
+
+	def mav_h_Mavlink(self, mav):
+		if mav.sysid != ODROID_SYS_ID:
+			rospy.logwarn('wrong sysid! %d:%d', mav.sysid, mav.compid) 
 	
-	# get rostime
-	now = rospy.get_rostime()
+		if mav.msgid == mv.MAVLINK_MSG_ID_HIGHRES_IMU:
+			fields = unpack_payload('<QfffffffffffffH', mav.payload)
 
-	if mav.msgid == mv.MAVLINK_MSG_ID_HIGHRES_IMU:
-		if self.imu_stream_t == None:
-			self.imu_stream_t = now
+			imu = HighResImu()
+			imu.timestamp_s = float(fields[0] * 1e-6) # convert usec to sec
+			imu.acc_x = fields[1] 	# [m/s^2]
+			imu.acc_y = fields[2]
+			imu.acc_z = fields[3]
+			imu.gyro_x = fields[4]	# [rad/s]
+			imu.gyro_y = fields[5]
+			imu.gyro_z = fields[6]
+			imu.mag_x = fields[7] 	# [Gauss]
+			imu.mag_y = fields[8]
+			imu.mag_z = fields[9]
+			imu.abs_pressure = fields[10]	# [mBar]
+			imu.diff_pressure = fields[11]
+			imu.pressure_alt = fields[12]	# [m]
+			imu.temperature = fields[13]	# [Celsius]
+			imu.fields_updated = fields[14]	# bitmask for which fields have been updated
+
+			if imu.fields_updated > 0:
+				self.imu_pub.publish(imu)
+
+
+		elif mav.msgid == mv.MAVLINK_MSG_ID_OPTICAL_FLOW_RAD:
+			fields = unpack_payload('<QBLfffffhBLf', mav.payload)
+
+			of = OpticalFlowRad()
+			of.timestamp_s = float(fields[0] * 1e-6) # convert usec to sec
+			of.sensor_id = fields[1]
+			of.integration_time_s = float(fields[2] * 1e-6) # [usec to sec] 
+			of.integrated_x	= fields[3]			# [flow (some ephereal unit)]
+			of.integrated_y = fields[4]
+			of.integrated_xgyro = fields[5]		# [rad]
+			of.integrated_ygyro = fields[6]
+			of.integrated_zgyro = fields[7]
+			of.temperature = fields[8]			# [x100 = Celsius]
+			of.quality = fields[9]				# [0-255 worst-best]
+			of.time_delta_distance_s = float(fields[10] * 1e-6) # [to sec]
+			if fields[11] > 0:
+				of.distance = fields[11] # [m]
+
+			self.of_pub.publish(of)
+
 		else:
-			dt = (now - self.imu_stream_t).to_sec()
-			self.imu_stream_t = now
-			self.imu_stream_dt += 0.01*(dt - self.imu_stream_dt)
-			rate = 1.0/self.imu_stream_dt
-			rospy.loginfo('Recieved imu msg. Rate = %f', rate)
+			# unrecognized mavlink message received
 
-		imu = IMUSample()
-		imu.gyro_x = msg.xgyro 	# [rad/s]
-		imu.gyro_y = msg.ygyro
-		imu.gyro_z = msg.zgyro
-		imu.acc_x = msg.xacc	# [m/s^2]
-		imu.acc_y = msg.yacc 
-		imu.acc_z = msg.zacc 
-		imu.mag_x = msg.xmag 	# to [Gauss]
-		imu.mag_y = msg.ymag 
-		imu.mag_z = msg.zmag 
-
-		imu.timestamp = self.uavTimeToRosTime(msg.time_usec, rx_time_ros)
-
-		self.imu_pub.publish(imu)
-
-
-
-
-
-
-
-
-
-
-
-
-
-rospy.init_node('px4_comm')
-
+		return
 

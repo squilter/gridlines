@@ -5,8 +5,8 @@ import numpy as np
 
 import serial
 
-from uav_msgs.msg import IMUSample
-from uav_msgs.msg import OptFlowSample
+from uav_msgs.msg import HighResImu
+from uav_msgs.msg import OpticalFlowRad
 from uav_msgs.msg import UavCmd
 
 import mavlink.mavlink as mavlink
@@ -66,8 +66,8 @@ class MavNode:
 
 		rospy.loginfo('Initializing ROS-facing interface...')
 		# NOTE: Here is where you initialize any additional ROS publishers
-		self.imu_pub = rospy.Publisher('uav_telemetry/imu', IMUSample, queue_size=5)
-		self.of_pub = rospy.Publisher('uav_telemetry/opt_flow', OptFlowSample, queue_size=5)
+		self.imu_pub = rospy.Publisher('uav_telemetry/imu', HighResImu, queue_size=5)
+		self.of_pub = rospy.Publisher('uav_telemetry/opt_flow', OpticalFlowRad, queue_size=5)
 		# NOTE: And here you initialize ROS subscribers and link them to their callback functions
 		#self.cmd_sub = rospy.Subscriber('uav_cmds/cmd', UavCmd, self.rosUavCmd)
 		
@@ -92,13 +92,13 @@ class MavNode:
 		
 		for i in range(3):
 			self.port.write(chr(0x0d))
-		self.port.write('mavlink stream -d /dev/ttyACM0 -s HIGHRES_IMU -r 10\n')
+		self.port.write('mavlink stream -d /dev/ttyACM0 -s HIGHRES_IMU -r 200\n')
 		for i in range(3):
 			self.port.write(chr(0x0d))
 		self.port.write('mavlink stream -d /dev/ttyACM0 -s OPTICAL_FLOW_RAD -r 10\n')
 		for i in range(3):
 			self.port.write(chr(0x0d))
-		# self.port.write('exit\n')
+		self.port.write('exit\n')
 		for i in range(3):
 			self.port.write(chr(0x0d))
 
@@ -139,9 +139,9 @@ class MavNode:
 		return
 
 	def mavCheck(self):
-		# first make sure we've sent a (at least empty) command recently
+		# first make sure we've sent a (at least empty) command recently (>2Hz)
 		rx_time = rospy.Time.now()
-		if ((rx_time - self.last_cmd_send_time).to_sec() > 3.0):
+		if ((rx_time - self.last_cmd_send_time).to_sec() > 0.25):
 			self.sendPosCmd()
 				
 		count = self.port.inWaiting()
@@ -210,18 +210,18 @@ class MavNode:
 			rate = 1.0/self.imu_stream_dt
 			rospy.loginfo('Recieved imu msg. Rate = %f', rate)
 
-		imu = IMUSample()
-		imu.gyro_x = msg.xgyro 	# [rad/s]
-		imu.gyro_y = msg.ygyro
-		imu.gyro_z = msg.zgyro
-		imu.acc_x = msg.xacc	# [m/s^2]
-		imu.acc_y = msg.yacc 
-		imu.acc_z = msg.zacc 
-		imu.mag_x = msg.xmag 	# to [Gauss]
-		imu.mag_y = msg.ymag 
-		imu.mag_z = msg.zmag 
-
-		imu.timestamp = self.uavTimeToRosTime(msg.time_usec, rx_time_ros)
+		imu = HighResImu()
+		imu.xgyro = msg.xgyro 	# [rad/s]
+		imu.ygyro = msg.ygyro
+		imu.zgyro = msg.zgyro
+		imu.xacc = msg.xacc		# [m/s^2]
+		imu.yacc = msg.yacc 
+		imu.zacc = msg.zacc 
+		imu.xmag = msg.xmag 	# to [Gauss]
+		imu.ymag = msg.ymag 
+		imu.zmag = msg.zmag 
+		imu.time_usec = msg.time_usec
+		imu.fields_updated = msg.fields_updated
 
 		self.imu_pub.publish(imu)
 		return
@@ -238,7 +238,7 @@ class MavNode:
 			rate = 1.0/self.of_stream_dt
 			rospy.loginfo('Recieved of msg. Rate = %f', rate)
 
-		of = OptFlowSample()	
+		of = OpticalFlowRad()	
 		of.integrated_xgyro = msg.integrated_xgyro
 		of.integrated_ygyro = msg.integrated_ygyro
 		of.integrated_x = msg.integrated_x
@@ -249,8 +249,7 @@ class MavNode:
 
 		of.time_delta_distance_us = msg.time_delta_distance_us
 		of.quality = msg.quality
-
-		of.timestamp = self.uavTimeToRosTime(msg.time_usec, rx_time_ros)
+		of.time_usec = msg.time_usec
 
 		self.of_pub.publish(of)
 		return
@@ -266,32 +265,32 @@ class MavNode:
 		x = 0
 		y = 0
 		z = 0
-		if uav_cmd not None:
+		if uav_cmd != None:
 			x = uav_cmd.x
 			y = uav_cmd.y
 			z = uav_cmd.z
 			type_mask = 0x111				
 		
-		self.mav.set_position_target_local_ned_send(time_boot_ms=0, target_system, target_component, coord_frame, type_mask, x, y, z, 0,0,0,0,0,0,0,0)
+		self.mav.set_position_target_local_ned_send(0, target_system, target_component, coord_frame, type_mask, x, y, z, 0,0,0,0,0,0,0,0)
 
 	def sendSetModeCmd(self, base_mode, custom_mode):
 		target_system = PX4_SYS_ID
-		self.mav.set_mode(target_system, base_mode, custom_mode)
+		self.mav.set_mode_send(target_system, base_mode, custom_mode)
 		return
 		
 
 rospy.init_node('comm_node')
 
-mav_node = MavNode(serial_name='/dev/ttyUSB0', baud_rate=921600)
-#mav_node.sendPx4PortOpenCmd()
+mav_node = MavNode(serial_name='/dev/ttyACM0', baud_rate=57600)
+mav_node.sendPx4PortOpenCmd()
 
 rospy.loginfo('Initialized Mavlink stream over USB.')
 
 # send empty position command
-sendPosCmd()
+mav_node.sendPosCmd()
 
 rospy.loginfo('Transitioned to OFFBOARD control mode.')
-sendSetModeCmd(mavlink.MAV_MODE_GUIDED_ARMED, PX4_CUSTOM_MAIN_MODE_OFFBOARD)
+mav_node.sendSetModeCmd(mavlink.MAV_MODE_GUIDED_ARMED, PX4_CUSTOM_MAIN_MODE_OFFBOARD)
 
 r = rospy.Rate(100)
 
