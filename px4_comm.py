@@ -1,12 +1,12 @@
-#px4_comm.py
+#!/usr/bin/env python
 
 import rospy
 import numpy as np
 import struct
 
-from uav_msgs import HighResImu
-from uav_msgs import OpticalFlowRad
-from uav_msgs import UavCmd
+from uav_msgs.msg import HighResImu
+from uav_msgs.msg import OpticalFlowRad
+from uav_msgs.msg import UavCmd
 
 from mavros.msg import Mavlink # generic Mavros mavlink message container
 from mavros.srv import *
@@ -50,11 +50,10 @@ def unpack_payload(format, payload):
 class OffboardController:
 
 	def OffboardController(self):
-		rospy.init_node('px4_comm')
 
 		# Initialize mavros publishers/clients/subscribers
 		self.mav_pub = rospy.Publisher('/mavlink/to', Mavlink, queue_size=2)
-		self.guided_enable_client = rospy.ServiceProxy('/mavros/cmd/guided_enable', CommandBool);
+		self.guided_enable_client = rospy.ServiceProxy('/mavros/cmd/guided_enable', CommandBool)
 		self.mav_sub = rospy.Subscriber('/mavlink/from', Mavlink, self.mav_h_Mavlink)
 
 		# Initialize ros publishers
@@ -73,7 +72,7 @@ class OffboardController:
 		x = 0.0
 		y = 0.0
 		z = 0.0
-		if uav_cmd not None:
+		if uav_cmd != None:
 			type_mask = 0x7 # meaningful x,y,z
 			x = uav_cmd.pos_x
 			y = uav_cmd.pos_y
@@ -95,8 +94,10 @@ class OffboardController:
 		return
 
 	def enableOffboardControl(self, enable):
-		self.guided_enable_client(enable)
-		return self.guided_enable_client.success
+		r = self.guided_enable_client(enable)
+		if not r.success:
+			rospy.logerr('Error trying to command offboard control mode.')
+		return
 
 	def enableGPSFailCircuitBreaker(self):
 		rospy.loginfo('Enabling GPSFAIL circuit breaker.')
@@ -107,23 +108,23 @@ class OffboardController:
 		param_set_client = rospy.ServiceProxy('mavros/param/set', ParamSet)
 
 		# pull parameters
-		param_pull_client(True)
-		if not param_pull_client.success:
+		r = param_pull_client(True)
+		if not r.success:
 			rospy.logerr('Failed to pull parameters.')
 			return
 		
 		# get CBRK_GPSFAIL param
-		param_get_client('CBRK_GPSFAIL')
-		if param_get_client.success:
-			rospy.loginfo('CBRK_GPSFAIL originally set to %l', param.param_get_client.integer)
+		r = param_get_client('CBRK_GPSFAIL')
+		if r.success:
+			rospy.loginfo('CBRK_GPSFAIL originally set to %l', r.integer)
 
-		param_set_client('CBRK_GPSFAIL', 240024, 0.0)
-		if not param_set_client.success:
+		r = param_set_client('CBRK_GPSFAIL', 240024, 0.0)
+		if not r.success:
 			rospy.logerr('Unable to set CBRK_GPSFAIL.')
 			return
 
-		param_push_client() # push updated parameter list
-		if not param_push_client.success:
+		r = param_push_client() # push updated parameter list
+		if not r.success:
 			rospy.logerr('Unable to push new parameter list.')
 			return
 		
@@ -179,6 +180,19 @@ class OffboardController:
 
 		else:
 			# unrecognized mavlink message received
+			pass
 
 		return
 
+rospy.init_node('px4_comm')
+
+controller = OffboardController()
+rospy.loginfo('Starting up OffboardController.')
+
+rospy.loginfo('Attempting to enable GPS circuit breaker.')
+#controller.enableGPSFailCircuitBreaker()
+
+rospy.loginfo('Attempting to enable offboard control.')
+controller.enableOffboardControl(True)
+
+rospy.spin()
