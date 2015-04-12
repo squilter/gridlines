@@ -11,15 +11,10 @@ from uav_msgs.msg import UavCmd
 from mavros.msg import Mavlink # generic Mavros mavlink message container
 from mavros.srv import *
 
+from geometry_msgs.msg import PoseStamped
+from geometry_msgs.msg import Point
+
 import mavlink.mavlink as mv
-
-# Mavlink system id and component id
-ODROID_SYS_ID = 5
-ODROID_COMP_ID = 1
-PX4_SYS_ID = 1
-PX4_COMP_ID = 50
-
-seq = 0
 
 def str_to_dw_array(string):
 	l = []	
@@ -53,50 +48,43 @@ class OffboardController:
 
 		# Initialize mavros publishers/clients/subscribers
 		self.mav_pub = rospy.Publisher('/mavlink/to', Mavlink, queue_size=2)
-		self.guided_enable_client = rospy.ServiceProxy('/mavros/cmd/guided_enable', CommandBool)
 		self.mav_sub = rospy.Subscriber('/mavlink/from', Mavlink, self.mav_h_Mavlink)
+		self.mavros_setp_pub = rospy.Publisher('/mavros/setpoint_position/local', PoseStamped, queue_size=1)
 
 		# Initialize ros publishers
 		self.imu_pub = rospy.Publisher('/uav_telemetry/imu', HighResImu, queue_size=5)
 		self.of_pub = rospy.Publisher('/uav_telemetry/opt_flow', OpticalFlowRad, queue_size=5)
 
+		self.start_time = rospy.get_rostime()
+		self.setp_ned = Point(0,0,0)
+		self.latest_pose_target_sent = None
+
+		self.in_guided_mode = False
+
 		return
 
 	# subscriber handles
-	def ros_h_UavCmd(self, uav_cmd=None):
-		time_boot_ms = 0
-		target_system = PX4_SYS_ID
-		target_component = PX4_COMP_ID
-		coordinate_frame = mv.MAV_FRAME_LOCAL_NED
-		type_mask = 0
-		x = 0.0
-		y = 0.0
-		z = 0.0
-		if uav_cmd != None:
-			type_mask = 0x7 # meaningful x,y,z
-			x = uav_cmd.pos_x
-			y = uav_cmd.pos_y
-			z = uav_cmd.pos_z
+	def ros_h_UavCmd(self, uav_cmd):
 
-		mav = Mavlink()
-		mav.sysid = ODROID_SYS_ID
-		mav.compid = ODROID_COMP_ID
-		mav.fromlcm = False
-		mav.seq = seq
-		mav.msgid = 84 # SET_POSITION_TARGET_LOCAL_NED
-		mav.len = 53/8 + 1 # 53 bytes / (8 bytes per 64 bits)
+		self.setp_ned.x = uav_cmd.x
+		self.setp_ned.y = uav_cmd.y
+		self.setp_ned.z = uav_cmd.z
 
-		mav.payload = str_to_dw_array( struct.pack('<IBHfffffffffff', time_boot_ms, target_system, target_component, coordinate_frame, type_mask, x, y, z, 0,0,0, 0,0,0, 0,0) )
-
-		# publish message
-		mav_pub.publish(mav)
-		seq += 1
+		self.sendLocalPosTargetNed(self.setp_ned)
 		return
 
-	def enableOffboardControl(self, enable):
-		r = self.guided_enable_client(enable)
-		if not r.success:
-			rospy.logerr('Error trying to command offboard control mode.')
+	def sendLocalPosTargetNed(self, setp_ned):
+		self.seq += 1
+		self.latest_pose_target_sent = rospy.get_rostime()
+
+		pose_stamped = PoseStamped()
+		pose_stamped.header.stamp = self.latest_pose_target_sent
+		pose_stamped.header.seq = seq
+		pose_stamped.header.frame_id = 1
+		pose_stamped.pose.position = setp_ned
+
+		# publish to mavros
+		mavros_setp_pub.publish(pose_stamped)
 		return
 
 	def enableGPSFailCircuitBreaker(self):
@@ -134,6 +122,7 @@ class OffboardController:
 		if mav.sysid != ODROID_SYS_ID:
 			rospy.logwarn('wrong sysid! %d:%d', mav.sysid, mav.compid) 
 	
+		"""
 		if mav.msgid == mv.MAVLINK_MSG_ID_HIGHRES_IMU:
 			fields = unpack_payload('<QfffffffffffffH', mav.payload)
 
@@ -182,6 +171,30 @@ class OffboardController:
 			# unrecognized mavlink message received
 			pass
 
+		"""
+
+		return
+
+	def spin(self):
+		latest_guided_mode_request = None
+		mode_client = rospy.ServiceProxy('mavros/cmd/guided_enable', CommandBool)
+
+		while not rospy.is_shutdown():
+			now = rospy.get_rostime()
+
+			# update position setpoint
+			if self.latest_pose_target_sent == None or (now - self.latest_pose_target_sent).to_sec() > 0.1:
+				sendLocalPosTargetNed(self.setp_ned)
+
+			# make sure we're in offboard mode
+			if self.in_guided_mode != True and (latest_guided_mode_request == None or (now - latest_guided_mode_request).to_sec() > 0.5):
+				rospy.loginfo('Attempting to enable offboard control.')
+				r = mode_client(True)
+				if r.success:
+					rospy.loginfo('Successfully entered guided mode.')
+				else:
+					rospy.logwarn('Unable to enter guided mode.')
+
 		return
 
 rospy.init_node('px4_comm')
@@ -189,10 +202,4 @@ rospy.init_node('px4_comm')
 controller = OffboardController()
 rospy.loginfo('Starting up OffboardController.')
 
-rospy.loginfo('Attempting to enable GPS circuit breaker.')
-#controller.enableGPSFailCircuitBreaker()
-
-rospy.loginfo('Attempting to enable offboard control.')
-controller.enableOffboardControl(True)
-
-rospy.spin()
+OffboardController.spin()
