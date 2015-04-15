@@ -128,16 +128,16 @@ class OffboardController:
 			fields = unpack_payload('<QfffffffffffffH', mav.payload)
 
 			imu = HighResImu()
-			imu.timestamp_s = float(fields[0] * 1e-6) # convert usec to sec
-			imu.acc_x = fields[1] 	# [m/s^2]
-			imu.acc_y = fields[2]
-			imu.acc_z = fields[3]
-			imu.gyro_x = fields[4]	# [rad/s]
-			imu.gyro_y = fields[5]
-			imu.gyro_z = fields[6]
-			imu.mag_x = fields[7] 	# [Gauss]
-			imu.mag_y = fields[8]
-			imu.mag_z = fields[9]
+			imu.time_usec = fields[0]
+			imu.xacc = fields[1] 	# [m/s^2]
+			imu.yacc = fields[2]
+			imu.zacc = fields[3]
+			imu.xgyro = fields[4]	# [rad/s]
+			imu.ygyro = fields[5]
+			imu.zgyro = fields[6]
+			imu.xmag = fields[7] 	# [Gauss]
+			imu.ymag = fields[8]
+			imu.zmag = fields[9]
 			imu.abs_pressure = fields[10]	# [mBar]
 			imu.diff_pressure = fields[11]
 			imu.pressure_alt = fields[12]	# [m]
@@ -153,9 +153,9 @@ class OffboardController:
 			fields = unpack_payload('<QBLfffffhBLf', mav.payload)
 
 			of = OpticalFlowRad()
-			of.timestamp_s = float(fields[0] * 1e-6) # convert usec to sec
+			of.time_usec = fields[0] # convert usec to sec
 			of.sensor_id = fields[1]
-			of.integration_time_s = float(fields[2] * 1e-6) # [usec to sec] 
+			of.integration_time_s = fields[2] # [usec] 
 			of.integrated_x	= fields[3]			# [flow (some ephereal unit)]
 			of.integrated_y = fields[4]
 			of.integrated_xgyro = fields[5]		# [rad]
@@ -163,7 +163,7 @@ class OffboardController:
 			of.integrated_zgyro = fields[7]
 			of.temperature = fields[8]			# [x100 = Celsius]
 			of.quality = fields[9]				# [0-255 worst-best]
-			of.time_delta_distance_s = float(fields[10] * 1e-6) # [to sec]
+			of.time_delta_distance_us = fields[10] # [usec]
 			if fields[11] > 0:
 				of.distance = fields[11] # [m]
 
