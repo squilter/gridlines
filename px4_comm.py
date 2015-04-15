@@ -155,7 +155,7 @@ class OffboardController:
 			of = OpticalFlowRad()
 			of.time_usec = fields[0] # convert usec to sec
 			of.sensor_id = fields[1]
-			of.integration_time_s = fields[2] # [usec] 
+			of.integration_time_us = fields[2] # [usec] 
 			of.integrated_x	= fields[3]			# [flow (some ephereal unit)]
 			of.integrated_y = fields[4]
 			of.integrated_xgyro = fields[5]		# [rad]
