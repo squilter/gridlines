@@ -122,8 +122,9 @@ class OffboardController:
 		if mav.sysid != ODROID_SYS_ID:
 			rospy.logwarn('wrong sysid! %d:%d', mav.sysid, mav.compid) 
 	
-		"""
+		rospy.loginfo('Received mavlink message.')
 		if mav.msgid == mv.MAVLINK_MSG_ID_HIGHRES_IMU:
+			rospy.loginfo('HIGHRES_IMU')
 			fields = unpack_payload('<QfffffffffffffH', mav.payload)
 
 			imu = HighResImu()
@@ -148,6 +149,7 @@ class OffboardController:
 
 
 		elif mav.msgid == mv.MAVLINK_MSG_ID_OPTICAL_FLOW_RAD:
+			rospy.loginfo('OPTICAL_FLOW_RAD.')
 			fields = unpack_payload('<QBLfffffhBLf', mav.payload)
 
 			of = OpticalFlowRad()
@@ -170,8 +172,7 @@ class OffboardController:
 		else:
 			# unrecognized mavlink message received
 			pass
-
-		"""
+		
 
 		return
 
