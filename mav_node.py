@@ -131,8 +131,8 @@ class MavNode:
 	def mavCheck(self):
 		# first make sure we've sent a (at least empty) command recently
 		rx_time = rospy.Time.now()
-		if ((rx_time - self.last_cmd_send_time).to_sec() > 3.0):
-			self.sendPosCmd()
+		# if ((rx_time - self.last_cmd_send_time).to_sec() > 3.0):
+			# self.sendPosCmd()
 				
 		count = self.port.inWaiting()
 		if count == 0:
@@ -256,23 +256,23 @@ class MavNode:
 		x = 0
 		y = 0
 		z = 0
-		if uav_cmd not None:
+		if not uav_cmd == None:
 			x = uav_cmd.x
 			y = uav_cmd.y
 			z = uav_cmd.z
 			type_mask = 0x111				
 		
-		self.mav.set_position_target_local_ned_send(time_boot_ms=0, target_system, target_component, coord_frame, type_mask, x, y, z, 0,0,0,0,0,0,0,0)
+		self.mav.set_position_target_local_ned_send(0, target_system, target_component, coord_frame, type_mask, x, y, z, 0,0,0,0,0,0,0,0)
 
 rospy.init_node('comm_node')
 
-mav_node = MavNode(serial_name='/dev/ttyUSB0', baud_rate=921600)
+mav_node = MavNode(serial_name='/dev/ttyUSB0', baud_rate=57600)
 #mav_node.sendPx4PortOpenCmd()
 
 rospy.loginfo('Initialized Mavlink stream over USB.')
 
 # send empty position command
-sendPosCmd()
+mav_node.sendPosCmd()
 
 rospy.loginfo('Transitioned to OFFBOARD control mode.')
 
