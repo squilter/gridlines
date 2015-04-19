@@ -24,6 +24,7 @@ class Pixhawk:
 	# NOTE: Define additional publishers/subscribers here
 	cmd_pub = None
 	alg_sub = None
+	locpos_sub = None
 
 	# current setpoint
 	last_x = 0
@@ -47,6 +48,7 @@ class Pixhawk:
 
 		# NOTE: And here you initialize ROS subscribers and link them to their callback functions		
 		self.alg_sub = rospy.Subscriber('simple_uav_cmd',SimpleUavCmd,self.next_cmd)
+		self.locpos_sub = rospy.Subscriber('local_position/local',SimpleUavCmd,self.locpos_received)
 		
 		return
 
