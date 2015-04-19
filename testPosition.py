@@ -83,6 +83,16 @@ class Pixhawk:
 	    # print "Going to: %s" % dest		
 	    return
 
+	def locpos_received(self,m):
+		self.local_positionx = m.pose.position.x
+		self.local_positiony = m.pose.position.y
+		self.local_positionz = m.pose.position.z
+
+		#This represents an orientation in free space in quaternion form
+		#x,y,z,w
+		self.local_orientation = m.pose.orientation 
+
+
 	def sendPositionMsg(self,x,y,z):
 		cmd = UavCmd()
 		cmd.type = 1 #POS_TARGET
