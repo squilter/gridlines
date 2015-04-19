@@ -8,6 +8,7 @@ import serial
 from uav_msgs.msg import IMUSample
 from uav_msgs.msg import OptFlowSample
 from uav_msgs.msg import UavCmd
+from uav_msgs.msg import SimpleUavCmd
 
 import mavlink.mavlink as mavlink
 
@@ -52,7 +53,7 @@ class Pixhawk:
 
 		# NOTE: And here you initialize ROS subscribers and link them to their callback functions		
 		self.alg_sub = rospy.Subscriber('simple_uav_cmd',SimpleUavCmd,self.next_cmd)
-		self.locpos_sub = rospy.Subscriber('local_position/local', LocalPos, self.locpos_received)
+		# self.locpos_sub = rospy.Subscriber('local_position/local', LocalPos, self.locpos_received)
 		
 		return
 
@@ -66,22 +67,8 @@ class Pixhawk:
 			return
 
 		sendPositionMsg(a.x_dir,a.y_dir,-1*a.z_dir)
+		return
 
-		# self.convert_to_gps(a.x_dir,a.y_dir)
-		# cmds = self.v.commands
-		# if (self.lat_go_to != None):
-		# 	dest = droneapi.lib.Location(self.lat_go_to,self.lon_go_to,self.current_altitude, is_relative=False)
-		# 	if (self.v.mode.name == "GUIDED"):
-		# 		cmds.goto(dest)
-		# 	else:
-		# 		print "Mode is not GUIDED"
-		# 	is_guided = True
-		# 	self.v.flush()
-		# else:
-		# 	print "no destination"
-		
-	    # print "Going to: %s" % dest		
-	    return
 
 	def locpos_received(self,m):
 		self.local_positionx = m.pose.position.x
@@ -102,7 +89,7 @@ class Pixhawk:
 		cmd.haste = 0.5 
 		# Coefficient describing how quickly or how carefully to move: proportion of maximum haste [0,1]
 		rospy.loginfo(cmd)
-		cmd_pub.publish(cmd)
+		self.cmd_pub.publish(cmd)
 		self.last_x = x
 		self.last_y = y
 		self.last_z = z
@@ -127,43 +114,43 @@ class Pixhawk:
 
 	def sendPath(self):
 		positions = (
-            (0, 0, 0), #ground
-            (0, 0, 1), #takeoff
-            (1, 1, 1), #front right
-            (1, -1, 1), #bottom right
-            (-1, -1, 1), #bottom left
-            (1, 1, 1)) #front right
+			(0, 0, 0), #ground
+			(0, 0, 1), #takeoff
+			(1, 1, 1), #front right
+			(1, -1, 1), #bottom right
+			(-1, -1, 1), #bottom left
+			(1, 1, 1)) #front right
 
-        for i in range(0, len(positions)):
-            self.reach_position(positions[i][0], positions[i][1], positions[i][2], 120)
+		for i in range(0, len(positions)):
+			self.reach_position(positions[i][0], positions[i][1], positions[i][2], 120)
 
-    def is_at_position(self, x, y, z, offset):
-        rospy.logdebug("current position %f, %f, %f" % (self.local_positionx, self.local_positiony, self.local_positionz))
-        desired = np.array((x, y, z))
-        pos = np.array((self.local_positionx, self.local_positiony, self.local_positionz))
-        return linalg.norm(desired - pos) < offset
+	def is_at_position(self, x, y, z, offset):
+		rospy.logdebug("current position %f, %f, %f" % (self.local_positionx, self.local_positiony, self.local_positionz))
+		desired = np.array((x, y, z))
+		pos = np.array((self.local_positionx, self.local_positiony, self.local_positionz))
+		return linalg.norm(desired - pos) < offset
 
-    def reach_position(self, x, y, z, timeout):
-        # set a position setpoint
-        self.sendPositionMsg(x,y,z)
+	def reach_position(self, x, y, z, timeout):
+		# set a position setpoint
+		self.sendPositionMsg(x,y,z)
 
-        # does it reach the position in X seconds?
-        count = 0
-        while count < timeout:
-            if self.is_at_position(pos.x, pos.y, pos.z, 0.5):
-                break
-            count = count + 1
-            self.rate.sleep()
+		# does it reach the position in X seconds?
+		count = 0
+		while count < timeout:
+			if self.is_at_position(pos.x, pos.y, pos.z, 0.5):
+				break
+			count = count + 1
+			self.rate.sleep()
 
-        if (count < timeout):
-         	rospy.loginfo("took too long to get to position")
+		if (count < timeout):
+			rospy.loginfo("took too long to get to position")
 
-    def setRate(self,r):
-    	self.rate = r
-    	return
+	def setRate(self,r):
+		self.rate = r
+		return
 
 rospy.init_node('comm_node')
-pixhawk = Pixhawk(rate)
+pixhawk = Pixhawk()
 r = rospy.Rate(100)
 pixhawk.setRate(r)
 
