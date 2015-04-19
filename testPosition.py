@@ -36,6 +36,10 @@ class Pixhawk:
 
 	rate = None
 
+	local_positionx = 0
+	local_positiony = 0
+	local_positionz = 0
+
 	def __init__(self):		
 		self.uav_time_start = None
 		self.uav_latency = None
@@ -48,7 +52,7 @@ class Pixhawk:
 
 		# NOTE: And here you initialize ROS subscribers and link them to their callback functions		
 		self.alg_sub = rospy.Subscriber('simple_uav_cmd',SimpleUavCmd,self.next_cmd)
-		self.locpos_sub = rospy.Subscriber('local_position/local',SimpleUavCmd,self.locpos_received)
+		self.locpos_sub = rospy.Subscriber('local_position/local', LocalPos, self.locpos_received)
 		
 		return
 
@@ -124,9 +128,9 @@ class Pixhawk:
             self.reach_position(positions[i][0], positions[i][1], positions[i][2], 120)
 
     def is_at_position(self, x, y, z, offset):
-        rospy.logdebug("current position %f, %f, %f" % (self.local_position.x, self.local_position.y, self.local_position.z))
+        rospy.logdebug("current position %f, %f, %f" % (self.local_positionx, self.local_positiony, self.local_positionz))
         desired = np.array((x, y, z))
-        pos = np.array((self.local_position.x, self.local_position.y, self.local_position.z))
+        pos = np.array((self.local_positionx, self.local_positiony, self.local_positionz))
         return linalg.norm(desired - pos) < offset
 
     def reach_position(self, x, y, z, timeout):
