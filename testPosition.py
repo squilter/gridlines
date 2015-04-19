@@ -99,13 +99,17 @@ class Pixhawk:
 
 	def check(self):
 		# check if theres a new cmd_sub
+		self.sendPosCmd()
 		return
 
 	def spin(self):
 		rospy.spin()
 
-	def sendTakeoff(self):
-		self.sendPositionMsg(0,0,1)
+	def sendTakeoff(self, height):
+		self.sendPositionMsg(0,0,height)
+		last_x = 0
+		last_y = 0
+		last_z = height
 		return
 
 	def sendPosCmd(self):
@@ -156,7 +160,8 @@ pixhawk.setRate(r)
 
 # send empty position command
 pixhawk.sendPosCmd()
-pixhawk.sendTakeoff()
+# takeoff 1 meter
+pixhawk.sendTakeoff(1)
 
 rospy.loginfo('Commanded takeoff through mavros')
 
