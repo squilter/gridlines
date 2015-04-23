@@ -19,6 +19,8 @@ import mavlink.mavlink as mv
 ODROID_SYS_ID = 1
 ODROID_COMP_ID = 50
 
+MAV_FRAME_LOCAL_NED = 1
+
 def str_to_dw_array(string):
 	l = []	
 	# now convert str to list of uint64t
@@ -89,6 +91,8 @@ class OffboardController:
 		self.setp_ned.y = uav_cmd.y
 		self.setp_ned.z = uav_cmd.z
 
+
+
 		self.sendLocalPosTargetNed(self.setp_ned)
 		return
 
@@ -99,8 +103,12 @@ class OffboardController:
 		pose_stamped = PoseStamped()
 		pose_stamped.header.stamp = self.latest_pose_target_sent
 		pose_stamped.header.seq = self.seq
-		pose_stamped.header.frame_id = 'local NED'
+		pose_stamped.header.frame_id = MAV_FRAME_LOCAL_NED
 		pose_stamped.pose.position = setp_ned
+		pose_stamped.orientation.x = 0	# identity quaternion (hold 0 yaw)
+		pose_stamped.orientation.y = 0
+		pose_stamped.orientation.z = 0
+		pose_stamped.orientation.w = 1
 
 		# publish to mavros
 		self.mavros_setp_pub.publish(pose_stamped)
