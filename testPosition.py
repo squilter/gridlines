@@ -53,8 +53,8 @@ class Pixhawk:
 
 		# NOTE: And here you initialize ROS subscribers and link them to their callback functions		
 		self.alg_sub = rospy.Subscriber('simple_uav_cmd',SimpleUavCmd,self.next_cmd)
-		# self.locpos_sub = rospy.Subscriber('local_position/local', LocalPos, self.locpos_received)
-		
+		self.locpos_sub = rospy.Subscriber('/mavros/local_position/local', LocalPos, self.locpos_received)
+		#/mavros/local_position/local TODO figure out topic type and import it
 		return
 
 	def next_cmd(self, a):#format of these coordinates with respect to gps layout not certain, are we assuming drone has established 	 interface so apiconnect is needed?
