@@ -9,6 +9,7 @@ from uav_msgs.msg import OpticalFlowRad
 from uav_msgs.msg import UavCmd
 
 from mavros.msg import Mavlink # generic Mavros mavlink message container
+from mavros.msg import State
 from mavros.srv import *
 
 from geometry_msgs.msg import PoseStamped
@@ -18,6 +19,8 @@ import mavlink.mavlink as mv
 
 ODROID_SYS_ID = 1
 ODROID_COMP_ID = 50
+
+MAV_FRAME_LOCAL_NED = 1
 
 def str_to_dw_array(string):
 	l = []	
@@ -67,6 +70,7 @@ class OffboardController:
 		#self.mav_pub = rospy.Publisher('/mavlink/to', Mavlink, queue_size=2)
 		#self.mav_sub = rospy.Subscriber('/mavlink/from', Mavlink, self.mav_h_Mavlink)
 		self.mavros_setp_pub = rospy.Publisher('/mavros/setpoint_position/local', PoseStamped, queue_size=1)
+		self.mavros_status_sub = rospy.Subscriber('/mavros/status', State, self.status_cb)
 
 		# Initialize ros publishers
 		self.imu_pub = rospy.Publisher('/uav_telemetry/imu', HighResImu, queue_size=5)
@@ -82,12 +86,19 @@ class OffboardController:
 
 		return
 
+	def status_cb(self, state):
+		self.armed = state.armed
+		self.in_guided_mode = state.guided
+		return
+
 	# subscriber handles
 	def ros_h_UavCmd(self, uav_cmd):
 		rospy.loginfo('Sending new setpoint at [%f, %f, %f].', uav_cmd.x, uav_cmd.y, uav_cmd.z)
 		self.setp_ned.x = uav_cmd.x
 		self.setp_ned.y = uav_cmd.y
 		self.setp_ned.z = uav_cmd.z
+
+
 
 		self.sendLocalPosTargetNed(self.setp_ned)
 		return
@@ -99,8 +110,12 @@ class OffboardController:
 		pose_stamped = PoseStamped()
 		pose_stamped.header.stamp = self.latest_pose_target_sent
 		pose_stamped.header.seq = self.seq
-		pose_stamped.header.frame_id = 'local NED'
+		pose_stamped.header.frame_id = 'local ned'
 		pose_stamped.pose.position = setp_ned
+		pose_stamped.pose.orientation.x = 0	# identity quaternion (hold 0 yaw)
+		pose_stamped.pose.orientation.y = 0
+		pose_stamped.pose.orientation.z = 0
+		pose_stamped.pose.orientation.w = 1
 
 		# publish to mavros
 		self.mavros_setp_pub.publish(pose_stamped)
