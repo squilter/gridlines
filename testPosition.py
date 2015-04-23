@@ -52,8 +52,8 @@ class Pixhawk:
 		self.cmd_pub = rospy.Publisher('uav_cmds/cmd', UavCmd, queue_size=5)
 
 		# NOTE: And here you initialize ROS subscribers and link them to their callback functions		
-		self.alg_sub = rospy.Subscriber('simple_uav_cmd',SimpleUavCmd,self.next_cmd)
-		self.locpos_sub = rospy.Subscriber('/mavros/local_position/local', LocalPos, self.locpos_received)
+		#self.alg_sub = rospy.Subscriber('simple_uav_cmd',SimpleUavCmd,self.next_cmd)
+		#self.locpos_sub = rospy.Subscriber('/mavros/local_position/local', LocalPos, self.locpos_received)
 		#/mavros/local_position/local TODO figure out topic type and import it
 		return
 
@@ -66,7 +66,7 @@ class Pixhawk:
 			print "no destination"
 			return
 
-		sendPositionMsg(a.x_dir,a.y_dir,-1*a.z_dir)
+		sendPositionMsg(a.x_dir,a.y_dir,a.z_dir)
 		return
 
 
@@ -85,7 +85,7 @@ class Pixhawk:
 		cmd.type = 1 #POS_TARGET
 		cmd.pos_x = x
 		cmd.pos_y = y
-		cmd.pos_z = -1*z # z points down in ROS
+		cmd.pos_z = z # z points down in ROS
 		cmd.haste = 0.5 
 		# Coefficient describing how quickly or how carefully to move: proportion of maximum haste [0,1]
 		rospy.loginfo(cmd)
@@ -117,13 +117,13 @@ class Pixhawk:
 		return
 
 	def sendPath(self):
-		positions = (
+		positions = (	# NED
 			(0, 0, 0), #ground
-			(0, 0, 1), #takeoff
-			(1, 1, 1), #front right
-			(1, -1, 1), #bottom right
-			(-1, -1, 1), #bottom left
-			(1, 1, 1)) #front right
+			(0, 0, -1), #takeoff
+			(1, 1, -1), #front right
+			(1, -1, -1), #bottom right
+			(-1, -1, -1), #bottom left
+			(1, 1, -1)) #front right
 
 		for i in range(0, len(positions)):
 			self.reach_position(positions[i][0], positions[i][1], positions[i][2], 120)
@@ -159,7 +159,7 @@ r = rospy.Rate(100)
 pixhawk.setRate(r)
 
 # send empty position command
-pixhawk.sendPosCmd()
+#pixhawk.sendPosCmd()
 # takeoff 1 meter
 pixhawk.sendTakeoff(1)
 
