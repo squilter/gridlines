@@ -10,7 +10,10 @@ from uav_msgs.msg import OptFlowSample
 from uav_msgs.msg import UavCmd
 from uav_msgs.msg import SimpleUavCmd
 
-from geometry_msgs.msg import PoseStamped
+from std_msgs.msg import Header
+from std_msgs.msg import Float64
+from geometry_msgs.msg import PoseStamped, Quaternion
+#mavros_offboard_attctrl_test.py
 
 import mavlink.mavlink as mavlink
 
