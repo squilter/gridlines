@@ -10,6 +10,11 @@ from uav_msgs.msg import OptFlowSample
 from uav_msgs.msg import UavCmd
 from uav_msgs.msg import SimpleUavCmd
 
+from std_msgs.msg import Header
+from std_msgs.msg import Float64
+from geometry_msgs.msg import PoseStamped, Quaternion
+#mavros_offboard_attctrl_test.py
+
 import mavlink.mavlink as mavlink
 
 class Pixhawk:
@@ -52,8 +57,9 @@ class Pixhawk:
 		self.cmd_pub = rospy.Publisher('uav_cmds/cmd', UavCmd, queue_size=5)
 
 		# NOTE: And here you initialize ROS subscribers and link them to their callback functions		
-		#self.alg_sub = rospy.Subscriber('simple_uav_cmd',SimpleUavCmd,self.next_cmd)
-		#self.locpos_sub = rospy.Subscriber('/mavros/local_position/local', LocalPos, self.locpos_received)
+		self.alg_sub = rospy.Subscriber('simple_uav_cmd',SimpleUavCmd,self.next_cmd)
+		self.locpos_sub = rospy.Subscriber('/mavros/local_position/local', PoseStamped, self.locpos_received)
+
 		#/mavros/local_position/local TODO figure out topic type and import it
 		return
 
