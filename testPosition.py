@@ -3,6 +3,20 @@
 # sources:
 # mavros_offboard_attctrl_test.py
 # setpoint_demo.py
+#
+# To run this script:
+# On one tab, start the core service of ROS:
+# roscore
+# On another tab, connect to the pixhawk via mavros
+# roslaunch mavros px4.launch 
+# OR, custom to comm team,
+# roslaunch mavros comm/launch/comm_node.launch 
+# roslaunch mavros comm/launch/px4_radio.launch
+# Then start the script
+# python testPosition.py
+# Note: behavior can be specified below in the testFlying() method, 
+# or other similar ones
+
 import rospy
 import numpy as np
 import thread
