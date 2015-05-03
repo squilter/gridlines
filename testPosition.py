@@ -20,6 +20,7 @@
 # ssh odroid@[odroidipaddress] pw: odroid
 # use visual display and ipconfig to find 
 # roslaunch comm px4.launch
+# odroid@18.111.105.66
 
 import rospy
 import numpy as np
