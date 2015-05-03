@@ -17,6 +17,10 @@
 # Note: behavior can be specified below in the testFlying() method, 
 # or other similar ones
 
+# ssh odroid@[odroidipaddress] pw: odroid
+# use visual display and ipconfig to find 
+# roslaunch comm px4.launch
+
 import rospy
 import numpy as np
 import thread
