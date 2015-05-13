@@ -59,6 +59,7 @@ class Pixhawk:
 	nav_pub = None #publishes to quadcopter to tell it where to go
 	alg_sub = None
 	locpos_sub = None
+	vicon_pub = None #publishes to vicon
 
 	# current setpoint
 	x = 0
@@ -84,10 +85,12 @@ class Pixhawk:
 		#self.of_pub = rospy.Publisher('uav_telemetry/opt_flow', OptFlowSample, queue_size=5)
 		self.cmd_pub = rospy.Publisher('uav_cmds/cmd', UavCmd, queue_size=5)
 		self.nav_pub =  rospy.Publisher('/mavros/setpoint_position/local', PoseStamped, queue_size=10)
+		self.vicon_pub = rospy.Publisher('/mavros/vicon_pose/pose',PoseStamped,queue_size=5)
 		# NOTE: And here you initialize ROS subscribers and link them to their callback functions		
 		self.alg_sub = rospy.Subscriber('simple_uav_cmd',SimpleUavCmd,self.next_cmd)
 		self.locpos_sub = rospy.Subscriber('mavros/local_position/local', PoseStamped, self.locpos_received)
 
+		# TODO subscribe to node that publishes VICON and send it over with self.sendViconData
 		try:
 			thread.start_new_thread( self.navigate, () )
 		except:
@@ -249,6 +252,32 @@ class Pixhawk:
 
 			self.nav_pub.publish(msg)
 			offboard_rate.sleep()
+
+	def sendViconData(self):
+		offboard_rate = rospy.Rate(10) # 10hz
+
+		msg = PoseStamped()
+		msg.header = Header() 
+		msg.header.frame_id = "base_footprint"
+		msg.header.stamp = rospy.Time.now()
+
+		while 1:
+			msg.pose.position.x = 0 #TODO
+			msg.pose.position.y = 0 #TODO
+			msg.pose.position.z = 0 #TODO
+
+			# we will lock yaw/heading to north.
+			roll_degrees = 0 #TODO
+			roll = radians(roll_degrees)
+			pitch_degrees = 0 #TODO
+			pitch = radian(pitch_degrees)
+			yaw_degrees = 0  # TODO
+			yaw = radians(yaw_degrees)
+			quaternion = quaternion_from_euler(roll, pitch, yaw)
+			msg.pose.orientation = Quaternion(*quaternion)
+
+			self.vicon_pub.publish(msg)
+			offboard_rate.sleep()		
 
 def testFlying():
 	rospy.init_node('comm_node',anonymous=True)
