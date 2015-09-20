@@ -89,6 +89,7 @@ class Pixhawk:
 		# NOTE: And here you initialize ROS subscribers and link them to their callback functions		
 		self.alg_sub = rospy.Subscriber('simple_uav_cmd',SimpleUavCmd,self.next_cmd)
 		self.locpos_sub = rospy.Subscriber('mavros/local_position/local', PoseStamped, self.locpos_received)
+		self.vicon_sub = rospy.Subscriber('/Batman/pose', PoseStamped, self.sendViconData)
 
 		# TODO subscribe to node that publishes VICON and send it over with self.sendViconData
 		try:
@@ -253,31 +254,8 @@ class Pixhawk:
 			self.nav_pub.publish(msg)
 			offboard_rate.sleep()
 
-	def sendViconData(self):
-		offboard_rate = rospy.Rate(10) # 10hz
-
-		msg = PoseStamped()
-		msg.header = Header() 
-		msg.header.frame_id = "base_footprint"
-		msg.header.stamp = rospy.Time.now()
-
-		while 1:
-			msg.pose.position.x = 0 #TODO
-			msg.pose.position.y = 0 #TODO
-			msg.pose.position.z = 0 #TODO
-
-			# we will lock yaw/heading to north.
-			roll_degrees = 0 #TODO
-			roll = radians(roll_degrees)
-			pitch_degrees = 0 #TODO
-			pitch = radian(pitch_degrees)
-			yaw_degrees = 0  # TODO
-			yaw = radians(yaw_degrees)
-			quaternion = quaternion_from_euler(roll, pitch, yaw)
-			msg.pose.orientation = Quaternion(*quaternion)
-
-			self.vicon_pub.publish(msg)
-			offboard_rate.sleep()		
+	def sendViconData(self,m):
+		self.vicon_pub.publish(m)	
 
 def testFlying():
 	rospy.init_node('comm_node',anonymous=True)
