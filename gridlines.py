@@ -29,7 +29,10 @@ class UAV:
 	def location_callback(self, location):
 		print self.vehicle.local_position
 		self.set_position(self.vehicle.local_position.north, self.vehicle.local_position.east)
-		self.g.canvas.itemconfig(self.g.circle, oval=_create_circle(self.g.canvas,self.x,self.y,circleRadius, fill="red", outline="black", width=1))
+		
+		self.g.clearCanvas()
+		#self.g.canvas.itemconfig(self.g.circle, oval=_create_circle(self.g.canvas,self.x,self.y,circleRadius, fill="red", outline="black", width=1))
+		self.g.drawGrid(self)
 	
 	def start_vehicle(self, altitude):
 		if self.vehicle.mode.name == "INITIALISING":
