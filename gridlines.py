@@ -66,9 +66,9 @@ class UAV:
 	
 
 class Grid:
-
 	def __init__(self, uav):
 		self.uav = uav
+		uav.setGrid(self)
 		
 		root = Tk()
 		#app = Application(master=root)
@@ -119,7 +119,6 @@ class Grid:
 
 uav=UAV()
 g=Grid(uav)
-uav.setGrid(g)
 #while True:
 	#g.clearCanvas()
 	#g.drawGrid(uav)
