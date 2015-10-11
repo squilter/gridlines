@@ -8,6 +8,10 @@ gridheight = 1000
 widthofline = 2.5
 circleRadius = 4
 
+def _create_circle(self, x, y, r, **kwargs):
+    return self.create_oval(x-r, y-r, x+r, y+r, **kwargs)
+tk.Canvas.create_circle = _create_circle
+
 class UAV:
 	def __init__(self):
 		self.vehicle = connect('udpin:0.0.0.0:14550', await_params=False)
