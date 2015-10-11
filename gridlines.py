@@ -2,20 +2,23 @@ import time
 import _tkinter
 from Tkinter import *
 from dronekit import connect, mavutil
+from dronekit.lib import VehicleMode
 
 gridwidth = 1000
 gridheight = 1000
 widthofline = 2.5
-circleRadius = 4
+circleRadius = 10
 
 def _create_circle(self, x, y, r, **kwargs):
-    return self.create_oval(x-r, y-r, x+r, y+r, **kwargs)
-tk.Canvas.create_circle = _create_circle
+	return self.create_oval(x-r, y-r, x+r, y+r, **kwargs)
+Canvas.create_circle = _create_circle
 
 class UAV:
 	def __init__(self):
 		self.vehicle = connect('udpin:0.0.0.0:14550', await_params=False)
 		self.vehicle.add_attribute_observer('local_position', self.location_callback)
+		if not self.vehicle.armed:
+			self.start_vehicle(5)
 		self.x = 0
 		self.y = 0
 
@@ -26,25 +29,25 @@ class UAV:
 	def location_callback(self, location):
 		print self.vehicle.local_position
 		self.set_position(self.vehicle.local_position.north, self.vehicle.local_position.east)
+		self.g.canvas.itemconfig(self.g.circle, oval=_create_circle(self.g.canvas,self.x,self.y,circleRadius, fill="red", outline="black", width=1))
 	
-	def start_vehicle(altitude):
-		if v.mode.name == "INITIALISING":
+	def start_vehicle(self, altitude):
+		if self.vehicle.mode.name == "INITIALISING":
 			time.sleep(1)
-		while v.gps_0.fix_type < 2:
+		while self.vehicle.gps_0.fix_type < 2:
 			time.sleep(1)
 
-		v.armed = True
-		v.flush()
+		self.vehicle.armed = True
+		self.vehicle.flush()
 	
-		while not v.armed:
+		while not self.vehicle.armed:
 			time.sleep(1)
 	
-		vehicle.mode = VehicleMode("GUIDED")
-		Vehicle.commands.takeoff(altitude)
+		self.vehicle.mode = VehicleMode("GUIDED")
+		self.vehicle.commands.takeoff(altitude)
+		self.vehicle.flush()
 		
 	def goto_local_position(self, north, east, down):
-		if(self.vehicle.armed is False):
-			self.start_vehicle(5)
 	
 		msg = self.vehicle.message_factory.set_position_target_local_ned_encode(
 			0,       # time_boot_ms (not used)
@@ -57,6 +60,9 @@ class UAV:
 			0, 0)    # yaw, yaw_rate (not supported yet, ignored in GCS_Mavlink) 
 		self.vehicle.send_mavlink(msg)
 		self.vehicle.flush()	
+		
+	def setGrid(self, g):
+		self.g = g
 	
 
 class Grid:
@@ -105,16 +111,17 @@ class Grid:
 
 	def drawUAV(self, uav):
 		#update uav
-		self.canvas.create_circle(uav.x,uav.y,circleRadius, fill="red", outline="black", width=1)
+		print "redrawing"
+		self.circle = self.canvas.create_circle(uav.x,uav.y,circleRadius, fill="red", outline="black", width=1)
 
 	def clearCanvas(self):
-		canvas.delete("all")
-
+		self.canvas.delete("all")
 
 uav=UAV()
 g=Grid(uav)
-while True:
-	g.clearCanvas()
-	g.drawGrid(uav)
-	time.sleep(0.1)
+uav.setGrid(g)
+#while True:
+	#g.clearCanvas()
+	#g.drawGrid(uav)
+	#time.sleep(0.1)
 	#g.updateUAV()
