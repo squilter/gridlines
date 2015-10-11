@@ -31,7 +31,9 @@ class UAV:
 		self.set_position(self.vehicle.local_position.north, self.vehicle.local_position.east)
 		
 		self.g.clearCanvasCircle()
-		self.g.canvas.itemconfig(self.g.circle, oval=_create_circle(self.g.canvas,self.x,self.y,circleRadius, fill="red", outline="black", width=1))
+		newCircle = _create_circle(self.g.canvas,self.x,self.y,circleRadius, fill="red", outline="black", width=1)
+		self.g.canvas.itemconfig(self.g.circle, oval=newCircle)
+		self.g.circle = newCircle
 		#self.g.drawGrid(self)
 	
 	def start_vehicle(self, altitude):
