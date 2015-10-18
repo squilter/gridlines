@@ -123,7 +123,7 @@ class Grid:
 		self.canvas.delete("all")
 
 	def clearCanvasCircle(self):
-		if not self.cirlce is None:
+		if not self.circle is None:
 			self.canvas.delete(self.circle)
 
 uav=UAV()
