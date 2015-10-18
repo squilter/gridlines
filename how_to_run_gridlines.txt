@@ -1,0 +1,18 @@
+run_gridlines
+
+Clone https://github.com/diydrones/ardupilot repository
+cd ardupilot/ArduCopter/
+sim_vehicle.sh
+
+Once the simulation starts, we need to forward the mavlink packets to itself
+output add 0.0.0.0:14550
+
+Now we can start the script in a new terminal
+Clone https://github.com/mit-uav/comm
+cd comm/
+python gridlines.py
+
+We connect the the uav on the local machine (0.0.0.0), on the port 14550
+We arm the quadcopter and move into move guided, then takeoff to 5 meters.
+Then we can start accepting commands
+
