@@ -1,7 +1,13 @@
 run_gridlines
 
+
+
 Clone https://github.com/diydrones/ardupilot repository
-cd ardupilot/ArduCopter/
+
+cd ardupilot/
+./Tools/scripts/install-prereqs-*****.sh (i used ubuntu)
+log out and log in again
+cd ArduCopter/
 sim_vehicle.sh
 
 Once the simulation starts, we need to forward the mavlink packets to itself
