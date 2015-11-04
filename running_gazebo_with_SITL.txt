@@ -1,0 +1,13 @@
+using ubuntu 14+
+
+
+follow directions at http://dev.ardupilot.com/wiki/using-rosgazebo-simulator-with-sitl/
+
+then
+1. Go to your ROS workspace that you dumped all the git hub code into and run source devel/setup.sh
+2. catkin_make your workspace
+3. check your ROS package path, your workspace should be included, now SITL can find ROS Gazebo plugin
+4. cd ~/ardupilot/ArduCopter  (this should be the repository from the above link)
+5. sim_vehicle.sh -f arducopter_sitl_ros –console
+6. output add 0.0.0.0:14550 (in MAV proxy window)
+7. python gridlines.py
