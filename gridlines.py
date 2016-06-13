@@ -28,7 +28,6 @@ class UAV:
 		
 	def location_callback(self, location):
 		self.set_position(self.vehicle.location.local_frame.north, self.vehicle.location.local_frame.east)
-		print self.vehicle.local_position
 		
 		self.g.clearCanvasCircle()
 		newCircle = _create_circle(self.g.canvas,self.x,self.y,circleRadius, fill="red", outline="black", width=1)
